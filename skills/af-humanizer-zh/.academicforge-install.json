@@ -1,0 +1,8 @@
+{
+  "name": "af-humanizer-zh",
+  "source_id": "humanizer-zh",
+  "source_name": "humanizer-zh",
+  "source_relative_path": "skills/humanizer-zh/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-humanizer-zh",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-humanizer-zh"
+}

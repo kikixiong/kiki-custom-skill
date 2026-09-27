@@ -1,0 +1,7 @@
+interface:
+  display_name: "Awesome AI Research Writing"
+  short_description: "Academic writing prompt library router"
+  default_prompt: "Use $awesome-ai-research-writing to apply the right academic writing prompt workflow."
+
+policy:
+  allow_implicit_invocation: true

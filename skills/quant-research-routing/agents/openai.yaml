@@ -1,0 +1,7 @@
+interface:
+  display_name: "Quant Research Routing"
+  short_description: "Route quantitative research work"
+  default_prompt: "Use $quant-research-routing to classify this quant task and route it to the right factor, backtest, data, or risk workflow."
+
+policy:
+  allow_implicit_invocation: true

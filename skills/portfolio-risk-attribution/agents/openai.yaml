@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Risk Attribution"
+  short_description: "Analyze portfolio risk and attribution"
+  default_prompt: "Use $portfolio-risk-attribution to analyze this portfolio's exposures, attribution, drawdown, and risk constraints."

@@ -1,0 +1,1208 @@
+{
+  "total": 200,
+  "roots": [
+    "@@KIKI_SKILLS_DIR@@"
+  ],
+  "skills": [
+    {
+      "name": "autoresearch",
+      "description": "Orchestrates end-to-end autonomous AI research projects using a two-loop architecture. The inner loop runs rapid experiment iterations with clear optimization targets. The outer loop synthesizes results, identifies patterns, and steers research direction. Routes to domain-specific skills for execution, supports continuous agent operation via Claude Code /loop and OpenClaw heartbeat, and produces research presentations and papers. Use when starting a research project, running autonomous experiments, or managing a multi-hypothesis research effort.",
+      "_path": "@@KIKI_SKILLS_DIR@@/0-autoresearch-skill/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/0-autoresearch-skill"
+    },
+    {
+      "name": "ml-paper-writing",
+      "description": "Write publication-ready ML/AI/Systems papers for NeurIPS, ICML, ICLR, ACL, AAAI, COLM, OSDI, NSDI, ASPLOS, SOSP. Use when drafting papers from research repos, structuring arguments, verifying citations, or preparing camera-ready submissions. Includes LaTeX templates, reviewer guidelines, and citation verification workflows.",
+      "_path": "@@KIKI_SKILLS_DIR@@/20-ml-paper-writing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/20-ml-paper-writing"
+    },
+    {
+      "name": "ablation-planner",
+      "description": "从审稿人问题出发设计消融，明确验证目的、优先级与计算成本。",
+      "_path": "@@KIKI_SKILLS_DIR@@/ablation-planner/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/ablation-planner"
+    },
+    {
+      "name": "academic-homepage-maintainer",
+      "description": "维护学术个人主页、项目页、论文列表和 GitHub Pages。",
+      "_path": "@@KIKI_SKILLS_DIR@@/academic-homepage-maintainer/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/academic-homepage-maintainer"
+    },
+    {
+      "name": "academic-paper",
+      "description": "多代理学术写作流程，支持大纲、正文、修改和格式转换等模式。",
+      "_path": "@@KIKI_SKILLS_DIR@@/academic-paper/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/academic-paper"
+    },
+    {
+      "name": "academic-paper-reviewer",
+      "description": "用多个审稿视角评阅论文，也支持快速评估、复审和方法审查。",
+      "_path": "@@KIKI_SKILLS_DIR@@/academic-paper-reviewer/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/academic-paper-reviewer"
+    },
+    {
+      "name": "academic-pipeline",
+      "description": "串联调研、写作、完整性核验、审稿、修改和最终检查。",
+      "_path": "@@KIKI_SKILLS_DIR@@/academic-pipeline/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/academic-pipeline"
+    },
+    {
+      "name": "academicforge-routing",
+      "description": "选择合适的 af-* 学术写作、引用、绘图和展示技能。",
+      "_path": "@@KIKI_SKILLS_DIR@@/academicforge-routing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/academicforge-routing"
+    },
+    {
+      "name": "academicforge-tool",
+      "description": "搜索和读取本地 AcademicForge 精选语料库，定位学术写作、引用、绘图与展示相关指南。",
+      "_path": "@@KIKI_SKILLS_DIR@@/academicforge-tool/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/academicforge-tool"
+    },
+    {
+      "name": "huggingface-accelerate",
+      "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). Interactive config, single launch command. HuggingFace ecosystem standard.",
+      "_path": "@@KIKI_SKILLS_DIR@@/accelerate/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/accelerate"
+    },
+    {
+      "name": "af-academic-plotting",
+      "description": "用 matplotlib/seaborn 绘制科研数据图，用 Codex 原生图像工具或可编辑图形制作架构图。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-academic-plotting/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-academic-plotting"
+    },
+    {
+      "name": "af-citation-management",
+      "description": "检索和校验参考文献元数据，生成和整理 BibTeX。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-citation-management/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-citation-management"
+    },
+    {
+      "name": "af-humanizer-zh",
+      "description": "减少中文套话、夸张措辞、模糊归因和机械句式。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-humanizer-zh/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-humanizer-zh"
+    },
+    {
+      "name": "af-literature-review",
+      "description": "开展系统性文献综述，组织检索、证据综合与引用。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-literature-review/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-literature-review"
+    },
+    {
+      "name": "af-markdown-mermaid-writing",
+      "description": "用 Markdown 与 Mermaid 组织科学文档、报告和文本图形。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-markdown-mermaid-writing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-markdown-mermaid-writing"
+    },
+    {
+      "name": "af-paper-lookup",
+      "description": "通过多个学术数据库检索论文、DOI、摘要与开放全文。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-paper-lookup/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-paper-lookup"
+    },
+    {
+      "name": "af-paper-polish-workflow",
+      "description": "按结构、逻辑、表达三个层次逐步润色论文。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-paper-polish-workflow/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-paper-polish-workflow"
+    },
+    {
+      "name": "af-peer-review",
+      "description": "按方法、统计、报告规范等标准撰写结构化同行评审。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-peer-review/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-peer-review"
+    },
+    {
+      "name": "af-presenting-conference-talks",
+      "description": "将论文转成会议演讲幻灯片、备注与完整讲稿。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-presenting-conference-talks/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-presenting-conference-talks"
+    },
+    {
+      "name": "af-scholar-evaluation",
+      "description": "从问题、方法、分析、写作等维度结构化评估学术工作。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-scholar-evaluation/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-scholar-evaluation"
+    },
+    {
+      "name": "af-scientific-critical-thinking",
+      "description": "检查研究设计、偏倚、混杂因素和证据质量。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-scientific-critical-thinking/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-scientific-critical-thinking"
+    },
+    {
+      "name": "af-scientific-slides",
+      "description": "制作科研报告、组会、答辩和会议演示文稿。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-scientific-slides/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-scientific-slides"
+    },
+    {
+      "name": "af-scientific-writing",
+      "description": "按科学论文结构撰写完整段落，处理引用、图表与报告规范。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-scientific-writing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-scientific-writing"
+    },
+    {
+      "name": "af-systems-paper-writing",
+      "description": "面向 OSDI、SOSP 等系统会议的论文结构、写作与检查指南。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-systems-paper-writing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-systems-paper-writing"
+    },
+    {
+      "name": "af-venue-templates",
+      "description": "查询论文、会议、海报与基金申请的 LaTeX 模板和格式要求。",
+      "_path": "@@KIKI_SKILLS_DIR@@/af-venue-templates/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/af-venue-templates"
+    },
+    {
+      "name": "alphaxiv",
+      "description": "快速理解一篇指定论文，优先读取 AlphaXiv 摘要并回退到其他来源。",
+      "_path": "@@KIKI_SKILLS_DIR@@/alphaxiv/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/alphaxiv"
+    },
+    {
+      "name": "analyze-results",
+      "description": "分析实验数据、统计差异并生成对比表和结论。",
+      "_path": "@@KIKI_SKILLS_DIR@@/analyze-results/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/analyze-results"
+    },
+    {
+      "name": "arxiv",
+      "description": "搜索、下载和总结 arXiv 预印本。",
+      "_path": "@@KIKI_SKILLS_DIR@@/arxiv/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/arxiv"
+    },
+    {
+      "name": "arxiv-daily-digest",
+      "description": "Automatically fetch, filter, rank, and summarize arXiv papers based on the user's configured research interests. Use when the user wants daily arXiv paper updates, personalized paper recommendations, research interest configuration, or scheduled research digests.",
+      "_path": "@@KIKI_SKILLS_DIR@@/arxiv-daily-digest/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/arxiv-daily-digest"
+    },
+    {
+      "name": "audiocraft-audio-generation",
+      "description": "PyTorch library for audio generation including text-to-music (MusicGen) and text-to-sound (AudioGen). Use when you need to generate music from text descriptions, create sound effects, or perform melody-conditioned music generation.",
+      "_path": "@@KIKI_SKILLS_DIR@@/audiocraft/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/audiocraft"
+    },
+    {
+      "name": "auto-paper-improvement-loop",
+      "description": "循环进行论文审查、修改与重新编译。",
+      "_path": "@@KIKI_SKILLS_DIR@@/auto-paper-improvement-loop/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/auto-paper-improvement-loop"
+    },
+    {
+      "name": "autodl-experiment",
+      "description": "Launch, monitor, troubleshoot, notify, and archive AutoDL or SeetaCloud SSH GPU experiments. Use for remote training/evaluation jobs, tmux/screen launches, conda/CUDA/HuggingFace setup, SMTP email progress alerts, failure alerts, result pullback, and append-only runbook notes. Do not use for local-only debugging unless a remote SSH GPU instance is involved.",
+      "_path": "@@KIKI_SKILLS_DIR@@/autodl-experiment/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/autodl-experiment"
+    },
+    {
+      "name": "autodl-manager",
+      "description": "Manage AutoDL cloud GPU instances with SSH connection, GPU status detection, disk monitoring, conda initialization, and network acceleration. Use when connecting to AutoDL, checking instance status, monitoring disk space, setting up new instances, or managing multiple AutoDL servers. Automatically detects GPU-enabled vs CPU-only instances.",
+      "_path": "@@KIKI_SKILLS_DIR@@/autodl-manager/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/autodl-manager"
+    },
+    {
+      "name": "autogpt-agents",
+      "description": "Autonomous AI agent platform for building and deploying continuous agents. Use when creating visual workflow agents, deploying persistent autonomous agents, or building complex multi-step AI automation systems.",
+      "_path": "@@KIKI_SKILLS_DIR@@/autogpt/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/autogpt"
+    },
+    {
+      "name": "awesome-ai-research-writing",
+      "description": "提供翻译、缩写、扩写、润色、图注和论文检查的提示模板入口。",
+      "_path": "@@KIKI_SKILLS_DIR@@/awesome-ai-research-writing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/awesome-ai-research-writing"
+    },
+    {
+      "name": "awq-quantization",
+      "description": "Activation-aware weight quantization for 4-bit LLM compression with 3x speedup and minimal accuracy loss. Use when deploying large models (7B-70B) on limited GPU memory, when you need faster inference than GPTQ with better accuracy preservation, or for instruction-tuned and multimodal models. MLSys 2024 Best Paper Award winner.",
+      "_path": "@@KIKI_SKILLS_DIR@@/awq/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/awq"
+    },
+    {
+      "name": "axolotl",
+      "description": "Expert guidance for fine-tuning LLMs with Axolotl - YAML configs, 100+ models, LoRA/QLoRA, DPO/KTO/ORPO/GRPO, multimodal support",
+      "_path": "@@KIKI_SKILLS_DIR@@/axolotl/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/axolotl"
+    },
+    {
+      "name": "backtest-integrity-audit",
+      "description": "检查回测中的数据泄漏、未来信息、过拟合、成本与样本外验证。",
+      "_path": "@@KIKI_SKILLS_DIR@@/backtest-integrity-audit/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/backtest-integrity-audit"
+    },
+    {
+      "name": "benchmark-paper-template",
+      "description": "围绕评估缺口、数据构建、评估框架和实证发现组织 benchmark 论文。",
+      "_path": "@@KIKI_SKILLS_DIR@@/benchmark-paper-template/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/benchmark-paper-template"
+    },
+    {
+      "name": "evaluating-code-models",
+      "description": "Evaluates code generation models across HumanEval, MBPP, MultiPL-E, and 15+ benchmarks with pass@k metrics. Use when benchmarking code models, comparing coding abilities, testing multi-language support, or measuring code generation quality. Industry standard from BigCode Project used by HuggingFace leaderboards.",
+      "_path": "@@KIKI_SKILLS_DIR@@/bigcode-evaluation-harness/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/bigcode-evaluation-harness"
+    },
+    {
+      "name": "quantizing-models-bitsandbytes",
+      "description": "Quantizes LLMs to 8-bit or 4-bit for 50-75% memory reduction with minimal accuracy loss. Use when GPU memory is limited, need to fit larger models, or want faster inference. Supports INT8, NF4, FP4 formats, QLoRA training, and 8-bit optimizers. Works with HuggingFace Transformers.",
+      "_path": "@@KIKI_SKILLS_DIR@@/bitsandbytes/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/bitsandbytes"
+    },
+    {
+      "name": "blip-2-vision-language",
+      "description": "Vision-language pre-training framework bridging frozen image encoders and LLMs. Use when you need image captioning, visual question answering, image-text retrieval, or multimodal chat with state-of-the-art zero-shot performance.",
+      "_path": "@@KIKI_SKILLS_DIR@@/blip-2/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/blip-2"
+    },
+    {
+      "name": "brainstorming-research-ideas",
+      "description": "Guides researchers through structured ideation frameworks to discover high-impact research directions. Use when exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work.",
+      "_path": "@@KIKI_SKILLS_DIR@@/brainstorming-research-ideas/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/brainstorming-research-ideas"
+    },
+    {
+      "name": "chroma",
+      "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source projects.",
+      "_path": "@@KIKI_SKILLS_DIR@@/chroma/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/chroma"
+    },
+    {
+      "name": "citation-audit",
+      "description": "检查引用是否真实、作者年份是否准确、被引论文是否支持对应论断。",
+      "_path": "@@KIKI_SKILLS_DIR@@/citation-audit/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/citation-audit"
+    },
+    {
+      "name": "clip",
+      "description": "OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, content moderation, or vision-language tasks without fine-tuning. Best for general-purpose image understanding.",
+      "_path": "@@KIKI_SKILLS_DIR@@/clip/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/clip"
+    },
+    {
+      "name": "constitutional-ai",
+      "description": "Anthropic's method for training harmless AI through self-improvement. Two-phase approach - supervised learning with self-critique/revision, then RLAIF (RL from AI Feedback). Use for safety alignment, reducing harmful outputs without human labels. Powers Claude's safety system.",
+      "_path": "@@KIKI_SKILLS_DIR@@/constitutional-ai/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/constitutional-ai"
+    },
+    {
+      "name": "evaluating-cosmos-policy",
+      "description": "Evaluates NVIDIA Cosmos Policy on LIBERO and RoboCasa simulation environments. Use when setting up cosmos-policy for robot manipulation evaluation, running headless GPU evaluations with EGL rendering, or profiling inference latency on cluster or local GPU machines.",
+      "_path": "@@KIKI_SKILLS_DIR@@/cosmos-policy/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/cosmos-policy"
+    },
+    {
+      "name": "craft-scientific-figure-prompts",
+      "description": "Analyze reference figures and their prompts, extract transferable visual and organizational grammar, maintain a project-wide style profile across multiple figures, and produce robust model-agnostic prompts for scientific overview figures, method diagrams, architecture schematics, graphical abstracts, and research posters. Use when Codex must learn or preserve figure style, adapt it to a paper, thesis, proposal, or technical project, rewrite or audit a long image-generation prompt, keep a multi-figure project visually consistent, preserve scientific evidence states, or iteratively improve a generated figure without copying the reference's scientific content.",
+      "_path": "@@KIKI_SKILLS_DIR@@/craft-scientific-figure-prompts/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/craft-scientific-figure-prompts"
+    },
+    {
+      "name": "creating-elegantpaper-reports",
+      "description": "Use when a user requests a human-readable Chinese or English report, midterm or progress report, experiment report, mentor or lab update, Overleaf-ready LaTeX source, printable PDF, or a decision between transient Markdown notes and a formal ElegantPaper deliverable.",
+      "_path": "@@KIKI_SKILLS_DIR@@/creating-elegantpaper-reports/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/creating-elegantpaper-reports"
+    },
+    {
+      "name": "creating-research-meeting-reports",
+      "description": "Use when preparing a pre- or post-meeting research brief from notes, drafts, slides, tables, logs, or meeting decisions for supervisor, lab, project, or research-review discussions.",
+      "_path": "@@KIKI_SKILLS_DIR@@/creating-research-meeting-reports/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/creating-research-meeting-reports"
+    },
+    {
+      "name": "creative-thinking-for-research",
+      "description": "Applies cognitive science frameworks for creative thinking to CS and AI research ideation. Use when seeking genuinely novel research directions by leveraging combinatorial creativity, analogical reasoning, constraint manipulation, and other empirically grounded creative strategies.",
+      "_path": "@@KIKI_SKILLS_DIR@@/creative-thinking-for-research/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/creative-thinking-for-research"
+    },
+    {
+      "name": "crewai-multi-agent",
+      "description": "Multi-agent orchestration framework for autonomous AI collaboration. Use when building teams of specialized agents working together on complex tasks, when you need role-based agent collaboration with memory, or for production workflows requiring sequential/hierarchical execution. Built without LangChain dependencies for lean, fast execution.",
+      "_path": "@@KIKI_SKILLS_DIR@@/crewai/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/crewai"
+    },
+    {
+      "name": "deep-research",
+      "description": "覆盖问题定义、文献搜索、证据综合和研究报告的多代理流程。",
+      "_path": "@@KIKI_SKILLS_DIR@@/deep-research/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/deep-research"
+    },
+    {
+      "name": "deepspeed",
+      "description": "Expert guidance for distributed training with DeepSpeed - ZeRO optimization stages, pipeline parallelism, FP16/BF16/FP8, 1-bit Adam, sparse attention",
+      "_path": "@@KIKI_SKILLS_DIR@@/deepspeed/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/deepspeed"
+    },
+    {
+      "name": "dspy",
+      "description": "Build complex AI systems with declarative programming, optimize prompts automatically, create modular RAG systems and agents with DSPy - Stanford NLP's framework for systematic LM programming",
+      "_path": "@@KIKI_SKILLS_DIR@@/dspy/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/dspy"
+    },
+    {
+      "name": "experiment-audit",
+      "description": "审查评估代码与结果来源，定位伪标签、异常归一化和无来源结果。",
+      "_path": "@@KIKI_SKILLS_DIR@@/experiment-audit/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/experiment-audit"
+    },
+    {
+      "name": "experiment-integrity-audit",
+      "description": "检查数据泄漏、划分、基线公平性、指标、统计与可复现性。",
+      "_path": "@@KIKI_SKILLS_DIR@@/experiment-integrity-audit/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/experiment-integrity-audit"
+    },
+    {
+      "name": "experiment-plan",
+      "description": "把研究主张转化为实验矩阵、评估协议、运行顺序和算力预算。",
+      "_path": "@@KIKI_SKILLS_DIR@@/experiment-plan/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/experiment-plan"
+    },
+    {
+      "name": "factor-alpha-lab",
+      "description": "研究因子与信号，分析 IC、衰减、换手和中性化。",
+      "_path": "@@KIKI_SKILLS_DIR@@/factor-alpha-lab/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/factor-alpha-lab"
+    },
+    {
+      "name": "faiss",
+      "description": "Facebook's library for efficient similarity search and clustering of dense vectors. Supports billions of vectors, GPU acceleration, and various index types (Flat, IVF, HNSW). Use for fast k-NN search, large-scale vector retrieval, or when you need pure similarity search without metadata. Best for high-performance applications.",
+      "_path": "@@KIKI_SKILLS_DIR@@/faiss/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/faiss"
+    },
+    {
+      "name": "figure-designer",
+      "description": "规划 Figure 1、方法总览图和实验图的布局、标注与信息结构。",
+      "_path": "@@KIKI_SKILLS_DIR@@/figure-designer/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/figure-designer"
+    },
+    {
+      "name": "figure-spec",
+      "description": "把结构化 JSON 图形规格渲染成可编辑 SVG 架构图或流程图。",
+      "_path": "@@KIKI_SKILLS_DIR@@/figure-spec/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/figure-spec"
+    },
+    {
+      "name": "figures4papers",
+      "description": "把科研绘图请求转到 figures4papers 示例与对应绘图技能。",
+      "_path": "@@KIKI_SKILLS_DIR@@/figures4papers/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/figures4papers"
+    },
+    {
+      "name": "optimizing-attention-flash",
+      "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory issues with attention, or need faster inference. Supports PyTorch native SDPA, flash-attn library, H100 FP8, and sliding window attention.",
+      "_path": "@@KIKI_SKILLS_DIR@@/flash-attention/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/flash-attention"
+    },
+    {
+      "name": "gguf-quantization",
+      "description": "GGUF format and llama.cpp quantization for efficient CPU/GPU inference. Use when deploying models on consumer hardware, Apple Silicon, or when needing flexible quantization from 2-8 bit without GPU requirements.",
+      "_path": "@@KIKI_SKILLS_DIR@@/gguf/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/gguf"
+    },
+    {
+      "name": "gh-address-comments",
+      "description": "读取 PR 审查反馈并处理选定的修改意见。",
+      "_path": "@@KIKI_SKILLS_DIR@@/gh-address-comments/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/gh-address-comments"
+    },
+    {
+      "name": "gh-fix-ci",
+      "description": "检查 GitHub Actions 失败日志、定位原因并修复。",
+      "_path": "@@KIKI_SKILLS_DIR@@/gh-fix-ci/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/gh-fix-ci"
+    },
+    {
+      "name": "github",
+      "description": "浏览与总结仓库、PR、issue，并选择相应专项流程。",
+      "_path": "@@KIKI_SKILLS_DIR@@/github/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/github"
+    },
+    {
+      "name": "gptq",
+      "description": "Post-training 4-bit quantization for LLMs with minimal accuracy loss. Use for deploying large models (70B, 405B) on consumer GPUs, when you need 4× memory reduction with <2% perplexity degradation, or for faster inference (3-4× speedup) vs FP16. Integrates with transformers and PEFT for QLoRA fine-tuning.",
+      "_path": "@@KIKI_SKILLS_DIR@@/gptq/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/gptq"
+    },
+    {
+      "name": "grant-proposal",
+      "description": "根据研究设想和文献起草基金申请，覆盖多国资助项目格式。",
+      "_path": "@@KIKI_SKILLS_DIR@@/grant-proposal/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/grant-proposal"
+    },
+    {
+      "name": "grpo-rl-training",
+      "description": "Expert guidance for GRPO/RL fine-tuning with TRL for reasoning and task-specific model training",
+      "_path": "@@KIKI_SKILLS_DIR@@/grpo-rl-training/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/grpo-rl-training"
+    },
+    {
+      "name": "guidance",
+      "description": "Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework",
+      "_path": "@@KIKI_SKILLS_DIR@@/guidance/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/guidance"
+    },
+    {
+      "name": "hqq-quantization",
+      "description": "Half-Quadratic Quantization for LLMs without calibration data. Use when quantizing models to 4/3/2-bit precision without needing calibration datasets, for fast quantization workflows, or when deploying with vLLM or HuggingFace Transformers.",
+      "_path": "@@KIKI_SKILLS_DIR@@/hqq/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/hqq"
+    },
+    {
+      "name": "huggingface-tokenizers",
+      "description": "Fast tokenizers optimized for research and production. Rust-based implementation tokenizes 1GB in <20 seconds. Supports BPE, WordPiece, and Unigram algorithms. Train custom vocabularies, track alignments, handle padding/truncation. Integrates seamlessly with transformers. Use when you need high-performance tokenization or custom tokenizer training.",
+      "_path": "@@KIKI_SKILLS_DIR@@/huggingface-tokenizers/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/huggingface-tokenizers"
+    },
+    {
+      "name": "idea-evaluator",
+      "description": "评估研究 idea 的致命缺陷、创新性、可行性与投入成本。",
+      "_path": "@@KIKI_SKILLS_DIR@@/idea-evaluator/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/idea-evaluator"
+    },
+    {
+      "name": "instructor",
+      "description": "Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-tested structured output library",
+      "_path": "@@KIKI_SKILLS_DIR@@/instructor/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/instructor"
+    },
+    {
+      "name": "intro-drafter",
+      "description": "把研究动机组织成六段式 Introduction 提纲。",
+      "_path": "@@KIKI_SKILLS_DIR@@/intro-drafter/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/intro-drafter"
+    },
+    {
+      "name": "joinquant-research-workflow",
+      "description": "面向聚宽 API 和回测脚本的研究工作流。",
+      "_path": "@@KIKI_SKILLS_DIR@@/joinquant-research-workflow/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/joinquant-research-workflow"
+    },
+    {
+      "name": "kiki-paper-workflow",
+      "description": "Kiki Custom 论文全流程：由研究报告生成大纲、图表、正文和 PDF。用于明确选择这套完整流水线的任务；日常论文修改优先使用已有 kiki-paper-writing。",
+      "_path": "@@KIKI_SKILLS_DIR@@/kiki-paper-workflow/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/kiki-paper-workflow"
+    },
+    {
+      "name": "kiki-paper-writing",
+      "description": "Evidence-grounded planning, drafting, revision, comparison, and final audit for AI/ML and technical research papers. Use when writing from an idea or outline; revising an Abstract, Introduction, Method, Figure Caption, Related Work, Experiments, Conclusion, or Table; choosing among versions; calibrating claims; formalizing notation; processing iterative user feedback; or aligning story, evidence, figures, tables, citations, and LaTeX across a paper.",
+      "_path": "@@KIKI_SKILLS_DIR@@/kiki-paper-writing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/kiki-paper-writing"
+    },
+    {
+      "name": "knowledge-distillation",
+      "description": "Compress large language models using knowledge distillation from teacher to student models. Use when deploying smaller models with retained performance, transferring GPT-4 capabilities to open-source models, or reducing inference costs. Covers temperature scaling, soft targets, reverse KLD, logit distillation, and MiniLLM training strategies.",
+      "_path": "@@KIKI_SKILLS_DIR@@/knowledge-distillation/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/knowledge-distillation"
+    },
+    {
+      "name": "lambda-labs-gpu-cloud",
+      "description": "Reserved and on-demand GPU cloud instances for ML training and inference. Use when you need dedicated GPU instances with simple SSH access, persistent filesystems, or high-performance multi-node clusters for large-scale training.",
+      "_path": "@@KIKI_SKILLS_DIR@@/lambda-labs/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/lambda-labs"
+    },
+    {
+      "name": "langchain",
+      "description": "Framework for building LLM-powered applications with agents, chains, and RAG. Supports multiple providers (OpenAI, Anthropic, Google), 500+ integrations, ReAct agents, tool calling, memory management, and vector store retrieval. Use for building chatbots, question-answering systems, autonomous agents, or RAG applications. Best for rapid prototyping and production deployments.",
+      "_path": "@@KIKI_SKILLS_DIR@@/langchain/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/langchain"
+    },
+    {
+      "name": "langsmith-observability",
+      "description": "LLM observability platform for tracing, evaluation, and monitoring. Use when debugging LLM applications, evaluating model outputs against datasets, monitoring production systems, or building systematic testing pipelines for AI applications.",
+      "_path": "@@KIKI_SKILLS_DIR@@/langsmith/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/langsmith"
+    },
+    {
+      "name": "lean-modular-coding",
+      "description": "Use when creating, changing, refactoring, or reviewing code in any language, especially when work may produce oversized entry points, fragmented files, speculative abstractions, defensive scaffolding, or disproportionate testing.",
+      "_path": "@@KIKI_SKILLS_DIR@@/lean-modular-coding/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/lean-modular-coding"
+    },
+    {
+      "name": "lightweight-development-verification",
+      "description": "Use when planning, implementing, reviewing, testing, building, linting, running E2E, checking generated-file hashes, or coordinating subagents for software changes where validation should match risk and duplicate gates should be avoided.",
+      "_path": "@@KIKI_SKILLS_DIR@@/lightweight-development-verification/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/lightweight-development-verification"
+    },
+    {
+      "name": "implementing-llms-litgpt",
+      "description": "Implements and trains LLMs using Lightning AI's LitGPT with 20+ pretrained architectures (Llama, Gemma, Phi, Qwen, Mistral). Use when need clean model implementations, educational understanding of architectures, or production fine-tuning with LoRA/QLoRA. Single-file implementations, no abstraction layers.",
+      "_path": "@@KIKI_SKILLS_DIR@@/litgpt/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/litgpt"
+    },
+    {
+      "name": "llama-cpp",
+      "description": "Runs LLM inference on CPU, Apple Silicon, and consumer GPUs without NVIDIA hardware. Use for edge deployment, M1/M2/M3 Macs, AMD/Intel GPUs, or when CUDA is unavailable. Supports GGUF quantization (1.5-8 bit) for reduced memory and 4-10× speedup vs PyTorch on CPU.",
+      "_path": "@@KIKI_SKILLS_DIR@@/llama-cpp/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/llama-cpp"
+    },
+    {
+      "name": "llama-factory",
+      "description": "Expert guidance for fine-tuning LLMs with LLaMA-Factory - WebUI no-code, 100+ models, 2/3/4/5/6/8-bit QLoRA, multimodal support",
+      "_path": "@@KIKI_SKILLS_DIR@@/llama-factory/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/llama-factory"
+    },
+    {
+      "name": "llamaguard",
+      "description": "Meta's 7-8B specialized moderation model for LLM input/output filtering. 6 safety categories - violence/hate, sexual content, weapons, substances, self-harm, criminal planning. 94-95% accuracy. Deploy with vLLM, HuggingFace, Sagemaker. Integrates with NeMo Guardrails.",
+      "_path": "@@KIKI_SKILLS_DIR@@/llamaguard/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/llamaguard"
+    },
+    {
+      "name": "llamaindex",
+      "description": "Data framework for building LLM applications with RAG. Specializes in document ingestion (300+ connectors), indexing, and querying. Features vector indices, query engines, agents, and multi-modal support. Use for document Q&A, chatbots, knowledge retrieval, or building RAG pipelines. Best for data-centric LLM applications.",
+      "_path": "@@KIKI_SKILLS_DIR@@/llamaindex/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/llamaindex"
+    },
+    {
+      "name": "llava",
+      "description": "Large Language and Vision Assistant. Enables visual instruction tuning and image-based conversations. Combines CLIP vision encoder with Vicuna/LLaMA language models. Supports multi-turn image chat, visual question answering, and instruction following. Use for vision-language chatbots or image understanding tasks. Best for conversational image analysis.",
+      "_path": "@@KIKI_SKILLS_DIR@@/llava/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/llava"
+    },
+    {
+      "name": "evaluating-llms-harness",
+      "description": "Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs.",
+      "_path": "@@KIKI_SKILLS_DIR@@/lm-evaluation-harness/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/lm-evaluation-harness"
+    },
+    {
+      "name": "long-context",
+      "description": "Extend context windows of transformer models using RoPE, YaRN, ALiBi, and position interpolation techniques. Use when processing long documents (32k-128k+ tokens), extending pre-trained models beyond original context limits, or implementing efficient positional encodings. Covers rotary embeddings, attention biases, interpolation methods, and extrapolation strategies for LLMs.",
+      "_path": "@@KIKI_SKILLS_DIR@@/long-context/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/long-context"
+    },
+    {
+      "name": "mamba-architecture",
+      "description": "State-space model with O(n) complexity vs Transformers' O(n²). 5× faster inference, million-token sequences, no KV cache. Selective SSM with hardware-aware design. Mamba-1 (d_state=16) and Mamba-2 (d_state=128, multi-head). Models 130M-2.8B on HuggingFace.",
+      "_path": "@@KIKI_SKILLS_DIR@@/mamba/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/mamba"
+    },
+    {
+      "name": "training-llms-megatron",
+      "description": "Trains large language models (2B-462B parameters) using NVIDIA Megatron-Core with advanced parallelism strategies. Use when training models >1B parameters, need maximum GPU efficiency (47% MFU on H100), or require tensor/pipeline/sequence/context/expert parallelism. Production-ready framework used for Nemotron, LLaMA, DeepSeek.",
+      "_path": "@@KIKI_SKILLS_DIR@@/megatron-core/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/megatron-core"
+    },
+    {
+      "name": "memory-manager",
+      "description": "Manage hierarchical memory system with daily entries, weekly/monthly compaction, and long-term knowledge base. Use when creating daily logs, reviewing/summarizing past memories, maintaining MEMORY.md, searching memory, or organizing the memory directory structure.",
+      "_path": "@@KIKI_SKILLS_DIR@@/memory-manager/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/memory-manager"
+    },
+    {
+      "name": "mermaid-diagram",
+      "description": "生成 Mermaid 流程图、时序图、类图等文本图形。",
+      "_path": "@@KIKI_SKILLS_DIR@@/mermaid-diagram/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/mermaid-diagram"
+    },
+    {
+      "name": "miles-rl-training",
+      "description": "Provides guidance for enterprise-grade RL training using miles, a production-ready fork of slime. Use when training large MoE models with FP8/INT4, needing train-inference alignment, or requiring speculative RL for maximum throughput.",
+      "_path": "@@KIKI_SKILLS_DIR@@/miles/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/miles"
+    },
+    {
+      "name": "mlflow",
+      "description": "Track ML experiments, manage model registry with versioning, deploy models to production, and reproduce experiments with MLflow - framework-agnostic ML lifecycle platform",
+      "_path": "@@KIKI_SKILLS_DIR@@/mlflow/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/mlflow"
+    },
+    {
+      "name": "modal-serverless-gpu",
+      "description": "Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic scaling.",
+      "_path": "@@KIKI_SKILLS_DIR@@/modal/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/modal"
+    },
+    {
+      "name": "model-merging",
+      "description": "Merge multiple fine-tuned models using mergekit to combine capabilities without retraining. Use when creating specialized models by blending domain-specific expertise (math + coding + chat), improving performance beyond single models, or experimenting rapidly with model variants. Covers SLERP, TIES-Merging, DARE, Task Arithmetic, linear merging, and production deployment strategies.",
+      "_path": "@@KIKI_SKILLS_DIR@@/model-merging/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/model-merging"
+    },
+    {
+      "name": "model-pruning",
+      "description": "Reduce LLM size and accelerate inference using pruning techniques like Wanda and SparseGPT. Use when compressing models without retraining, achieving 50% sparsity with minimal accuracy loss, or enabling faster inference on hardware accelerators. Covers unstructured pruning, structured pruning, N:M sparsity, magnitude pruning, and one-shot methods.",
+      "_path": "@@KIKI_SKILLS_DIR@@/model-pruning/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/model-pruning"
+    },
+    {
+      "name": "moe-training",
+      "description": "Train Mixture of Experts (MoE) models using DeepSpeed or HuggingFace. Use when training large-scale models with limited compute (5× cost reduction vs dense models), implementing sparse architectures like Mixtral 8x7B or DeepSeek-V3, or scaling model capacity without proportional compute increase. Covers MoE architectures, routing mechanisms, load balancing, expert parallelism, and inference optimization.",
+      "_path": "@@KIKI_SKILLS_DIR@@/moe-training/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/moe-training"
+    },
+    {
+      "name": "monitor-experiment",
+      "description": "查看运行中实验的进度、日志和输出结果。",
+      "_path": "@@KIKI_SKILLS_DIR@@/monitor-experiment/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/monitor-experiment"
+    },
+    {
+      "name": "nanogpt",
+      "description": "Educational GPT implementation in ~300 lines. Reproduces GPT-2 (124M) on OpenWebText. Clean, hackable code for learning transformers. By Andrej Karpathy. Perfect for understanding GPT architecture from scratch. Train on Shakespeare (CPU) or OpenWebText (multi-GPU).",
+      "_path": "@@KIKI_SKILLS_DIR@@/nanogpt/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/nanogpt"
+    },
+    {
+      "name": "nature-figure",
+      "description": "规范 matplotlib 科研图的字体、配色、多面板布局和矢量导出。",
+      "_path": "@@KIKI_SKILLS_DIR@@/nature-figure/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/nature-figure"
+    },
+    {
+      "name": "nature-polishing",
+      "description": "改进学术英语、论述节奏、审慎措辞与 Nature 风格表达。",
+      "_path": "@@KIKI_SKILLS_DIR@@/nature-polishing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/nature-polishing"
+    },
+    {
+      "name": "nemo-curator",
+      "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16× faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs with RAPIDS. Use for preparing high-quality training datasets, cleaning web data, or deduplicating large corpora.",
+      "_path": "@@KIKI_SKILLS_DIR@@/nemo-curator/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/nemo-curator"
+    },
+    {
+      "name": "nemo-evaluator-sdk",
+      "description": "Evaluates LLMs across 100+ benchmarks from 18+ harnesses (MMLU, HumanEval, GSM8K, safety, VLM) with multi-backend execution. Use when needing scalable evaluation on local Docker, Slurm HPC, or cloud platforms. NVIDIA's enterprise-grade platform with container-first architecture for reproducible benchmarking.",
+      "_path": "@@KIKI_SKILLS_DIR@@/nemo-evaluator/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/nemo-evaluator"
+    },
+    {
+      "name": "nemo-guardrails",
+      "description": "NVIDIA's runtime safety framework for LLM applications. Features jailbreak detection, input/output validation, fact-checking, hallucination detection, PII filtering, toxicity detection. Uses Colang 2.0 DSL for programmable rails. Production-ready, runs on T4 GPU.",
+      "_path": "@@KIKI_SKILLS_DIR@@/nemo-guardrails/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/nemo-guardrails"
+    },
+    {
+      "name": "nnsight-remote-interpretability",
+      "description": "Provides guidance for interpreting and manipulating neural network internals using nnsight with optional NDIF remote execution. Use when needing to run interpretability experiments on massive models (70B+) without local GPU resources, or when working with any PyTorch architecture.",
+      "_path": "@@KIKI_SKILLS_DIR@@/nnsight/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/nnsight"
+    },
+    {
+      "name": "novelty-check",
+      "description": "拆解创新主张，检索近邻工作，判断与已有研究的差异。",
+      "_path": "@@KIKI_SKILLS_DIR@@/novelty-check/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/novelty-check"
+    },
+    {
+      "name": "ontology",
+      "description": "Typed knowledge graph for structured agent memory and composable skills. Use when creating/querying entities (Person, Project, Task, Event, Document), linking related objects, enforcing constraints, planning multi-step actions as graph transformations, or when skills need to share state. Trigger on \"remember\", \"what do I know about\", \"link X to Y\", \"show dependencies\", entity CRUD, or cross-skill data access.",
+      "_path": "@@KIKI_SKILLS_DIR@@/ontology/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/ontology"
+    },
+    {
+      "name": "fine-tuning-serving-openpi",
+      "description": "Fine-tune and serve Physical Intelligence OpenPI models (pi0, pi0-fast, pi0.5) using JAX or PyTorch backends for robot policy inference across ALOHA, DROID, and LIBERO environments. Use when adapting pi0 models to custom datasets, converting JAX checkpoints to PyTorch, running policy inference servers, or debugging norm stats and GPU memory issues.",
+      "_path": "@@KIKI_SKILLS_DIR@@/openpi/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/openpi"
+    },
+    {
+      "name": "openrlhf-training",
+      "description": "High-performance RLHF framework with Ray+vLLM acceleration. Use for PPO, GRPO, RLOO, DPO training of large models (7B-70B+). Built on Ray, vLLM, ZeRO-3. 2× faster than DeepSpeedChat with distributed architecture and GPU resource sharing.",
+      "_path": "@@KIKI_SKILLS_DIR@@/openrlhf/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/openrlhf"
+    },
+    {
+      "name": "fine-tuning-openvla-oft",
+      "description": "Fine-tunes and evaluates OpenVLA-OFT and OpenVLA-OFT+ policies for robot action generation with continuous action heads, LoRA adaptation, and FiLM conditioning on LIBERO simulation and ALOHA real-world setups. Use when reproducing OpenVLA-OFT paper results, training custom VLA action heads (L1 or diffusion), deploying server-client inference for ALOHA, or debugging normalization, LoRA merge, and cross-GPU issues.",
+      "_path": "@@KIKI_SKILLS_DIR@@/openvla-oft/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/openvla-oft"
+    },
+    {
+      "name": "outlines",
+      "description": "Guarantee valid JSON/XML/code structure during generation, use Pydantic models for type-safe outputs, support local models (Transformers, vLLM), and maximize inference speed with Outlines - dottxt.ai's structured generation library",
+      "_path": "@@KIKI_SKILLS_DIR@@/outlines/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/outlines"
+    },
+    {
+      "name": "overleaf-paper-sync",
+      "description": "Orchestrate evidence-grounded LaTeX paper planning and revision through a review-gated Overleaf Git workflow. Use when a user wants to write or revise an Overleaf paper one paragraph, caption, equation block, table, or other small reviewable slice at a time; push every revision candidate to Overleaf for web review; wait for explicit approval before continuing; or reconcile feedback and web edits without batching or overwriting accepted text.",
+      "_path": "@@KIKI_SKILLS_DIR@@/overleaf-paper-sync/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/overleaf-paper-sync"
+    },
+    {
+      "name": "overleaf-sync",
+      "description": "复用本机已有 Overleaf 授权与项目配置，同步论文，并衔接 Kiki 写作流程。",
+      "_path": "@@KIKI_SKILLS_DIR@@/overleaf-sync/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/overleaf-sync"
+    },
+    {
+      "name": "paper-claim-audit",
+      "description": "逐项核对论文数字、比较和范围表述是否与原始结果一致。",
+      "_path": "@@KIKI_SKILLS_DIR@@/paper-claim-audit/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/paper-claim-audit"
+    },
+    {
+      "name": "paper-compile",
+      "description": "编译 LaTeX、处理编译错误并检查 PDF 输出。",
+      "_path": "@@KIKI_SKILLS_DIR@@/paper-compile/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/paper-compile"
+    },
+    {
+      "name": "paper-figure",
+      "description": "从实验结果生成论文图表。",
+      "_path": "@@KIKI_SKILLS_DIR@@/paper-figure/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/paper-figure"
+    },
+    {
+      "name": "paper-illustration",
+      "description": "使用 Codex 原生图像工具制作和修改论文插图，按需衔接可编辑结构图与科研绘图。",
+      "_path": "@@KIKI_SKILLS_DIR@@/paper-illustration/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/paper-illustration"
+    },
+    {
+      "name": "paper-plan",
+      "description": "根据研究结论与实验结果生成论文大纲。",
+      "_path": "@@KIKI_SKILLS_DIR@@/paper-plan/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/paper-plan"
+    },
+    {
+      "name": "paper-poster",
+      "description": "从论文生成会议海报，面向 A0/A1 PDF、PPTX 与 SVG。",
+      "_path": "@@KIKI_SKILLS_DIR@@/paper-poster/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/paper-poster"
+    },
+    {
+      "name": "paper-slides",
+      "description": "从论文生成 Beamer/PDF、可编辑 PPTX、讲稿和演讲备注。",
+      "_path": "@@KIKI_SKILLS_DIR@@/paper-slides/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/paper-slides"
+    },
+    {
+      "name": "paper-write",
+      "description": "按照大纲逐节起草 LaTeX 论文正文。",
+      "_path": "@@KIKI_SKILLS_DIR@@/paper-write/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/paper-write"
+    },
+    {
+      "name": "peft-fine-tuning",
+      "description": "Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter serving. HuggingFace's official library integrated with transformers ecosystem.",
+      "_path": "@@KIKI_SKILLS_DIR@@/peft/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/peft"
+    },
+    {
+      "name": "phoenix-observability",
+      "description": "Open-source AI observability platform for LLM tracing, evaluation, and monitoring. Use when debugging LLM applications with detailed traces, running evaluations on datasets, or monitoring production AI systems with real-time insights.",
+      "_path": "@@KIKI_SKILLS_DIR@@/phoenix/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/phoenix"
+    },
+    {
+      "name": "pinecone",
+      "description": "Managed vector database for production AI applications. Fully managed, auto-scaling, with hybrid search (dense + sparse), metadata filtering, and namespaces. Low latency (<100ms p95). Use for production RAG, recommendation systems, or semantic search at scale. Best for serverless, managed infrastructure.",
+      "_path": "@@KIKI_SKILLS_DIR@@/pinecone/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/pinecone"
+    },
+    {
+      "name": "portfolio-risk-attribution",
+      "description": "分析投资组合风险、暴露、收益归因和约束。",
+      "_path": "@@KIKI_SKILLS_DIR@@/portfolio-risk-attribution/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/portfolio-risk-attribution"
+    },
+    {
+      "name": "pre-submission-reviewer",
+      "description": "按严重程度列出论文逻辑、语言、LaTeX、图表和表达问题。",
+      "_path": "@@KIKI_SKILLS_DIR@@/pre-submission-reviewer/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/pre-submission-reviewer"
+    },
+    {
+      "name": "project-intake-autopilot",
+      "description": "接手现有项目，检查文件、识别当前状态并归纳下一步。",
+      "_path": "@@KIKI_SKILLS_DIR@@/project-intake-autopilot/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/project-intake-autopilot"
+    },
+    {
+      "name": "prompt-clarifier",
+      "description": "Use when user input has Chinese-English mixing, pinyin typos, front/back nasal confusion (前后鼻音 ing/in eng/en), homophones (同音字 的地得 在再), missing punctuation, run-on sentences, or vague instructions. Rewrites messy input into clear, actionable English.",
+      "_path": "@@KIKI_SKILLS_DIR@@/prompt-clarifier/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/prompt-clarifier"
+    },
+    {
+      "name": "prompt-guard",
+      "description": "Meta's 86M prompt injection and jailbreak detector. Filters malicious prompts and third-party data for LLM apps. 99%+ TPR, <1% FPR. Fast (<2ms GPU). Multilingual (8 languages). Deploy with HuggingFace or batch processing for RAG security.",
+      "_path": "@@KIKI_SKILLS_DIR@@/prompt-guard/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/prompt-guard"
+    },
+    {
+      "name": "proof-checker",
+      "description": "检查 LaTeX 数学证明的漏洞，补充推导并复核。",
+      "_path": "@@KIKI_SKILLS_DIR@@/proof-checker/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/proof-checker"
+    },
+    {
+      "name": "pua",
+      "description": "Forces high-agency exhaustive problem-solving with corporate PUA pressure. Triggers on user frustration, repeated failures, passive behavior, or quality complaints. Common triggers: try harder, figure it out, stop giving up, you keep failing, stop spinning, you broke it, 加油, 别偷懒, 你再试试, 又错了, 降智了, 你又在原地打转, 你把之前的改坏了, /pua. All task types.",
+      "_path": "@@KIKI_SKILLS_DIR@@/pua/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/pua"
+    },
+    {
+      "name": "pua-en",
+      "description": "英语版本：类似的问题解决流程，采用英语职场绩效话术。",
+      "_path": "@@KIKI_SKILLS_DIR@@/pua-en/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/pua-en"
+    },
+    {
+      "name": "pua-ja",
+      "description": "日语版本：类似的问题解决流程，采用日语职场话术。",
+      "_path": "@@KIKI_SKILLS_DIR@@/pua-ja/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/pua-ja"
+    },
+    {
+      "name": "pytorch-fsdp2",
+      "description": "Adds PyTorch FSDP2 (fully_shard) to training scripts with correct init, sharding, mixed precision/offload config, and distributed checkpointing. Use when models exceed single-GPU memory or when you need DTensor-based sharding with DeviceMesh.",
+      "_path": "@@KIKI_SKILLS_DIR@@/pytorch-fsdp2/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/pytorch-fsdp2"
+    },
+    {
+      "name": "pytorch-lightning",
+      "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. Use when you want clean training loops with built-in best practices.",
+      "_path": "@@KIKI_SKILLS_DIR@@/pytorch-lightning/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/pytorch-lightning"
+    },
+    {
+      "name": "pyvene-interventions",
+      "description": "Provides guidance for performing causal interventions on PyTorch models using pyvene's declarative intervention framework. Use when conducting causal tracing, activation patching, interchange intervention training, or testing causal hypotheses about model behavior.",
+      "_path": "@@KIKI_SKILLS_DIR@@/pyvene/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/pyvene"
+    },
+    {
+      "name": "qdrant-vector-search",
+      "description": "High-performance vector similarity search engine for RAG and semantic search. Use when building production RAG systems requiring fast nearest neighbor search, hybrid search with filtering, or scalable vector storage with Rust-powered performance.",
+      "_path": "@@KIKI_SKILLS_DIR@@/qdrant/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/qdrant"
+    },
+    {
+      "name": "quant-ai-paper-scout",
+      "description": "检索 AI/ML 论文，提炼适用于量化金融的研究思路。",
+      "_path": "@@KIKI_SKILLS_DIR@@/quant-ai-paper-scout/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/quant-ai-paper-scout"
+    },
+    {
+      "name": "quant-ai-research-autopilot",
+      "description": "组织 AI 量化方向的文献、idea、查新和实验设计。",
+      "_path": "@@KIKI_SKILLS_DIR@@/quant-ai-research-autopilot/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/quant-ai-research-autopilot"
+    },
+    {
+      "name": "quant-data-pipeline-audit",
+      "description": "检查行情、基本面、特征和时点一致性等量化数据管线。",
+      "_path": "@@KIKI_SKILLS_DIR@@/quant-data-pipeline-audit/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/quant-data-pipeline-audit"
+    },
+    {
+      "name": "quant-research-routing",
+      "description": "把量化研究请求分派到因子、回测、数据或组合分析流程。",
+      "_path": "@@KIKI_SKILLS_DIR@@/quant-research-routing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/quant-research-routing"
+    },
+    {
+      "name": "ray-data",
+      "description": "Scalable data processing for ML workloads. Streaming execution across CPU/GPU, supports Parquet/CSV/JSON/images. Integrates with Ray Train, PyTorch, TensorFlow. Scales from single machine to 100s of nodes. Use for batch inference, data preprocessing, multi-modal data loading, or distributed ETL pipelines.",
+      "_path": "@@KIKI_SKILLS_DIR@@/ray-data/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/ray-data"
+    },
+    {
+      "name": "ray-train",
+      "description": "Distributed training orchestration across clusters. Scales PyTorch/TensorFlow/HuggingFace from laptop to 1000s of nodes. Built-in hyperparameter tuning with Ray Tune, fault tolerance, elastic scaling. Use when training massive models across multiple machines or running distributed hyperparameter sweeps.",
+      "_path": "@@KIKI_SKILLS_DIR@@/ray-train/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/ray-train"
+    },
+    {
+      "name": "rebuttal",
+      "description": "拆解审稿意见，基于已有证据起草回复并管理后续轮次。",
+      "_path": "@@KIKI_SKILLS_DIR@@/rebuttal/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/rebuttal"
+    },
+    {
+      "name": "rebuttalstudio",
+      "description": "衔接 RebuttalStudio 的逐点回复、压缩、润色与多轮讨论流程。",
+      "_path": "@@KIKI_SKILLS_DIR@@/rebuttalstudio/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/rebuttalstudio"
+    },
+    {
+      "name": "research-algorithm-checker",
+      "description": "对照算法或论文检查实现、张量形状、数值逻辑、边界和性能。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-algorithm-checker/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-algorithm-checker"
+    },
+    {
+      "name": "research-code-autopilot",
+      "description": "统筹科研代码、训练评估脚本、复现、日志和故障处理。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-code-autopilot/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-code-autopilot"
+    },
+    {
+      "name": "research-lit",
+      "description": "搜索相关工作、分析论文并提炼研究脉络。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-lit/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-lit"
+    },
+    {
+      "name": "research-paper-writing",
+      "description": "改善 ML/CV/NLP 论文结构、段落衔接和审稿人阅读体验。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-paper-writing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-paper-writing"
+    },
+    {
+      "name": "research-progress-tracker",
+      "description": "用进度文档和实验登记表维护项目状态及下一步任务。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-progress-tracker/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-progress-tracker"
+    },
+    {
+      "name": "research-review",
+      "description": "调用独立代理对研究想法、论文或实验结果做批判性审查。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-review/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-review"
+    },
+    {
+      "name": "research-start-routing",
+      "description": "把科研启动与继续推进请求分派到进度、算法审查和任务执行技能。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-start-routing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-start-routing"
+    },
+    {
+      "name": "research-task-executor",
+      "description": "执行一个明确的科研代码或实验实现任务，并更新任务记录。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-task-executor/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-task-executor"
+    },
+    {
+      "name": "research-wiki",
+      "description": "关联论文、想法、实验与结论，维护持久化研究知识库。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-wiki/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-wiki"
+    },
+    {
+      "name": "research-wiki-organization-prompts",
+      "description": "提供知识库组织、论文摄入、领域地图和研究空白整理流程。",
+      "_path": "@@KIKI_SKILLS_DIR@@/research-wiki-organization-prompts/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/research-wiki-organization-prompts"
+    },
+    {
+      "name": "result-to-claim",
+      "description": "判断实验支持哪些结论、哪些结论需要收缩，以及还缺什么证据。",
+      "_path": "@@KIKI_SKILLS_DIR@@/result-to-claim/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/result-to-claim"
+    },
+    {
+      "name": "rwkv-architecture",
+      "description": "RNN+Transformer hybrid with O(n) inference. Linear time, infinite context, no KV cache. Train like GPT (parallel), infer like RNN (sequential). Linux Foundation AI project. Production at Windows, Office, NeMo. RWKV-7 (March 2025). Models up to 14B parameters.",
+      "_path": "@@KIKI_SKILLS_DIR@@/rwkv/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/rwkv"
+    },
+    {
+      "name": "sparse-autoencoder-training",
+      "description": "Provides guidance for training and analyzing Sparse Autoencoders (SAEs) using SAELens to decompose neural network activations into interpretable features. Use when discovering interpretable features, analyzing superposition, or studying monosemantic representations in language models.",
+      "_path": "@@KIKI_SKILLS_DIR@@/saelens/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/saelens"
+    },
+    {
+      "name": "scfm-paper-writing",
+      "description": "Write or revise single-cell foundation model papers using a local, section-aware literature library. Retrieve close scFM exemplars, compare scientific positioning, and adapt argument structure to the user's evidence; use alongside kiki-paper-writing for scGPT, Geneformer, cell representations, contrastive pretraining, or perturbation-model manuscripts.",
+      "_path": "@@KIKI_SKILLS_DIR@@/scfm-paper-writing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/scfm-paper-writing"
+    },
+    {
+      "name": "scientific-figure-making",
+      "description": "按 figures4papers 的风格制作柱状图、趋势图、热图等发表用图。",
+      "_path": "@@KIKI_SKILLS_DIR@@/scientific-figure-making/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/scientific-figure-making"
+    },
+    {
+      "name": "segment-anything-model",
+      "description": "Foundation model for image segmentation with zero-shot transfer. Use when you need to segment any object in images using points, boxes, or masks as prompts, or automatically generate all object masks in an image.",
+      "_path": "@@KIKI_SKILLS_DIR@@/segment-anything/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/segment-anything"
+    },
+    {
+      "name": "self-improvement",
+      "description": "Capture useful learnings from failures, user corrections, missing capabilities, outdated assumptions, and recurring workflow discoveries. Use when a command fails unexpectedly, the user says a prior answer was wrong, a better reusable pattern is found, or durable guidance should be promoted into AGENTS.md or a project learning log.",
+      "_path": "@@KIKI_SKILLS_DIR@@/self-improvement/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/self-improvement"
+    },
+    {
+      "name": "semantic-scholar",
+      "description": "检索已发表论文、引用关系、会议期刊和摘要信息。",
+      "_path": "@@KIKI_SKILLS_DIR@@/semantic-scholar/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/semantic-scholar"
+    },
+    {
+      "name": "sentence-transformers",
+      "description": "Framework for state-of-the-art sentence, text, and image embeddings. Provides 5000+ pre-trained models for semantic similarity, clustering, and retrieval. Supports multilingual, domain-specific, and multimodal models. Use for generating embeddings for RAG, semantic search, or similarity tasks. Best for production embedding generation.",
+      "_path": "@@KIKI_SKILLS_DIR@@/sentence-transformers/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/sentence-transformers"
+    },
+    {
+      "name": "sentencepiece",
+      "description": "Language-independent tokenizer treating text as raw Unicode. Supports BPE and Unigram algorithms. Fast (50k sentences/sec), lightweight (6MB memory), deterministic vocabulary. Used by T5, ALBERT, XLNet, mBART. Train on raw text without pre-tokenization. Use when you need multilingual support, CJK languages, or reproducible tokenization.",
+      "_path": "@@KIKI_SKILLS_DIR@@/sentencepiece/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/sentencepiece"
+    },
+    {
+      "name": "server-gpu-diagnosis",
+      "description": "排查 CUDA、GPU 可见性、环境、显存和服务器运行问题。",
+      "_path": "@@KIKI_SKILLS_DIR@@/server-gpu-diagnosis/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/server-gpu-diagnosis"
+    },
+    {
+      "name": "sglang",
+      "description": "Fast structured generation and serving for LLMs with RadixAttention prefix caching. Use for JSON/regex outputs, constrained decoding, agentic workflows with tool calls, or when you need 5× faster inference than vLLM with prefix sharing. Powers 300,000+ GPUs at xAI, AMD, NVIDIA, and LinkedIn.",
+      "_path": "@@KIKI_SKILLS_DIR@@/sglang/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/sglang"
+    },
+    {
+      "name": "simpo-training",
+      "description": "Simple Preference Optimization for LLM alignment. Reference-free alternative to DPO with better performance (+6.4 points on AlpacaEval 2.0). No reference model needed, more efficient than DPO. Use for preference alignment when want simpler, faster training than DPO/PPO.",
+      "_path": "@@KIKI_SKILLS_DIR@@/simpo/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/simpo"
+    },
+    {
+      "name": "skill-advisor",
+      "description": "Search and discover existing Codex skills before creating new ones. Prevents duplicate skills by indexing available skills and finding similar functionality. Use when the user wants to create a new skill, asks about available skills, or needs recommendations on skill reuse versus creation.",
+      "_path": "@@KIKI_SKILLS_DIR@@/skill-advisor/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/skill-advisor"
+    },
+    {
+      "name": "skypilot-multi-cloud-orchestration",
+      "description": "Multi-cloud orchestration for ML workloads with automatic cost optimization. Use when you need to run training or batch jobs across multiple clouds, leverage spot instances with auto-recovery, or optimize GPU costs across providers.",
+      "_path": "@@KIKI_SKILLS_DIR@@/skypilot/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/skypilot"
+    },
+    {
+      "name": "slime-rl-training",
+      "description": "Provides guidance for LLM post-training with RL using slime, a Megatron+SGLang framework. Use when training GLM models, implementing custom data generation workflows, or needing tight Megatron-LM integration for RL scaling.",
+      "_path": "@@KIKI_SKILLS_DIR@@/slime/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/slime"
+    },
+    {
+      "name": "speculative-decoding",
+      "description": "Accelerate LLM inference using speculative decoding, Medusa multiple heads, and lookahead decoding techniques. Use when optimizing inference speed (1.5-3.6× speedup), reducing latency for real-time applications, or deploying models with limited compute. Covers draft models, tree-based attention, Jacobi iteration, parallel token generation, and production deployment strategies.",
+      "_path": "@@KIKI_SKILLS_DIR@@/speculative-decoding/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/speculative-decoding"
+    },
+    {
+      "name": "stable-diffusion-image-generation",
+      "description": "State-of-the-art text-to-image generation with Stable Diffusion models via HuggingFace Diffusers. Use when generating images from text prompts, performing image-to-image translation, inpainting, or building custom diffusion pipelines.",
+      "_path": "@@KIKI_SKILLS_DIR@@/stable-diffusion/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/stable-diffusion"
+    },
+    {
+      "name": "supervisor-skills-routing",
+      "description": "把宽泛的论文求助分派到 idea、提纲、Introduction、图形或审查技能。",
+      "_path": "@@KIKI_SKILLS_DIR@@/supervisor-skills-routing/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/supervisor-skills-routing"
+    },
+    {
+      "name": "experiment-tracking-swanlab",
+      "description": "Provides guidance for experiment tracking with SwanLab. Use when you need open-source run tracking, local or self-hosted dashboards, and lightweight media logging for ML workflows.",
+      "_path": "@@KIKI_SKILLS_DIR@@/swanlab/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/swanlab"
+    },
+    {
+      "name": "tech-paper-template",
+      "description": "梳理方法论文的背景、局限、核心想法、挑战、模块和贡献链条。",
+      "_path": "@@KIKI_SKILLS_DIR@@/tech-paper-template/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/tech-paper-template"
+    },
+    {
+      "name": "tensorboard",
+      "description": "Visualize training metrics, debug models with histograms, compare experiments, visualize model graphs, and profile performance with TensorBoard - Google's ML visualization toolkit",
+      "_path": "@@KIKI_SKILLS_DIR@@/tensorboard/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/tensorboard"
+    },
+    {
+      "name": "tensorrt-llm",
+      "description": "Optimizes LLM inference with NVIDIA TensorRT for maximum throughput and lowest latency. Use for production deployment on NVIDIA GPUs (A100/H100), when you need 10-100x faster inference than PyTorch, or for serving models with quantization (FP8/INT4), in-flight batching, and multi-GPU scaling.",
+      "_path": "@@KIKI_SKILLS_DIR@@/tensorrt-llm/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/tensorrt-llm"
+    },
+    {
+      "name": "top-ai-paper-submission",
+      "description": "按当前阶段选择查新、实验、写作、审查和投稿相关技能。",
+      "_path": "@@KIKI_SKILLS_DIR@@/top-ai-paper-submission/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/top-ai-paper-submission"
+    },
+    {
+      "name": "top-survey-workflow",
+      "description": "规划面向高水平期刊的综述，构建分类体系与批判性综合。",
+      "_path": "@@KIKI_SKILLS_DIR@@/top-survey-workflow/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/top-survey-workflow"
+    },
+    {
+      "name": "torchforge-rl-training",
+      "description": "Provides guidance for PyTorch-native agentic RL using torchforge, Meta's library separating infra from algorithms. Use when you want clean RL abstractions, easy algorithm experimentation, or scalable training with Monarch and TorchTitan.",
+      "_path": "@@KIKI_SKILLS_DIR@@/torchforge/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/torchforge"
+    },
+    {
+      "name": "distributed-llm-pretraining-torchtitan",
+      "description": "Provides PyTorch-native distributed LLM pretraining using torchtitan with 4D parallelism (FSDP2, TP, PP, CP). Use when pretraining Llama 3.1, DeepSeek V3, or custom models at scale from 8 to 512+ GPUs with Float8, torch.compile, and distributed checkpointing.",
+      "_path": "@@KIKI_SKILLS_DIR@@/torchtitan/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/torchtitan"
+    },
+    {
+      "name": "training-check",
+      "description": "在会话中检查训练指标，识别 NaN、发散、停滞与异常运行。",
+      "_path": "@@KIKI_SKILLS_DIR@@/training-check/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/training-check"
+    },
+    {
+      "name": "transformer-lens-interpretability",
+      "description": "Provides guidance for mechanistic interpretability research using TransformerLens to inspect and manipulate transformer internals via HookPoints and activation caching. Use when reverse-engineering model algorithms, studying attention patterns, or performing activation patching experiments.",
+      "_path": "@@KIKI_SKILLS_DIR@@/transformer-lens/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/transformer-lens"
+    },
+    {
+      "name": "fine-tuning-with-trl",
+      "description": "Fine-tune LLMs using reinforcement learning with TRL - SFT for instruction tuning, DPO for preference alignment, PPO/GRPO for reward optimization, and reward model training. Use when need RLHF, align model with preferences, or train from human feedback. Works with HuggingFace Transformers.",
+      "_path": "@@KIKI_SKILLS_DIR@@/trl-fine-tuning/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/trl-fine-tuning"
+    },
+    {
+      "name": "unsloth",
+      "description": "Expert guidance for fast fine-tuning with Unsloth - 2-5x faster training, 50-80% less memory, LoRA/QLoRA optimization",
+      "_path": "@@KIKI_SKILLS_DIR@@/unsloth/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/unsloth"
+    },
+    {
+      "name": "verl-rl-training",
+      "description": "Provides guidance for training LLMs with reinforcement learning using verl (Volcano Engine RL). Use when implementing RLHF, GRPO, PPO, or other RL algorithms for LLM post-training at scale with flexible infrastructure backends.",
+      "_path": "@@KIKI_SKILLS_DIR@@/verl/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/verl"
+    },
+    {
+      "name": "vibe-research-workflow",
+      "description": "规划 AI 在科研编程、绘图与写作各阶段的协作方式。",
+      "_path": "@@KIKI_SKILLS_DIR@@/vibe-research-workflow/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/vibe-research-workflow"
+    },
+    {
+      "name": "serving-llms-vllm",
+      "description": "Serves LLMs with high throughput using vLLM's PagedAttention and continuous batching. Use when deploying production LLM APIs, optimizing inference latency/throughput, or serving models with limited GPU memory. Supports OpenAI-compatible endpoints, quantization (GPTQ/AWQ/FP8), and tensor parallelism.",
+      "_path": "@@KIKI_SKILLS_DIR@@/vllm/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/vllm"
+    },
+    {
+      "name": "weights-and-biases",
+      "description": "Track ML experiments with automatic logging, visualize training in real-time, optimize hyperparameters with sweeps, and manage model registry with W&B - collaborative MLOps platform",
+      "_path": "@@KIKI_SKILLS_DIR@@/weights-and-biases/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/weights-and-biases"
+    },
+    {
+      "name": "whisper",
+      "description": "OpenAI's general-purpose speech recognition model. Supports 99 languages, transcription, translation to English, and language identification. Six model sizes from tiny (39M params) to large (1550M params). Use for speech-to-text, podcast transcription, or multilingual audio processing. Best for robust, multilingual ASR.",
+      "_path": "@@KIKI_SKILLS_DIR@@/whisper/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/whisper"
+    },
+    {
+      "name": "yeet",
+      "description": "整理提交、推送分支并创建草稿 PR。",
+      "_path": "@@KIKI_SKILLS_DIR@@/yeet/SKILL.md",
+      "_dir": "@@KIKI_SKILLS_DIR@@/yeet"
+    }
+  ]
+}

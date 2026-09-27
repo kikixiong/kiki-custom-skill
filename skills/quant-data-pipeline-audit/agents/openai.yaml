@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quant Data Pipeline Audit"
+  short_description: "Audit quant data construction"
+  default_prompt: "Use $quant-data-pipeline-audit to inspect this market or fundamental data pipeline for timestamp, adjustment, and survivorship issues."

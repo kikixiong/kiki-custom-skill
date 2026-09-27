@@ -1,0 +1,1024 @@
+{
+  "name": "Kiki Custom Skill",
+  "repository": "kikixiong/kiki-custom-skill",
+  "purpose": "Private personal-use collection for Kiki",
+  "skill_count": 200,
+  "skills": [
+    {
+      "directory": "0-autoresearch-skill",
+      "name": "autoresearch",
+      "description": "Orchestrates end-to-end autonomous AI research projects using a two-loop architecture. The inner loop runs rapid experiment iterations with clear optimization targets. The outer loop synthesizes results, identifies patterns, and steers research direction. Routes to domain-specific skills for execution, supports continuous agent operation via Claude Code /loop and OpenClaw heartbeat, and produces research presentations and papers. Use when starting a research project, running autonomous experiments, or managing a multi-hypothesis research effort."
+    },
+    {
+      "directory": "20-ml-paper-writing",
+      "name": "ml-paper-writing",
+      "description": "Write publication-ready ML/AI/Systems papers for NeurIPS, ICML, ICLR, ACL, AAAI, COLM, OSDI, NSDI, ASPLOS, SOSP. Use when drafting papers from research repos, structuring arguments, verifying citations, or preparing camera-ready submissions. Includes LaTeX templates, reviewer guidelines, and citation verification workflows."
+    },
+    {
+      "directory": "ablation-planner",
+      "name": "ablation-planner",
+      "description": "从审稿人问题出发设计消融，明确验证目的、优先级与计算成本。"
+    },
+    {
+      "directory": "academic-homepage-maintainer",
+      "name": "academic-homepage-maintainer",
+      "description": "维护学术个人主页、项目页、论文列表和 GitHub Pages。"
+    },
+    {
+      "directory": "academic-paper",
+      "name": "academic-paper",
+      "description": "多代理学术写作流程，支持大纲、正文、修改和格式转换等模式。"
+    },
+    {
+      "directory": "academic-paper-reviewer",
+      "name": "academic-paper-reviewer",
+      "description": "用多个审稿视角评阅论文，也支持快速评估、复审和方法审查。"
+    },
+    {
+      "directory": "academic-pipeline",
+      "name": "academic-pipeline",
+      "description": "串联调研、写作、完整性核验、审稿、修改和最终检查。"
+    },
+    {
+      "directory": "academicforge-routing",
+      "name": "academicforge-routing",
+      "description": "选择合适的 af-* 学术写作、引用、绘图和展示技能。"
+    },
+    {
+      "directory": "academicforge-tool",
+      "name": "academicforge-tool",
+      "description": "搜索和读取本地 AcademicForge 精选语料库，定位学术写作、引用、绘图与展示相关指南。"
+    },
+    {
+      "directory": "accelerate",
+      "name": "huggingface-accelerate",
+      "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). Interactive config, single launch command. HuggingFace ecosystem standard."
+    },
+    {
+      "directory": "af-academic-plotting",
+      "name": "af-academic-plotting",
+      "description": "用 matplotlib/seaborn 绘制科研数据图，用 Codex 原生图像工具或可编辑图形制作架构图。"
+    },
+    {
+      "directory": "af-citation-management",
+      "name": "af-citation-management",
+      "description": "检索和校验参考文献元数据，生成和整理 BibTeX。"
+    },
+    {
+      "directory": "af-humanizer-zh",
+      "name": "af-humanizer-zh",
+      "description": "减少中文套话、夸张措辞、模糊归因和机械句式。"
+    },
+    {
+      "directory": "af-literature-review",
+      "name": "af-literature-review",
+      "description": "开展系统性文献综述，组织检索、证据综合与引用。"
+    },
+    {
+      "directory": "af-markdown-mermaid-writing",
+      "name": "af-markdown-mermaid-writing",
+      "description": "用 Markdown 与 Mermaid 组织科学文档、报告和文本图形。"
+    },
+    {
+      "directory": "af-paper-lookup",
+      "name": "af-paper-lookup",
+      "description": "通过多个学术数据库检索论文、DOI、摘要与开放全文。"
+    },
+    {
+      "directory": "af-paper-polish-workflow",
+      "name": "af-paper-polish-workflow",
+      "description": "按结构、逻辑、表达三个层次逐步润色论文。"
+    },
+    {
+      "directory": "af-peer-review",
+      "name": "af-peer-review",
+      "description": "按方法、统计、报告规范等标准撰写结构化同行评审。"
+    },
+    {
+      "directory": "af-presenting-conference-talks",
+      "name": "af-presenting-conference-talks",
+      "description": "将论文转成会议演讲幻灯片、备注与完整讲稿。"
+    },
+    {
+      "directory": "af-scholar-evaluation",
+      "name": "af-scholar-evaluation",
+      "description": "从问题、方法、分析、写作等维度结构化评估学术工作。"
+    },
+    {
+      "directory": "af-scientific-critical-thinking",
+      "name": "af-scientific-critical-thinking",
+      "description": "检查研究设计、偏倚、混杂因素和证据质量。"
+    },
+    {
+      "directory": "af-scientific-slides",
+      "name": "af-scientific-slides",
+      "description": "制作科研报告、组会、答辩和会议演示文稿。"
+    },
+    {
+      "directory": "af-scientific-writing",
+      "name": "af-scientific-writing",
+      "description": "按科学论文结构撰写完整段落，处理引用、图表与报告规范。"
+    },
+    {
+      "directory": "af-systems-paper-writing",
+      "name": "af-systems-paper-writing",
+      "description": "面向 OSDI、SOSP 等系统会议的论文结构、写作与检查指南。"
+    },
+    {
+      "directory": "af-venue-templates",
+      "name": "af-venue-templates",
+      "description": "查询论文、会议、海报与基金申请的 LaTeX 模板和格式要求。"
+    },
+    {
+      "directory": "alphaxiv",
+      "name": "alphaxiv",
+      "description": "快速理解一篇指定论文，优先读取 AlphaXiv 摘要并回退到其他来源。"
+    },
+    {
+      "directory": "analyze-results",
+      "name": "analyze-results",
+      "description": "分析实验数据、统计差异并生成对比表和结论。"
+    },
+    {
+      "directory": "arxiv",
+      "name": "arxiv",
+      "description": "搜索、下载和总结 arXiv 预印本。"
+    },
+    {
+      "directory": "arxiv-daily-digest",
+      "name": "arxiv-daily-digest",
+      "description": "Automatically fetch, filter, rank, and summarize arXiv papers based on the user's configured research interests. Use when the user wants daily arXiv paper updates, personalized paper recommendations, research interest configuration, or scheduled research digests."
+    },
+    {
+      "directory": "audiocraft",
+      "name": "audiocraft-audio-generation",
+      "description": "PyTorch library for audio generation including text-to-music (MusicGen) and text-to-sound (AudioGen). Use when you need to generate music from text descriptions, create sound effects, or perform melody-conditioned music generation."
+    },
+    {
+      "directory": "auto-paper-improvement-loop",
+      "name": "auto-paper-improvement-loop",
+      "description": "循环进行论文审查、修改与重新编译。"
+    },
+    {
+      "directory": "autodl-experiment",
+      "name": "autodl-experiment",
+      "description": "Launch, monitor, troubleshoot, notify, and archive AutoDL or SeetaCloud SSH GPU experiments. Use for remote training/evaluation jobs, tmux/screen launches, conda/CUDA/HuggingFace setup, SMTP email progress alerts, failure alerts, result pullback, and append-only runbook notes. Do not use for local-only debugging unless a remote SSH GPU instance is involved."
+    },
+    {
+      "directory": "autodl-manager",
+      "name": "autodl-manager",
+      "description": "Manage AutoDL cloud GPU instances with SSH connection, GPU status detection, disk monitoring, conda initialization, and network acceleration. Use when connecting to AutoDL, checking instance status, monitoring disk space, setting up new instances, or managing multiple AutoDL servers. Automatically detects GPU-enabled vs CPU-only instances."
+    },
+    {
+      "directory": "autogpt",
+      "name": "autogpt-agents",
+      "description": "Autonomous AI agent platform for building and deploying continuous agents. Use when creating visual workflow agents, deploying persistent autonomous agents, or building complex multi-step AI automation systems."
+    },
+    {
+      "directory": "awesome-ai-research-writing",
+      "name": "awesome-ai-research-writing",
+      "description": "提供翻译、缩写、扩写、润色、图注和论文检查的提示模板入口。"
+    },
+    {
+      "directory": "awq",
+      "name": "awq-quantization",
+      "description": "Activation-aware weight quantization for 4-bit LLM compression with 3x speedup and minimal accuracy loss. Use when deploying large models (7B-70B) on limited GPU memory, when you need faster inference than GPTQ with better accuracy preservation, or for instruction-tuned and multimodal models. MLSys 2024 Best Paper Award winner."
+    },
+    {
+      "directory": "axolotl",
+      "name": "axolotl",
+      "description": "Expert guidance for fine-tuning LLMs with Axolotl - YAML configs, 100+ models, LoRA/QLoRA, DPO/KTO/ORPO/GRPO, multimodal support"
+    },
+    {
+      "directory": "backtest-integrity-audit",
+      "name": "backtest-integrity-audit",
+      "description": "检查回测中的数据泄漏、未来信息、过拟合、成本与样本外验证。"
+    },
+    {
+      "directory": "benchmark-paper-template",
+      "name": "benchmark-paper-template",
+      "description": "围绕评估缺口、数据构建、评估框架和实证发现组织 benchmark 论文。"
+    },
+    {
+      "directory": "bigcode-evaluation-harness",
+      "name": "evaluating-code-models",
+      "description": "Evaluates code generation models across HumanEval, MBPP, MultiPL-E, and 15+ benchmarks with pass@k metrics. Use when benchmarking code models, comparing coding abilities, testing multi-language support, or measuring code generation quality. Industry standard from BigCode Project used by HuggingFace leaderboards."
+    },
+    {
+      "directory": "bitsandbytes",
+      "name": "quantizing-models-bitsandbytes",
+      "description": "Quantizes LLMs to 8-bit or 4-bit for 50-75% memory reduction with minimal accuracy loss. Use when GPU memory is limited, need to fit larger models, or want faster inference. Supports INT8, NF4, FP4 formats, QLoRA training, and 8-bit optimizers. Works with HuggingFace Transformers."
+    },
+    {
+      "directory": "blip-2",
+      "name": "blip-2-vision-language",
+      "description": "Vision-language pre-training framework bridging frozen image encoders and LLMs. Use when you need image captioning, visual question answering, image-text retrieval, or multimodal chat with state-of-the-art zero-shot performance."
+    },
+    {
+      "directory": "brainstorming-research-ideas",
+      "name": "brainstorming-research-ideas",
+      "description": "Guides researchers through structured ideation frameworks to discover high-impact research directions. Use when exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work."
+    },
+    {
+      "directory": "chroma",
+      "name": "chroma",
+      "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source projects."
+    },
+    {
+      "directory": "citation-audit",
+      "name": "citation-audit",
+      "description": "检查引用是否真实、作者年份是否准确、被引论文是否支持对应论断。"
+    },
+    {
+      "directory": "clip",
+      "name": "clip",
+      "description": "OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, content moderation, or vision-language tasks without fine-tuning. Best for general-purpose image understanding."
+    },
+    {
+      "directory": "constitutional-ai",
+      "name": "constitutional-ai",
+      "description": "Anthropic's method for training harmless AI through self-improvement. Two-phase approach - supervised learning with self-critique/revision, then RLAIF (RL from AI Feedback). Use for safety alignment, reducing harmful outputs without human labels. Powers Claude's safety system."
+    },
+    {
+      "directory": "cosmos-policy",
+      "name": "evaluating-cosmos-policy",
+      "description": "Evaluates NVIDIA Cosmos Policy on LIBERO and RoboCasa simulation environments. Use when setting up cosmos-policy for robot manipulation evaluation, running headless GPU evaluations with EGL rendering, or profiling inference latency on cluster or local GPU machines."
+    },
+    {
+      "directory": "craft-scientific-figure-prompts",
+      "name": "craft-scientific-figure-prompts",
+      "description": "Analyze reference figures and their prompts, extract transferable visual and organizational grammar, maintain a project-wide style profile across multiple figures, and produce robust model-agnostic prompts for scientific overview figures, method diagrams, architecture schematics, graphical abstracts, and research posters. Use when Codex must learn or preserve figure style, adapt it to a paper, thesis, proposal, or technical project, rewrite or audit a long image-generation prompt, keep a multi-figure project visually consistent, preserve scientific evidence states, or iteratively improve a generated figure without copying the reference's scientific content."
+    },
+    {
+      "directory": "creating-elegantpaper-reports",
+      "name": "creating-elegantpaper-reports",
+      "description": "Use when a user requests a human-readable Chinese or English report, midterm or progress report, experiment report, mentor or lab update, Overleaf-ready LaTeX source, printable PDF, or a decision between transient Markdown notes and a formal ElegantPaper deliverable."
+    },
+    {
+      "directory": "creating-research-meeting-reports",
+      "name": "creating-research-meeting-reports",
+      "description": "Use when preparing a pre- or post-meeting research brief from notes, drafts, slides, tables, logs, or meeting decisions for supervisor, lab, project, or research-review discussions."
+    },
+    {
+      "directory": "creative-thinking-for-research",
+      "name": "creative-thinking-for-research",
+      "description": "Applies cognitive science frameworks for creative thinking to CS and AI research ideation. Use when seeking genuinely novel research directions by leveraging combinatorial creativity, analogical reasoning, constraint manipulation, and other empirically grounded creative strategies."
+    },
+    {
+      "directory": "crewai",
+      "name": "crewai-multi-agent",
+      "description": "Multi-agent orchestration framework for autonomous AI collaboration. Use when building teams of specialized agents working together on complex tasks, when you need role-based agent collaboration with memory, or for production workflows requiring sequential/hierarchical execution. Built without LangChain dependencies for lean, fast execution."
+    },
+    {
+      "directory": "deep-research",
+      "name": "deep-research",
+      "description": "覆盖问题定义、文献搜索、证据综合和研究报告的多代理流程。"
+    },
+    {
+      "directory": "deepspeed",
+      "name": "deepspeed",
+      "description": "Expert guidance for distributed training with DeepSpeed - ZeRO optimization stages, pipeline parallelism, FP16/BF16/FP8, 1-bit Adam, sparse attention"
+    },
+    {
+      "directory": "dspy",
+      "name": "dspy",
+      "description": "Build complex AI systems with declarative programming, optimize prompts automatically, create modular RAG systems and agents with DSPy - Stanford NLP's framework for systematic LM programming"
+    },
+    {
+      "directory": "experiment-audit",
+      "name": "experiment-audit",
+      "description": "审查评估代码与结果来源，定位伪标签、异常归一化和无来源结果。"
+    },
+    {
+      "directory": "experiment-integrity-audit",
+      "name": "experiment-integrity-audit",
+      "description": "检查数据泄漏、划分、基线公平性、指标、统计与可复现性。"
+    },
+    {
+      "directory": "experiment-plan",
+      "name": "experiment-plan",
+      "description": "把研究主张转化为实验矩阵、评估协议、运行顺序和算力预算。"
+    },
+    {
+      "directory": "factor-alpha-lab",
+      "name": "factor-alpha-lab",
+      "description": "研究因子与信号，分析 IC、衰减、换手和中性化。"
+    },
+    {
+      "directory": "faiss",
+      "name": "faiss",
+      "description": "Facebook's library for efficient similarity search and clustering of dense vectors. Supports billions of vectors, GPU acceleration, and various index types (Flat, IVF, HNSW). Use for fast k-NN search, large-scale vector retrieval, or when you need pure similarity search without metadata. Best for high-performance applications."
+    },
+    {
+      "directory": "figure-designer",
+      "name": "figure-designer",
+      "description": "规划 Figure 1、方法总览图和实验图的布局、标注与信息结构。"
+    },
+    {
+      "directory": "figure-spec",
+      "name": "figure-spec",
+      "description": "把结构化 JSON 图形规格渲染成可编辑 SVG 架构图或流程图。"
+    },
+    {
+      "directory": "figures4papers",
+      "name": "figures4papers",
+      "description": "把科研绘图请求转到 figures4papers 示例与对应绘图技能。"
+    },
+    {
+      "directory": "flash-attention",
+      "name": "optimizing-attention-flash",
+      "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory issues with attention, or need faster inference. Supports PyTorch native SDPA, flash-attn library, H100 FP8, and sliding window attention."
+    },
+    {
+      "directory": "gguf",
+      "name": "gguf-quantization",
+      "description": "GGUF format and llama.cpp quantization for efficient CPU/GPU inference. Use when deploying models on consumer hardware, Apple Silicon, or when needing flexible quantization from 2-8 bit without GPU requirements."
+    },
+    {
+      "directory": "gh-address-comments",
+      "name": "gh-address-comments",
+      "description": "读取 PR 审查反馈并处理选定的修改意见。"
+    },
+    {
+      "directory": "gh-fix-ci",
+      "name": "gh-fix-ci",
+      "description": "检查 GitHub Actions 失败日志、定位原因并修复。"
+    },
+    {
+      "directory": "github",
+      "name": "github",
+      "description": "浏览与总结仓库、PR、issue，并选择相应专项流程。"
+    },
+    {
+      "directory": "gptq",
+      "name": "gptq",
+      "description": "Post-training 4-bit quantization for LLMs with minimal accuracy loss. Use for deploying large models (70B, 405B) on consumer GPUs, when you need 4× memory reduction with <2% perplexity degradation, or for faster inference (3-4× speedup) vs FP16. Integrates with transformers and PEFT for QLoRA fine-tuning."
+    },
+    {
+      "directory": "grant-proposal",
+      "name": "grant-proposal",
+      "description": "根据研究设想和文献起草基金申请，覆盖多国资助项目格式。"
+    },
+    {
+      "directory": "grpo-rl-training",
+      "name": "grpo-rl-training",
+      "description": "Expert guidance for GRPO/RL fine-tuning with TRL for reasoning and task-specific model training"
+    },
+    {
+      "directory": "guidance",
+      "name": "guidance",
+      "description": "Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework"
+    },
+    {
+      "directory": "hqq",
+      "name": "hqq-quantization",
+      "description": "Half-Quadratic Quantization for LLMs without calibration data. Use when quantizing models to 4/3/2-bit precision without needing calibration datasets, for fast quantization workflows, or when deploying with vLLM or HuggingFace Transformers."
+    },
+    {
+      "directory": "huggingface-tokenizers",
+      "name": "huggingface-tokenizers",
+      "description": "Fast tokenizers optimized for research and production. Rust-based implementation tokenizes 1GB in <20 seconds. Supports BPE, WordPiece, and Unigram algorithms. Train custom vocabularies, track alignments, handle padding/truncation. Integrates seamlessly with transformers. Use when you need high-performance tokenization or custom tokenizer training."
+    },
+    {
+      "directory": "idea-evaluator",
+      "name": "idea-evaluator",
+      "description": "评估研究 idea 的致命缺陷、创新性、可行性与投入成本。"
+    },
+    {
+      "directory": "instructor",
+      "name": "instructor",
+      "description": "Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-tested structured output library"
+    },
+    {
+      "directory": "intro-drafter",
+      "name": "intro-drafter",
+      "description": "把研究动机组织成六段式 Introduction 提纲。"
+    },
+    {
+      "directory": "joinquant-research-workflow",
+      "name": "joinquant-research-workflow",
+      "description": "面向聚宽 API 和回测脚本的研究工作流。"
+    },
+    {
+      "directory": "kiki-paper-workflow",
+      "name": "kiki-paper-workflow",
+      "description": "Kiki Custom 论文全流程：由研究报告生成大纲、图表、正文和 PDF。用于明确选择这套完整流水线的任务；日常论文修改优先使用已有 kiki-paper-writing。"
+    },
+    {
+      "directory": "kiki-paper-writing",
+      "name": "kiki-paper-writing",
+      "description": "Evidence-grounded planning, drafting, revision, comparison, and final audit for AI/ML and technical research papers. Use when writing from an idea or outline; revising an Abstract, Introduction, Method, Figure Caption, Related Work, Experiments, Conclusion, or Table; choosing among versions; calibrating claims; formalizing notation; processing iterative user feedback; or aligning story, evidence, figures, tables, citations, and LaTeX across a paper."
+    },
+    {
+      "directory": "knowledge-distillation",
+      "name": "knowledge-distillation",
+      "description": "Compress large language models using knowledge distillation from teacher to student models. Use when deploying smaller models with retained performance, transferring GPT-4 capabilities to open-source models, or reducing inference costs. Covers temperature scaling, soft targets, reverse KLD, logit distillation, and MiniLLM training strategies."
+    },
+    {
+      "directory": "lambda-labs",
+      "name": "lambda-labs-gpu-cloud",
+      "description": "Reserved and on-demand GPU cloud instances for ML training and inference. Use when you need dedicated GPU instances with simple SSH access, persistent filesystems, or high-performance multi-node clusters for large-scale training."
+    },
+    {
+      "directory": "langchain",
+      "name": "langchain",
+      "description": "Framework for building LLM-powered applications with agents, chains, and RAG. Supports multiple providers (OpenAI, Anthropic, Google), 500+ integrations, ReAct agents, tool calling, memory management, and vector store retrieval. Use for building chatbots, question-answering systems, autonomous agents, or RAG applications. Best for rapid prototyping and production deployments."
+    },
+    {
+      "directory": "langsmith",
+      "name": "langsmith-observability",
+      "description": "LLM observability platform for tracing, evaluation, and monitoring. Use when debugging LLM applications, evaluating model outputs against datasets, monitoring production systems, or building systematic testing pipelines for AI applications."
+    },
+    {
+      "directory": "lean-modular-coding",
+      "name": "lean-modular-coding",
+      "description": "Use when creating, changing, refactoring, or reviewing code in any language, especially when work may produce oversized entry points, fragmented files, speculative abstractions, defensive scaffolding, or disproportionate testing."
+    },
+    {
+      "directory": "lightweight-development-verification",
+      "name": "lightweight-development-verification",
+      "description": "Use when planning, implementing, reviewing, testing, building, linting, running E2E, checking generated-file hashes, or coordinating subagents for software changes where validation should match risk and duplicate gates should be avoided."
+    },
+    {
+      "directory": "litgpt",
+      "name": "implementing-llms-litgpt",
+      "description": "Implements and trains LLMs using Lightning AI's LitGPT with 20+ pretrained architectures (Llama, Gemma, Phi, Qwen, Mistral). Use when need clean model implementations, educational understanding of architectures, or production fine-tuning with LoRA/QLoRA. Single-file implementations, no abstraction layers."
+    },
+    {
+      "directory": "llama-cpp",
+      "name": "llama-cpp",
+      "description": "Runs LLM inference on CPU, Apple Silicon, and consumer GPUs without NVIDIA hardware. Use for edge deployment, M1/M2/M3 Macs, AMD/Intel GPUs, or when CUDA is unavailable. Supports GGUF quantization (1.5-8 bit) for reduced memory and 4-10× speedup vs PyTorch on CPU."
+    },
+    {
+      "directory": "llama-factory",
+      "name": "llama-factory",
+      "description": "Expert guidance for fine-tuning LLMs with LLaMA-Factory - WebUI no-code, 100+ models, 2/3/4/5/6/8-bit QLoRA, multimodal support"
+    },
+    {
+      "directory": "llamaguard",
+      "name": "llamaguard",
+      "description": "Meta's 7-8B specialized moderation model for LLM input/output filtering. 6 safety categories - violence/hate, sexual content, weapons, substances, self-harm, criminal planning. 94-95% accuracy. Deploy with vLLM, HuggingFace, Sagemaker. Integrates with NeMo Guardrails."
+    },
+    {
+      "directory": "llamaindex",
+      "name": "llamaindex",
+      "description": "Data framework for building LLM applications with RAG. Specializes in document ingestion (300+ connectors), indexing, and querying. Features vector indices, query engines, agents, and multi-modal support. Use for document Q&A, chatbots, knowledge retrieval, or building RAG pipelines. Best for data-centric LLM applications."
+    },
+    {
+      "directory": "llava",
+      "name": "llava",
+      "description": "Large Language and Vision Assistant. Enables visual instruction tuning and image-based conversations. Combines CLIP vision encoder with Vicuna/LLaMA language models. Supports multi-turn image chat, visual question answering, and instruction following. Use for vision-language chatbots or image understanding tasks. Best for conversational image analysis."
+    },
+    {
+      "directory": "lm-evaluation-harness",
+      "name": "evaluating-llms-harness",
+      "description": "Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs."
+    },
+    {
+      "directory": "long-context",
+      "name": "long-context",
+      "description": "Extend context windows of transformer models using RoPE, YaRN, ALiBi, and position interpolation techniques. Use when processing long documents (32k-128k+ tokens), extending pre-trained models beyond original context limits, or implementing efficient positional encodings. Covers rotary embeddings, attention biases, interpolation methods, and extrapolation strategies for LLMs."
+    },
+    {
+      "directory": "mamba",
+      "name": "mamba-architecture",
+      "description": "State-space model with O(n) complexity vs Transformers' O(n²). 5× faster inference, million-token sequences, no KV cache. Selective SSM with hardware-aware design. Mamba-1 (d_state=16) and Mamba-2 (d_state=128, multi-head). Models 130M-2.8B on HuggingFace."
+    },
+    {
+      "directory": "megatron-core",
+      "name": "training-llms-megatron",
+      "description": "Trains large language models (2B-462B parameters) using NVIDIA Megatron-Core with advanced parallelism strategies. Use when training models >1B parameters, need maximum GPU efficiency (47% MFU on H100), or require tensor/pipeline/sequence/context/expert parallelism. Production-ready framework used for Nemotron, LLaMA, DeepSeek."
+    },
+    {
+      "directory": "memory-manager",
+      "name": "memory-manager",
+      "description": "Manage hierarchical memory system with daily entries, weekly/monthly compaction, and long-term knowledge base. Use when creating daily logs, reviewing/summarizing past memories, maintaining MEMORY.md, searching memory, or organizing the memory directory structure."
+    },
+    {
+      "directory": "mermaid-diagram",
+      "name": "mermaid-diagram",
+      "description": "生成 Mermaid 流程图、时序图、类图等文本图形。"
+    },
+    {
+      "directory": "miles",
+      "name": "miles-rl-training",
+      "description": "Provides guidance for enterprise-grade RL training using miles, a production-ready fork of slime. Use when training large MoE models with FP8/INT4, needing train-inference alignment, or requiring speculative RL for maximum throughput."
+    },
+    {
+      "directory": "mlflow",
+      "name": "mlflow",
+      "description": "Track ML experiments, manage model registry with versioning, deploy models to production, and reproduce experiments with MLflow - framework-agnostic ML lifecycle platform"
+    },
+    {
+      "directory": "modal",
+      "name": "modal-serverless-gpu",
+      "description": "Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic scaling."
+    },
+    {
+      "directory": "model-merging",
+      "name": "model-merging",
+      "description": "Merge multiple fine-tuned models using mergekit to combine capabilities without retraining. Use when creating specialized models by blending domain-specific expertise (math + coding + chat), improving performance beyond single models, or experimenting rapidly with model variants. Covers SLERP, TIES-Merging, DARE, Task Arithmetic, linear merging, and production deployment strategies."
+    },
+    {
+      "directory": "model-pruning",
+      "name": "model-pruning",
+      "description": "Reduce LLM size and accelerate inference using pruning techniques like Wanda and SparseGPT. Use when compressing models without retraining, achieving 50% sparsity with minimal accuracy loss, or enabling faster inference on hardware accelerators. Covers unstructured pruning, structured pruning, N:M sparsity, magnitude pruning, and one-shot methods."
+    },
+    {
+      "directory": "moe-training",
+      "name": "moe-training",
+      "description": "Train Mixture of Experts (MoE) models using DeepSpeed or HuggingFace. Use when training large-scale models with limited compute (5× cost reduction vs dense models), implementing sparse architectures like Mixtral 8x7B or DeepSeek-V3, or scaling model capacity without proportional compute increase. Covers MoE architectures, routing mechanisms, load balancing, expert parallelism, and inference optimization."
+    },
+    {
+      "directory": "monitor-experiment",
+      "name": "monitor-experiment",
+      "description": "查看运行中实验的进度、日志和输出结果。"
+    },
+    {
+      "directory": "nanogpt",
+      "name": "nanogpt",
+      "description": "Educational GPT implementation in ~300 lines. Reproduces GPT-2 (124M) on OpenWebText. Clean, hackable code for learning transformers. By Andrej Karpathy. Perfect for understanding GPT architecture from scratch. Train on Shakespeare (CPU) or OpenWebText (multi-GPU)."
+    },
+    {
+      "directory": "nature-figure",
+      "name": "nature-figure",
+      "description": "规范 matplotlib 科研图的字体、配色、多面板布局和矢量导出。"
+    },
+    {
+      "directory": "nature-polishing",
+      "name": "nature-polishing",
+      "description": "改进学术英语、论述节奏、审慎措辞与 Nature 风格表达。"
+    },
+    {
+      "directory": "nemo-curator",
+      "name": "nemo-curator",
+      "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16× faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs with RAPIDS. Use for preparing high-quality training datasets, cleaning web data, or deduplicating large corpora."
+    },
+    {
+      "directory": "nemo-evaluator",
+      "name": "nemo-evaluator-sdk",
+      "description": "Evaluates LLMs across 100+ benchmarks from 18+ harnesses (MMLU, HumanEval, GSM8K, safety, VLM) with multi-backend execution. Use when needing scalable evaluation on local Docker, Slurm HPC, or cloud platforms. NVIDIA's enterprise-grade platform with container-first architecture for reproducible benchmarking."
+    },
+    {
+      "directory": "nemo-guardrails",
+      "name": "nemo-guardrails",
+      "description": "NVIDIA's runtime safety framework for LLM applications. Features jailbreak detection, input/output validation, fact-checking, hallucination detection, PII filtering, toxicity detection. Uses Colang 2.0 DSL for programmable rails. Production-ready, runs on T4 GPU."
+    },
+    {
+      "directory": "nnsight",
+      "name": "nnsight-remote-interpretability",
+      "description": "Provides guidance for interpreting and manipulating neural network internals using nnsight with optional NDIF remote execution. Use when needing to run interpretability experiments on massive models (70B+) without local GPU resources, or when working with any PyTorch architecture."
+    },
+    {
+      "directory": "novelty-check",
+      "name": "novelty-check",
+      "description": "拆解创新主张，检索近邻工作，判断与已有研究的差异。"
+    },
+    {
+      "directory": "ontology",
+      "name": "ontology",
+      "description": "Typed knowledge graph for structured agent memory and composable skills. Use when creating/querying entities (Person, Project, Task, Event, Document), linking related objects, enforcing constraints, planning multi-step actions as graph transformations, or when skills need to share state. Trigger on \"remember\", \"what do I know about\", \"link X to Y\", \"show dependencies\", entity CRUD, or cross-skill data access."
+    },
+    {
+      "directory": "openpi",
+      "name": "fine-tuning-serving-openpi",
+      "description": "Fine-tune and serve Physical Intelligence OpenPI models (pi0, pi0-fast, pi0.5) using JAX or PyTorch backends for robot policy inference across ALOHA, DROID, and LIBERO environments. Use when adapting pi0 models to custom datasets, converting JAX checkpoints to PyTorch, running policy inference servers, or debugging norm stats and GPU memory issues."
+    },
+    {
+      "directory": "openrlhf",
+      "name": "openrlhf-training",
+      "description": "High-performance RLHF framework with Ray+vLLM acceleration. Use for PPO, GRPO, RLOO, DPO training of large models (7B-70B+). Built on Ray, vLLM, ZeRO-3. 2× faster than DeepSpeedChat with distributed architecture and GPU resource sharing."
+    },
+    {
+      "directory": "openvla-oft",
+      "name": "fine-tuning-openvla-oft",
+      "description": "Fine-tunes and evaluates OpenVLA-OFT and OpenVLA-OFT+ policies for robot action generation with continuous action heads, LoRA adaptation, and FiLM conditioning on LIBERO simulation and ALOHA real-world setups. Use when reproducing OpenVLA-OFT paper results, training custom VLA action heads (L1 or diffusion), deploying server-client inference for ALOHA, or debugging normalization, LoRA merge, and cross-GPU issues."
+    },
+    {
+      "directory": "outlines",
+      "name": "outlines",
+      "description": "Guarantee valid JSON/XML/code structure during generation, use Pydantic models for type-safe outputs, support local models (Transformers, vLLM), and maximize inference speed with Outlines - dottxt.ai's structured generation library"
+    },
+    {
+      "directory": "overleaf-paper-sync",
+      "name": "overleaf-paper-sync",
+      "description": "Orchestrate evidence-grounded LaTeX paper planning and revision through a review-gated Overleaf Git workflow. Use when a user wants to write or revise an Overleaf paper one paragraph, caption, equation block, table, or other small reviewable slice at a time; push every revision candidate to Overleaf for web review; wait for explicit approval before continuing; or reconcile feedback and web edits without batching or overwriting accepted text."
+    },
+    {
+      "directory": "overleaf-sync",
+      "name": "overleaf-sync",
+      "description": "复用本机已有 Overleaf 授权与项目配置，同步论文，并衔接 Kiki 写作流程。"
+    },
+    {
+      "directory": "paper-claim-audit",
+      "name": "paper-claim-audit",
+      "description": "逐项核对论文数字、比较和范围表述是否与原始结果一致。"
+    },
+    {
+      "directory": "paper-compile",
+      "name": "paper-compile",
+      "description": "编译 LaTeX、处理编译错误并检查 PDF 输出。"
+    },
+    {
+      "directory": "paper-figure",
+      "name": "paper-figure",
+      "description": "从实验结果生成论文图表。"
+    },
+    {
+      "directory": "paper-illustration",
+      "name": "paper-illustration",
+      "description": "使用 Codex 原生图像工具制作和修改论文插图，按需衔接可编辑结构图与科研绘图。"
+    },
+    {
+      "directory": "paper-plan",
+      "name": "paper-plan",
+      "description": "根据研究结论与实验结果生成论文大纲。"
+    },
+    {
+      "directory": "paper-poster",
+      "name": "paper-poster",
+      "description": "从论文生成会议海报，面向 A0/A1 PDF、PPTX 与 SVG。"
+    },
+    {
+      "directory": "paper-slides",
+      "name": "paper-slides",
+      "description": "从论文生成 Beamer/PDF、可编辑 PPTX、讲稿和演讲备注。"
+    },
+    {
+      "directory": "paper-write",
+      "name": "paper-write",
+      "description": "按照大纲逐节起草 LaTeX 论文正文。"
+    },
+    {
+      "directory": "peft",
+      "name": "peft-fine-tuning",
+      "description": "Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter serving. HuggingFace's official library integrated with transformers ecosystem."
+    },
+    {
+      "directory": "phoenix",
+      "name": "phoenix-observability",
+      "description": "Open-source AI observability platform for LLM tracing, evaluation, and monitoring. Use when debugging LLM applications with detailed traces, running evaluations on datasets, or monitoring production AI systems with real-time insights."
+    },
+    {
+      "directory": "pinecone",
+      "name": "pinecone",
+      "description": "Managed vector database for production AI applications. Fully managed, auto-scaling, with hybrid search (dense + sparse), metadata filtering, and namespaces. Low latency (<100ms p95). Use for production RAG, recommendation systems, or semantic search at scale. Best for serverless, managed infrastructure."
+    },
+    {
+      "directory": "portfolio-risk-attribution",
+      "name": "portfolio-risk-attribution",
+      "description": "分析投资组合风险、暴露、收益归因和约束。"
+    },
+    {
+      "directory": "pre-submission-reviewer",
+      "name": "pre-submission-reviewer",
+      "description": "按严重程度列出论文逻辑、语言、LaTeX、图表和表达问题。"
+    },
+    {
+      "directory": "project-intake-autopilot",
+      "name": "project-intake-autopilot",
+      "description": "接手现有项目，检查文件、识别当前状态并归纳下一步。"
+    },
+    {
+      "directory": "prompt-clarifier",
+      "name": "prompt-clarifier",
+      "description": "Use when user input has Chinese-English mixing, pinyin typos, front/back nasal confusion (前后鼻音 ing/in eng/en), homophones (同音字 的地得 在再), missing punctuation, run-on sentences, or vague instructions. Rewrites messy input into clear, actionable English."
+    },
+    {
+      "directory": "prompt-guard",
+      "name": "prompt-guard",
+      "description": "Meta's 86M prompt injection and jailbreak detector. Filters malicious prompts and third-party data for LLM apps. 99%+ TPR, <1% FPR. Fast (<2ms GPU). Multilingual (8 languages). Deploy with HuggingFace or batch processing for RAG security."
+    },
+    {
+      "directory": "proof-checker",
+      "name": "proof-checker",
+      "description": "检查 LaTeX 数学证明的漏洞，补充推导并复核。"
+    },
+    {
+      "directory": "pua",
+      "name": "pua",
+      "description": "Forces high-agency exhaustive problem-solving with corporate PUA pressure. Triggers on user frustration, repeated failures, passive behavior, or quality complaints. Common triggers: try harder, figure it out, stop giving up, you keep failing, stop spinning, you broke it, 加油, 别偷懒, 你再试试, 又错了, 降智了, 你又在原地打转, 你把之前的改坏了, /pua. All task types."
+    },
+    {
+      "directory": "pua-en",
+      "name": "pua-en",
+      "description": "英语版本：类似的问题解决流程，采用英语职场绩效话术。"
+    },
+    {
+      "directory": "pua-ja",
+      "name": "pua-ja",
+      "description": "日语版本：类似的问题解决流程，采用日语职场话术。"
+    },
+    {
+      "directory": "pytorch-fsdp2",
+      "name": "pytorch-fsdp2",
+      "description": "Adds PyTorch FSDP2 (fully_shard) to training scripts with correct init, sharding, mixed precision/offload config, and distributed checkpointing. Use when models exceed single-GPU memory or when you need DTensor-based sharding with DeviceMesh."
+    },
+    {
+      "directory": "pytorch-lightning",
+      "name": "pytorch-lightning",
+      "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. Use when you want clean training loops with built-in best practices."
+    },
+    {
+      "directory": "pyvene",
+      "name": "pyvene-interventions",
+      "description": "Provides guidance for performing causal interventions on PyTorch models using pyvene's declarative intervention framework. Use when conducting causal tracing, activation patching, interchange intervention training, or testing causal hypotheses about model behavior."
+    },
+    {
+      "directory": "qdrant",
+      "name": "qdrant-vector-search",
+      "description": "High-performance vector similarity search engine for RAG and semantic search. Use when building production RAG systems requiring fast nearest neighbor search, hybrid search with filtering, or scalable vector storage with Rust-powered performance."
+    },
+    {
+      "directory": "quant-ai-paper-scout",
+      "name": "quant-ai-paper-scout",
+      "description": "检索 AI/ML 论文，提炼适用于量化金融的研究思路。"
+    },
+    {
+      "directory": "quant-ai-research-autopilot",
+      "name": "quant-ai-research-autopilot",
+      "description": "组织 AI 量化方向的文献、idea、查新和实验设计。"
+    },
+    {
+      "directory": "quant-data-pipeline-audit",
+      "name": "quant-data-pipeline-audit",
+      "description": "检查行情、基本面、特征和时点一致性等量化数据管线。"
+    },
+    {
+      "directory": "quant-research-routing",
+      "name": "quant-research-routing",
+      "description": "把量化研究请求分派到因子、回测、数据或组合分析流程。"
+    },
+    {
+      "directory": "ray-data",
+      "name": "ray-data",
+      "description": "Scalable data processing for ML workloads. Streaming execution across CPU/GPU, supports Parquet/CSV/JSON/images. Integrates with Ray Train, PyTorch, TensorFlow. Scales from single machine to 100s of nodes. Use for batch inference, data preprocessing, multi-modal data loading, or distributed ETL pipelines."
+    },
+    {
+      "directory": "ray-train",
+      "name": "ray-train",
+      "description": "Distributed training orchestration across clusters. Scales PyTorch/TensorFlow/HuggingFace from laptop to 1000s of nodes. Built-in hyperparameter tuning with Ray Tune, fault tolerance, elastic scaling. Use when training massive models across multiple machines or running distributed hyperparameter sweeps."
+    },
+    {
+      "directory": "rebuttal",
+      "name": "rebuttal",
+      "description": "拆解审稿意见，基于已有证据起草回复并管理后续轮次。"
+    },
+    {
+      "directory": "rebuttalstudio",
+      "name": "rebuttalstudio",
+      "description": "衔接 RebuttalStudio 的逐点回复、压缩、润色与多轮讨论流程。"
+    },
+    {
+      "directory": "research-algorithm-checker",
+      "name": "research-algorithm-checker",
+      "description": "对照算法或论文检查实现、张量形状、数值逻辑、边界和性能。"
+    },
+    {
+      "directory": "research-code-autopilot",
+      "name": "research-code-autopilot",
+      "description": "统筹科研代码、训练评估脚本、复现、日志和故障处理。"
+    },
+    {
+      "directory": "research-lit",
+      "name": "research-lit",
+      "description": "搜索相关工作、分析论文并提炼研究脉络。"
+    },
+    {
+      "directory": "research-paper-writing",
+      "name": "research-paper-writing",
+      "description": "改善 ML/CV/NLP 论文结构、段落衔接和审稿人阅读体验。"
+    },
+    {
+      "directory": "research-progress-tracker",
+      "name": "research-progress-tracker",
+      "description": "用进度文档和实验登记表维护项目状态及下一步任务。"
+    },
+    {
+      "directory": "research-review",
+      "name": "research-review",
+      "description": "调用独立代理对研究想法、论文或实验结果做批判性审查。"
+    },
+    {
+      "directory": "research-start-routing",
+      "name": "research-start-routing",
+      "description": "把科研启动与继续推进请求分派到进度、算法审查和任务执行技能。"
+    },
+    {
+      "directory": "research-task-executor",
+      "name": "research-task-executor",
+      "description": "执行一个明确的科研代码或实验实现任务，并更新任务记录。"
+    },
+    {
+      "directory": "research-wiki",
+      "name": "research-wiki",
+      "description": "关联论文、想法、实验与结论，维护持久化研究知识库。"
+    },
+    {
+      "directory": "research-wiki-organization-prompts",
+      "name": "research-wiki-organization-prompts",
+      "description": "提供知识库组织、论文摄入、领域地图和研究空白整理流程。"
+    },
+    {
+      "directory": "result-to-claim",
+      "name": "result-to-claim",
+      "description": "判断实验支持哪些结论、哪些结论需要收缩，以及还缺什么证据。"
+    },
+    {
+      "directory": "rwkv",
+      "name": "rwkv-architecture",
+      "description": "RNN+Transformer hybrid with O(n) inference. Linear time, infinite context, no KV cache. Train like GPT (parallel), infer like RNN (sequential). Linux Foundation AI project. Production at Windows, Office, NeMo. RWKV-7 (March 2025). Models up to 14B parameters."
+    },
+    {
+      "directory": "saelens",
+      "name": "sparse-autoencoder-training",
+      "description": "Provides guidance for training and analyzing Sparse Autoencoders (SAEs) using SAELens to decompose neural network activations into interpretable features. Use when discovering interpretable features, analyzing superposition, or studying monosemantic representations in language models."
+    },
+    {
+      "directory": "scfm-paper-writing",
+      "name": "scfm-paper-writing",
+      "description": "Write or revise single-cell foundation model papers using a local, section-aware literature library. Retrieve close scFM exemplars, compare scientific positioning, and adapt argument structure to the user's evidence; use alongside kiki-paper-writing for scGPT, Geneformer, cell representations, contrastive pretraining, or perturbation-model manuscripts."
+    },
+    {
+      "directory": "scientific-figure-making",
+      "name": "scientific-figure-making",
+      "description": "按 figures4papers 的风格制作柱状图、趋势图、热图等发表用图。"
+    },
+    {
+      "directory": "segment-anything",
+      "name": "segment-anything-model",
+      "description": "Foundation model for image segmentation with zero-shot transfer. Use when you need to segment any object in images using points, boxes, or masks as prompts, or automatically generate all object masks in an image."
+    },
+    {
+      "directory": "self-improvement",
+      "name": "self-improvement",
+      "description": "Capture useful learnings from failures, user corrections, missing capabilities, outdated assumptions, and recurring workflow discoveries. Use when a command fails unexpectedly, the user says a prior answer was wrong, a better reusable pattern is found, or durable guidance should be promoted into AGENTS.md or a project learning log."
+    },
+    {
+      "directory": "semantic-scholar",
+      "name": "semantic-scholar",
+      "description": "检索已发表论文、引用关系、会议期刊和摘要信息。"
+    },
+    {
+      "directory": "sentence-transformers",
+      "name": "sentence-transformers",
+      "description": "Framework for state-of-the-art sentence, text, and image embeddings. Provides 5000+ pre-trained models for semantic similarity, clustering, and retrieval. Supports multilingual, domain-specific, and multimodal models. Use for generating embeddings for RAG, semantic search, or similarity tasks. Best for production embedding generation."
+    },
+    {
+      "directory": "sentencepiece",
+      "name": "sentencepiece",
+      "description": "Language-independent tokenizer treating text as raw Unicode. Supports BPE and Unigram algorithms. Fast (50k sentences/sec), lightweight (6MB memory), deterministic vocabulary. Used by T5, ALBERT, XLNet, mBART. Train on raw text without pre-tokenization. Use when you need multilingual support, CJK languages, or reproducible tokenization."
+    },
+    {
+      "directory": "server-gpu-diagnosis",
+      "name": "server-gpu-diagnosis",
+      "description": "排查 CUDA、GPU 可见性、环境、显存和服务器运行问题。"
+    },
+    {
+      "directory": "sglang",
+      "name": "sglang",
+      "description": "Fast structured generation and serving for LLMs with RadixAttention prefix caching. Use for JSON/regex outputs, constrained decoding, agentic workflows with tool calls, or when you need 5× faster inference than vLLM with prefix sharing. Powers 300,000+ GPUs at xAI, AMD, NVIDIA, and LinkedIn."
+    },
+    {
+      "directory": "simpo",
+      "name": "simpo-training",
+      "description": "Simple Preference Optimization for LLM alignment. Reference-free alternative to DPO with better performance (+6.4 points on AlpacaEval 2.0). No reference model needed, more efficient than DPO. Use for preference alignment when want simpler, faster training than DPO/PPO."
+    },
+    {
+      "directory": "skill-advisor",
+      "name": "skill-advisor",
+      "description": "Search and discover existing Codex skills before creating new ones. Prevents duplicate skills by indexing available skills and finding similar functionality. Use when the user wants to create a new skill, asks about available skills, or needs recommendations on skill reuse versus creation."
+    },
+    {
+      "directory": "skypilot",
+      "name": "skypilot-multi-cloud-orchestration",
+      "description": "Multi-cloud orchestration for ML workloads with automatic cost optimization. Use when you need to run training or batch jobs across multiple clouds, leverage spot instances with auto-recovery, or optimize GPU costs across providers."
+    },
+    {
+      "directory": "slime",
+      "name": "slime-rl-training",
+      "description": "Provides guidance for LLM post-training with RL using slime, a Megatron+SGLang framework. Use when training GLM models, implementing custom data generation workflows, or needing tight Megatron-LM integration for RL scaling."
+    },
+    {
+      "directory": "speculative-decoding",
+      "name": "speculative-decoding",
+      "description": "Accelerate LLM inference using speculative decoding, Medusa multiple heads, and lookahead decoding techniques. Use when optimizing inference speed (1.5-3.6× speedup), reducing latency for real-time applications, or deploying models with limited compute. Covers draft models, tree-based attention, Jacobi iteration, parallel token generation, and production deployment strategies."
+    },
+    {
+      "directory": "stable-diffusion",
+      "name": "stable-diffusion-image-generation",
+      "description": "State-of-the-art text-to-image generation with Stable Diffusion models via HuggingFace Diffusers. Use when generating images from text prompts, performing image-to-image translation, inpainting, or building custom diffusion pipelines."
+    },
+    {
+      "directory": "supervisor-skills-routing",
+      "name": "supervisor-skills-routing",
+      "description": "把宽泛的论文求助分派到 idea、提纲、Introduction、图形或审查技能。"
+    },
+    {
+      "directory": "swanlab",
+      "name": "experiment-tracking-swanlab",
+      "description": "Provides guidance for experiment tracking with SwanLab. Use when you need open-source run tracking, local or self-hosted dashboards, and lightweight media logging for ML workflows."
+    },
+    {
+      "directory": "tech-paper-template",
+      "name": "tech-paper-template",
+      "description": "梳理方法论文的背景、局限、核心想法、挑战、模块和贡献链条。"
+    },
+    {
+      "directory": "tensorboard",
+      "name": "tensorboard",
+      "description": "Visualize training metrics, debug models with histograms, compare experiments, visualize model graphs, and profile performance with TensorBoard - Google's ML visualization toolkit"
+    },
+    {
+      "directory": "tensorrt-llm",
+      "name": "tensorrt-llm",
+      "description": "Optimizes LLM inference with NVIDIA TensorRT for maximum throughput and lowest latency. Use for production deployment on NVIDIA GPUs (A100/H100), when you need 10-100x faster inference than PyTorch, or for serving models with quantization (FP8/INT4), in-flight batching, and multi-GPU scaling."
+    },
+    {
+      "directory": "top-ai-paper-submission",
+      "name": "top-ai-paper-submission",
+      "description": "按当前阶段选择查新、实验、写作、审查和投稿相关技能。"
+    },
+    {
+      "directory": "top-survey-workflow",
+      "name": "top-survey-workflow",
+      "description": "规划面向高水平期刊的综述，构建分类体系与批判性综合。"
+    },
+    {
+      "directory": "torchforge",
+      "name": "torchforge-rl-training",
+      "description": "Provides guidance for PyTorch-native agentic RL using torchforge, Meta's library separating infra from algorithms. Use when you want clean RL abstractions, easy algorithm experimentation, or scalable training with Monarch and TorchTitan."
+    },
+    {
+      "directory": "torchtitan",
+      "name": "distributed-llm-pretraining-torchtitan",
+      "description": "Provides PyTorch-native distributed LLM pretraining using torchtitan with 4D parallelism (FSDP2, TP, PP, CP). Use when pretraining Llama 3.1, DeepSeek V3, or custom models at scale from 8 to 512+ GPUs with Float8, torch.compile, and distributed checkpointing."
+    },
+    {
+      "directory": "training-check",
+      "name": "training-check",
+      "description": "在会话中检查训练指标，识别 NaN、发散、停滞与异常运行。"
+    },
+    {
+      "directory": "transformer-lens",
+      "name": "transformer-lens-interpretability",
+      "description": "Provides guidance for mechanistic interpretability research using TransformerLens to inspect and manipulate transformer internals via HookPoints and activation caching. Use when reverse-engineering model algorithms, studying attention patterns, or performing activation patching experiments."
+    },
+    {
+      "directory": "trl-fine-tuning",
+      "name": "fine-tuning-with-trl",
+      "description": "Fine-tune LLMs using reinforcement learning with TRL - SFT for instruction tuning, DPO for preference alignment, PPO/GRPO for reward optimization, and reward model training. Use when need RLHF, align model with preferences, or train from human feedback. Works with HuggingFace Transformers."
+    },
+    {
+      "directory": "unsloth",
+      "name": "unsloth",
+      "description": "Expert guidance for fast fine-tuning with Unsloth - 2-5x faster training, 50-80% less memory, LoRA/QLoRA optimization"
+    },
+    {
+      "directory": "verl",
+      "name": "verl-rl-training",
+      "description": "Provides guidance for training LLMs with reinforcement learning using verl (Volcano Engine RL). Use when implementing RLHF, GRPO, PPO, or other RL algorithms for LLM post-training at scale with flexible infrastructure backends."
+    },
+    {
+      "directory": "vibe-research-workflow",
+      "name": "vibe-research-workflow",
+      "description": "规划 AI 在科研编程、绘图与写作各阶段的协作方式。"
+    },
+    {
+      "directory": "vllm",
+      "name": "serving-llms-vllm",
+      "description": "Serves LLMs with high throughput using vLLM's PagedAttention and continuous batching. Use when deploying production LLM APIs, optimizing inference latency/throughput, or serving models with limited GPU memory. Supports OpenAI-compatible endpoints, quantization (GPTQ/AWQ/FP8), and tensor parallelism."
+    },
+    {
+      "directory": "weights-and-biases",
+      "name": "weights-and-biases",
+      "description": "Track ML experiments with automatic logging, visualize training in real-time, optimize hyperparameters with sweeps, and manage model registry with W&B - collaborative MLOps platform"
+    },
+    {
+      "directory": "whisper",
+      "name": "whisper",
+      "description": "OpenAI's general-purpose speech recognition model. Supports 99 languages, transcription, translation to English, and language identification. Six model sizes from tiny (39M params) to large (1550M params). Use for speech-to-text, podcast transcription, or multilingual audio processing. Best for robust, multilingual ASR."
+    },
+    {
+      "directory": "yeet",
+      "name": "yeet",
+      "description": "整理提交、推送分支并创建草稿 PR。"
+    }
+  ],
+  "reference_only": {
+    "system_entries": 6,
+    "plugin_entries": 58
+  },
+  "runtime_tokens": [
+    "@@KIKI_SKILLS_DIR@@",
+    "@@KIKI_SUPPORT_DIR@@",
+    "@@KIKI_AGENT_HOME@@",
+    "@@KIKI_HOME@@",
+    "@@KIKI_PYTHON@@",
+    "@@KIKI_LATEXMK@@",
+    "@@KIKI_TEXBIN@@",
+    "@@KIKI_AGENT@@",
+    "@@KIKI_PROFILE@@"
+  ],
+  "validation": "File/static inspection only; no installer or skill execution tests were run."
+}

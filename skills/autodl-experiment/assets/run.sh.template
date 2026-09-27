@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+PROJECT_NAME="<PROJECT_NAME>"
+RUN_ID="<RUN_ID>"
+CONDA_ENV="<CONDA_ENV>"
+RUN_ROOT="/root/autodl-tmp/${PROJECT_NAME}/runs/${RUN_ID}"
+LOG_FILE="${RUN_ROOT}/logs/main.log"
+NOTIFY_ENV="${RUN_ROOT}/notify.env"
+THRESHOLDS="<THRESHOLDS>"
+
+mkdir -p "${RUN_ROOT}/logs" "${RUN_ROOT}/results" "${RUN_ROOT}/checkpoints" "${RUN_ROOT}/configs"
+
+source /etc/network_turbo || true
+export PYTHONUNBUFFERED=1
+export HF_HOME=/root/autodl-tmp/cache/huggingface
+export HUGGINGFACE_HUB_CACHE=/root/autodl-tmp/cache/huggingface/hub
+export TRANSFORMERS_CACHE=/root/autodl-tmp/cache/huggingface/hub
+
+source /root/miniconda3/etc/profile.d/conda.sh
+conda activate "${CONDA_ENV}"
+
+cd "/root/autodl-tmp/${PROJECT_NAME}"
+
+python "<SKILL_SCRIPT_DIR>/send_email_notify.py" \
+  --event started \
+  --project "${PROJECT_NAME}" \
+  --run-id "${RUN_ID}" \
+  --run-root "${RUN_ROOT}" \
+  --summary "Experiment started" \
+  --env-file "${NOTIFY_ENV}" || true
+
+(
+  <LAUNCH_COMMAND>
+) 2>&1 | tee "${LOG_FILE}" &
+RUN_PID=$!
+
+python "<SKILL_SCRIPT_DIR>/watch_progress_notify.py" \
+  --project "${PROJECT_NAME}" \
+  --run-id "${RUN_ID}" \
+  --run-root "${RUN_ROOT}" \
+  --log-file "${LOG_FILE}" \
+  --thresholds "${THRESHOLDS}" \
+  --env-file "${NOTIFY_ENV}" \
+  >> "${RUN_ROOT}/logs/notify.log" 2>&1 &
+WATCH_PID=$!
+
+set +e
+wait "${RUN_PID}"
+EXIT_CODE=$?
+set -e
+
+echo "${EXIT_CODE}" > "${RUN_ROOT}/exit_code.txt"
+
+python "<SKILL_SCRIPT_DIR>/watch_progress_notify.py" \
+  --project "${PROJECT_NAME}" \
+  --run-id "${RUN_ID}" \
+  --run-root "${RUN_ROOT}" \
+  --log-file "${LOG_FILE}" \
+  --thresholds "${THRESHOLDS}" \
+  --env-file "${NOTIFY_ENV}" \
+  --exit-code-file "${RUN_ROOT}/exit_code.txt" \
+  --once \
+  >> "${RUN_ROOT}/logs/notify.log" 2>&1 || true
+
+kill "${WATCH_PID}" 2>/dev/null || true
+exit "${EXIT_CODE}"

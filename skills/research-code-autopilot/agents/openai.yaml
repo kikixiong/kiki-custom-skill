@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Code Autopilot"
+  short_description: "Run and repair research code"
+  default_prompt: "Use $research-code-autopilot to inspect this experiment repo, fix the run path, and validate the cheapest meaningful check."

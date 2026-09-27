@@ -1,0 +1,4 @@
+interface:
+  display_name: "Server GPU Diagnosis"
+  short_description: "Diagnose CUDA and server runs"
+  default_prompt: "Use $server-gpu-diagnosis to diagnose why this GPU or CUDA job is not running correctly on the server."

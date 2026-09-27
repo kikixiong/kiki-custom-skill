@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Intake Autopilot"
+  short_description: "Orient and continue local projects"
+  default_prompt: "Use $project-intake-autopilot to inspect this repo, summarize the project state, and continue with the next useful task."

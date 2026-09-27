@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backtest Integrity Audit"
+  short_description: "Audit backtest reliability"
+  default_prompt: "Use $backtest-integrity-audit to review this backtest for lookahead, survivorship, cost, execution, and overfit risks."

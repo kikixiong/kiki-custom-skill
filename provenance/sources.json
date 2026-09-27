@@ -1,0 +1,52 @@
+[
+  {
+    "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+    "revision": "5725459ef5847263e9982f3390a6aa12f2320eaa",
+    "files": [
+      "LICENSE",
+      "skills/shared-references/assurance-contract.md",
+      "skills/shared-references/citation-discipline.md",
+      "skills/shared-references/effort-contract.md",
+      "skills/shared-references/experiment-integrity.md",
+      "skills/shared-references/integration-contract.md",
+      "skills/shared-references/output-language.md",
+      "skills/shared-references/output-manifest.md",
+      "skills/shared-references/output-versioning.md",
+      "skills/shared-references/patent-format-cn.md",
+      "skills/shared-references/patent-format-ep.md",
+      "skills/shared-references/patent-format-us.md",
+      "skills/shared-references/patent-writing-principles.md",
+      "skills/shared-references/prior-art-databases.md",
+      "skills/shared-references/review-tracing.md",
+      "skills/shared-references/reviewer-independence.md",
+      "skills/shared-references/reviewer-routing.md",
+      "skills/shared-references/venue-checklists.md",
+      "skills/shared-references/wiki-helper-resolution.md",
+      "skills/shared-references/writing-principles.md",
+      "tools/arxiv_fetch.py",
+      "tools/deepxiv_fetch.py",
+      "tools/exa_search.py",
+      "tools/extract_paper_style.py",
+      "tools/figure_renderer.py",
+      "tools/openalex_fetch.py",
+      "tools/overleaf_audit.sh",
+      "tools/overleaf_setup.sh",
+      "tools/paper_illustration_image2.py",
+      "tools/research_wiki.py",
+      "tools/save_trace.sh",
+      "tools/semantic_scholar_fetch.py",
+      "tools/verify_paper_audits.sh",
+      "tools/verify_wiki_coverage.sh"
+    ]
+  },
+  {
+    "repo": "HughYau/AcademicForge",
+    "revision": "d0280dadb9ebf2e2b8f0c575a89aa4b480731904",
+    "files": [
+      "ATTRIBUTIONS.md",
+      "LICENSE",
+      "README.md",
+      "forge.yaml"
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+skill:
+  name: "kiki-paper-writing"
+  directory: "kiki-paper-writing"
+  version: "2.0.0"
+  primary_entry: "SKILL.md"
+  language: "bilingual-guidance-english-paper-output"
+
+self_containment:
+  standalone_distribution: true
+  runtime_boundary: "kiki-paper-writing"
+  external_files_required: false
+  external_paths_referenced_for_operation: false
+  bundled_evidence:
+    - "05_provenance/DECISION_LEDGER.md"
+    - "05_provenance/RULE_EVIDENCE_MATRIX.md"
+    - "05_provenance/PROJECT_SPECIFIC_VS_GENERAL.md"
+    - "05_provenance/MERGE_PROVENANCE.md"
+
+capabilities:
+  modes:
+    - "from-zero"
+    - "from-outline-or-template"
+    - "revise-existing-draft"
+    - "compare-multiple-versions"
+    - "iterative-feedback-and-versioning"
+    - "global-assembly"
+    - "final-audit"
+  core_sections:
+    - "abstract"
+    - "introduction"
+    - "method"
+    - "figure-caption"
+  provisional_sections:
+    - "related-work"
+    - "experiments"
+    - "conclusion"
+    - "tables"
+
+merge_policy:
+  preference_order:
+    - "scientific-accuracy"
+    - "causal-completeness"
+    - "narrative-role"
+    - "contribution-coverage"
+    - "global-consistency"
+    - "concision"
+    - "natural-style"
+    - "rhythm-and-elegance"
+  rigid_project_rules_softened: true
+  project_specific_rules_not_generalized: true
+  evidence_classes:
+    - "Explicit"
+    - "Strongly-Inferred"
+    - "Project-Specific"
+    - "Provisional"
+
+quality:
+  progressive_disclosure: true
+  claim_audit_required: true
+  semantic_diff_for_major_revision: true
+  rendered_asset_audit_required: true
+  self_containment_check_required: true
+  self_containment_validator: "scripts/validate_self_contained.py"

@@ -1,0 +1,8 @@
+{
+  "name": "af-citation-management",
+  "source_id": "scientific-agent-skills/scientific-skills/citation-management",
+  "source_name": "citation-management",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/citation-management/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-citation-management",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-citation-management"
+}

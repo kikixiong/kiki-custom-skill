@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Meeting Reports"
+  short_description: "Prepare decision-ready research meeting reports"
+  default_prompt: "Use $creating-research-meeting-reports to turn my research notes into a decision-ready meeting report."

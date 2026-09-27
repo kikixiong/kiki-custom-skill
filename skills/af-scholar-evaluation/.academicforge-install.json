@@ -1,0 +1,8 @@
+{
+  "name": "af-scholar-evaluation",
+  "source_id": "scientific-agent-skills/scientific-skills/scholar-evaluation",
+  "source_name": "scholar-evaluation",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/scholar-evaluation/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-scholar-evaluation",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-scholar-evaluation"
+}

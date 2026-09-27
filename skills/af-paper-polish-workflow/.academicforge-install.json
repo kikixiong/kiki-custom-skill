@@ -1,0 +1,8 @@
+{
+  "name": "af-paper-polish-workflow",
+  "source_id": "paper-polish-workflow-skill/skills/paper-polish-workflow",
+  "source_name": "paper-polish-workflow",
+  "source_relative_path": "skills/paper-polish-workflow-skill/skills/paper-polish-workflow/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-paper-polish-workflow",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-paper-polish-workflow"
+}

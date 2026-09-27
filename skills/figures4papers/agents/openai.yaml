@@ -1,0 +1,7 @@
+interface:
+  display_name: "Figures4Papers"
+  short_description: "Route paper figure work to figures4papers style"
+  default_prompt: "Use $figures4papers to create or audit a publication-quality paper figure."
+
+policy:
+  allow_implicit_invocation: true

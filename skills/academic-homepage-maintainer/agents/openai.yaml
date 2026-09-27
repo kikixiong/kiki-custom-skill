@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Homepage Maintainer"
+  short_description: "Maintain academic web pages"
+  default_prompt: "Use $academic-homepage-maintainer to update or audit this academic homepage or project page without inventing claims."

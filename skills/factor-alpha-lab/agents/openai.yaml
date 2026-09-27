@@ -1,0 +1,4 @@
+interface:
+  display_name: "Factor Alpha Lab"
+  short_description: "Research and validate alpha factors"
+  default_prompt: "Use $factor-alpha-lab to evaluate this alpha factor idea with IC, RankIC, neutralization, decay, and turnover checks."

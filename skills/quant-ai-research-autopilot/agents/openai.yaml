@@ -1,0 +1,7 @@
+interface:
+  display_name: "Quant AI Research Autopilot"
+  short_description: "Route AI quant ideas into papers and tests"
+  default_prompt: "Use $quant-ai-research-autopilot to find AI quant research ideas, retrieve papers, and turn the best candidates into falsifiable experiments."
+
+policy:
+  allow_implicit_invocation: true

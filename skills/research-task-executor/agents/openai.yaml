@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Task Executor"
+  short_description: "Execute AI research coding tasks"
+  default_prompt: "Use $research-task-executor to implement and verify this research-code task."
+
+policy:
+  allow_implicit_invocation: true

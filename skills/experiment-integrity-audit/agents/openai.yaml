@@ -1,0 +1,4 @@
+interface:
+  display_name: "Experiment Integrity Audit"
+  short_description: "Audit research result credibility"
+  default_prompt: "Use $experiment-integrity-audit to audit these experiment results for leakage, metric errors, and reproducibility gaps."

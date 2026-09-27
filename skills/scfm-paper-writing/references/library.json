@@ -1,0 +1,5 @@
+{
+  "root": "",
+  "base_skill": "@@KIKI_SKILLS_DIR@@/kiki-paper-writing/SKILL.md",
+  "build_python": "@@KIKI_PYTHON@@"
+}

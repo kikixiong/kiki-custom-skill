@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Wiki Organization"
+  short_description: "Scaffold and operate research wiki prompts"
+  default_prompt: "Use $research-wiki-organization-prompts to scaffold or maintain a research wiki for paper-driven idea generation."
+
+policy:
+  allow_implicit_invocation: true

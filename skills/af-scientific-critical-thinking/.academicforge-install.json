@@ -1,0 +1,8 @@
+{
+  "name": "af-scientific-critical-thinking",
+  "source_id": "scientific-agent-skills/scientific-skills/scientific-critical-thinking",
+  "source_name": "scientific-critical-thinking",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/scientific-critical-thinking/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-scientific-critical-thinking",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-scientific-critical-thinking"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "af-literature-review",
+  "source_id": "scientific-agent-skills/scientific-skills/literature-review",
+  "source_name": "literature-review",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/literature-review/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-literature-review",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-literature-review"
+}

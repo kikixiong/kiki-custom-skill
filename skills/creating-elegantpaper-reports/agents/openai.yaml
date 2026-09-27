@@ -1,0 +1,4 @@
+interface:
+  display_name: "ElegantPaper Reports"
+  short_description: "Create complete ElegantPaper report projects"
+  default_prompt: "Use $creating-elegantpaper-reports to package a formal report as a validated ElegantPaper project."

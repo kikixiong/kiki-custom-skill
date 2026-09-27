@@ -1,0 +1,22 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk (XeLaTeX, ElegantPaper)",
+      "command": "@@KIKI_LATEXMK@@",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (XeLaTeX, ElegantPaper)",
+      "tools": ["latexmk (XeLaTeX, ElegantPaper)"]
+    }
+  ]
+}

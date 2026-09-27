@@ -1,0 +1,4 @@
+interface:
+  display_name: "JoinQuant Research Workflow"
+  short_description: "Work with JoinQuant strategy code"
+  default_prompt: "Use $joinquant-research-workflow to review or modify this JoinQuant script while preserving API timing and A-share constraints."

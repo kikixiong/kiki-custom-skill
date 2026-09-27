@@ -1,0 +1,46 @@
+[
+  {
+    "repo": "ChenLiu-1996/figures4papers",
+    "revision": "151dbadaef50f7eecb4021cb9fa12e279ce83616",
+    "files": [
+      "README.md",
+      "figure_CellSpliceNet/plot_ablation.py",
+      "figure_CellSpliceNet/plot_comparison.py",
+      "figure_Cflows/diffusion_swiss_roll.py",
+      "figure_Cflows/plot_comparison_Ablation.py",
+      "figure_Cflows/plot_comparison_GeneRegulatory.py",
+      "figure_Cflows/plot_comparison_Trajectory.py",
+      "figure_Dispersion/plot_idea.py",
+      "figure_Dispersion/plot_illustration.py",
+      "figure_FPGM/plot_freq_prior.py",
+      "figure_ImmunoStruct/plot_bars.py",
+      "figure_ImmunoStruct/raw_data.py",
+      "figure_RNAGenScape/plot_comparison.py",
+      "figure_RNAGenScape/plot_hole_manifold.py",
+      "figure_RNAGenScape/plot_manifold.py",
+      "figure_RNAGenScape/plot_sweep.py",
+      "figure_VIGIL/plot_comparison_radar.py",
+      "figure_VIGIL/plot_posttraining.py",
+      "figure_brainteaser/plot_brute_force.py",
+      "figure_brainteaser/plot_correctness_by_category.py",
+      "figure_brainteaser/plot_correctness_by_subcategory.py",
+      "figure_brainteaser/plot_rewriting.py",
+      "figure_brainteaser/plot_selfcorrection_math.py",
+      "figure_ophthal_review/plot_composition.py",
+      "figure_ophthal_review/plot_trend.py",
+      "scientific-figure-making/SKILL.md",
+      "scientific-figure-making/references/api.md",
+      "scientific-figure-making/references/common-patterns.md",
+      "scientific-figure-making/references/demos.md",
+      "scientific-figure-making/references/design-theory.md",
+      "scientific-figure-making/references/tutorials.md"
+    ]
+  },
+  {
+    "repo": "Leey21/awesome-ai-research-writing",
+    "revision": "27a65dc54fabb6db86f7dde214d553072c1cbe22",
+    "files": [
+      "README.md"
+    ]
+  }
+]

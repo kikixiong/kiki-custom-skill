@@ -1,0 +1,14 @@
+# Local state and credentials never belong in this collection
+.DS_Store
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+auth.json
+credentials.json
+*.pem
+*.p12
+node_modules/
+.venv/
+.install-state/

@@ -1,0 +1,7 @@
+{
+  "name": "a6000-8",
+  "platform": "Linux",
+  "role": "remote Codex/Claude host; experiments only when authorized",
+  "default_experiment_host": "cnic-ps",
+  "automatic_experiment_launch": false
+}

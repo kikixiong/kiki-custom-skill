@@ -1,0 +1,7 @@
+interface:
+  display_name: "RebuttalStudio"
+  short_description: "Structured rebuttal and author-response router"
+  default_prompt: "Use $rebuttalstudio to break down reviews and draft point-by-point rebuttal responses."
+
+policy:
+  allow_implicit_invocation: true

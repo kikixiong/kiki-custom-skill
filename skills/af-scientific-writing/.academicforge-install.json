@@ -1,0 +1,8 @@
+{
+  "name": "af-scientific-writing",
+  "source_id": "scientific-agent-skills/scientific-skills/scientific-writing",
+  "source_name": "scientific-writing",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/scientific-writing/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-scientific-writing",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-scientific-writing"
+}

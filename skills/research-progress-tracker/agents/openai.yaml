@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Progress Tracker"
+  short_description: "Resume and track AI research projects"
+  default_prompt: "Use $research-progress-tracker to inspect this research project and update progress, pipeline, and experiment records."
+
+policy:
+  allow_implicit_invocation: true

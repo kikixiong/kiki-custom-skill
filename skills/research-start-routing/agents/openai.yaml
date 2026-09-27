@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Start Routing"
+  short_description: "Route research-code progress and execution"
+  default_prompt: "Use $research-start-routing to resume, inspect, or execute an AI research coding workflow."
+
+policy:
+  allow_implicit_invocation: true

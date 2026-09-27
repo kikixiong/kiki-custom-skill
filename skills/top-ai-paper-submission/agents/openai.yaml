@@ -1,0 +1,7 @@
+interface:
+  display_name: "Top AI Paper Submission"
+  short_description: "Route casual paper requests into top-venue workflow"
+  default_prompt: "Use $top-ai-paper-submission to harden this AI paper for a top-tier submission."
+
+policy:
+  allow_implicit_invocation: true

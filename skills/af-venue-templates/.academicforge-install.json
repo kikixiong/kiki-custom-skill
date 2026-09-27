@@ -1,0 +1,8 @@
+{
+  "name": "af-venue-templates",
+  "source_id": "scientific-agent-skills/scientific-skills/venue-templates",
+  "source_name": "venue-templates",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/venue-templates/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-venue-templates",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-venue-templates"
+}

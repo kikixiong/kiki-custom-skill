@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Algorithm Checker"
+  short_description: "Audit research-code algorithm correctness"
+  default_prompt: "Use $research-algorithm-checker to check this research code against the intended algorithm."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "轻量开发与验证"
+  short_description: "按风险匹配审查、测试与构建，减少重复门禁和代理开销"
+  default_prompt: "Use $lightweight-development-verification to plan and validate this change with the smallest risk-appropriate workflow."

@@ -1,0 +1,8 @@
+{
+  "name": "af-scientific-slides",
+  "source_id": "scientific-agent-skills/scientific-skills/scientific-slides",
+  "source_name": "scientific-slides",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/scientific-slides/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-scientific-slides",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-scientific-slides"
+}

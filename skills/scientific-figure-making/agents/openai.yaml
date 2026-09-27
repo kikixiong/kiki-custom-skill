@@ -1,0 +1,7 @@
+interface:
+  display_name: "Scientific Figure Making"
+  short_description: "Publication matplotlib figures from figures4papers"
+  default_prompt: "Use $scientific-figure-making to create a publication-quality matplotlib figure using figures4papers conventions."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,91 @@
+# Research State — Central Project Tracking
+# Copy this template to your project root and fill in as you go.
+# Updated by the agent after each experiment and reflection.
+
+project:
+  title: ""
+  question: ""                    # The core research question
+  status: active                  # active | paused | concluded
+  started: ""                     # ISO date
+  domain: ""                      # e.g., "mechanistic interpretability", "RL training"
+
+literature:
+  key_papers: []
+  # - id: "liu2025superposition"
+  #   title: "Superposition Yields Robust Neural Scaling"
+  #   authors: "Liu et al."
+  #   year: 2025
+  #   relevance: "Proves ETF structure in LM heads"
+  open_problems: []               # Gaps identified from literature
+  evidence_gaps: []               # What's missing in the field
+
+hypotheses:
+  # List of all hypotheses, active and completed
+  # - id: H1
+  #   statement: "Testable claim with clear prediction"
+  #   status: pending             # pending | active | supported | refuted | inconclusive
+  #   motivation: "Why this is worth testing"
+  #   parent: null                # null for root, parent ID (e.g., H1) for sub-hypotheses
+  #   priority: medium            # high | medium | low
+
+experiments:
+  proxy_metric: ""                # What we're optimizing and how to compute it
+  baseline_value: null            # Starting point
+  best_value: null                # Best achieved so far
+  total_runs: 0
+  trajectory: []
+  # - run_id: "run_001"
+  #   hypothesis: "H1"
+  #   metric_value: null
+  #   delta: null                 # Change from baseline
+  #   wall_time_min: null
+  #   change_summary: ""
+  #   timestamp: ""
+
+active_experiments: []
+  # Tracked by the inner loop watchdog. Each entry:
+  # - id: "exp_001"
+  #   type: remote                # remote | local | subagent
+  #   hypothesis: "H1"
+  #   started: ""                 # ISO timestamp
+  #   stall_threshold_min: 60     # Minutes before considered stalled
+  #   # remote-specific:
+  #   ssh_host: ""
+  #   ssh_port: 22
+  #   progress_file: ""           # File to check for mtime updates
+  #   result_file: ""             # Where final results land
+  #   # subagent-specific:
+  #   session_id: ""
+  #   # local-specific:
+  #   watch_path: ""              # Directory/file to monitor for changes
+
+outer_loop:
+  cycle: 0                       # How many outer loop reflections so far
+  last_direction: null            # deepen | broaden | pivot | conclude
+  last_reflection: ""             # Brief summary of last reflection decision
+
+pivot_assessments: []
+  # Scale-up consistency tracking for structured pivot decisions.
+  # - hypothesis: "H1"
+  #   date: ""
+  #   small_scale:
+  #     setup: "100 samples, 3 epochs"
+  #     result: "+4.2% accuracy"
+  #     significant: true
+  #   large_scale:
+  #     setup: "10k samples, 20 epochs"
+  #     result: "+0.3% accuracy"
+  #     significant: false
+  #   consistency: "not_robust"   # robust | not_robust | negative | untested
+  #   decision: "pivot"           # deepen | pivot | scale_up | negative_result
+  #   reasoning: ""
+  #   next_action: ""
+
+workspace:
+  # Track key resource locations
+  findings: "findings.md"
+  log: "research-log.md"
+  literature_dir: "literature/"
+  experiments_dir: "experiments/"
+  to_human_dir: "to_human/"
+  paper_dir: "paper/"

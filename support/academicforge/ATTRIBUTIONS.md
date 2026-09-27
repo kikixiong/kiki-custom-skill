@@ -1,0 +1,235 @@
+# Attributions and Credits
+
+This project integrates skills from multiple authors across the AI agent ecosystem. We are deeply grateful for their contributions and want to ensure proper credit is given.
+
+## How This Forge Works
+
+Academic Forge uses a **hybrid integration model**:
+
+- Most skills are linked via git submodules
+- `paper-polish-workflow-skill` is linked via git submodule
+- `humanizer-zh` is linked via git submodule
+- `superpowers` is synced as a skills-only snapshot from upstream `skills/`
+- `scientific-visualization` is maintained locally in this repository (no upstream dependency)
+
+This means:
+
+- ✅ All original LICENSE files are preserved
+- ✅ External skills link directly to their source repositories
+- ✅ Authors receive proper credit and GitHub attribution
+- ✅ Updates flow from the original repositories
+- ✅ `superpowers` is intentionally limited to skills-only content to keep this forge focused
+- ✅ Local custom skills remain fully transparent in this repository's git history
+
+## Included Skills
+
+### 1. scientific-agent-skills
+
+**Original Repository**: [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)
+
+- **Author**: K-Dense-AI
+- **License**: MIT License
+- **Included Version**: See `.gitmodules` for current commit hash
+- **Purpose**: Scientific and research workflows for any AI agent
+- **Modifications**: None (used as-is via git submodule)
+- **Original License Text**: See `skills/scientific-agent-skills/LICENSE.md`
+
+**Why we included it**: The most comprehensive scientific skills collection available, now published as Scientific Agent Skills. It currently provides 133 ready-to-use scientific and research skills, broad AI-agent compatibility via the open Agent Skills standard, coverage across 15+ domains, and deep integration with 78+ scientific databases plus 70+ optimized Python package workflows.
+
+---
+
+### 2. AI-research-SKILLs
+
+**Original Repository**: [orchestra-research/AI-research-SKILLs](https://github.com/orchestra-research/AI-research-SKILLs)
+
+- **Author**: orchestra-research
+- **License**: Check original repository for license details
+- **Included Version**: See `.gitmodules` for current commit hash
+- **Purpose**: Research methodology, experimental design, data analysis
+- **Modifications**: None (used as-is via git submodule)
+- **Original License Text**: See `skills/AI-research-SKILLs/LICENSE`
+
+**Why we included it**: The gold standard for AI research engineering workflows, with 82 expert-level skills covering the complete research lifecycle. Each skill contains ~420 lines of detailed documentation plus 300KB+ reference materials. Covers cutting-edge frameworks across model architecture (LitGPT, Mamba, RWKV), training (Axolotl, DeepSpeed, FSDP), post-training (TRL, OpenRLHF), inference (vLLM, TensorRT-LLM), and evaluation (lm-eval-harness). Invaluable for researchers and engineers working on LLMs, multimodal models, or publishing ML papers at top-tier conferences (NeurIPS, ICML, ICLR).
+
+---
+
+### 3. humanizer
+
+**Original Repository**: [blader/humanizer](https://github.com/blader/humanizer)
+
+- **Author**: blader
+- **License**: Check original repository for license details
+- **Included Version**: See `.gitmodules` for current commit hash
+- **Purpose**: Academic tone refinement, readability improvement
+- **Modifications**: None (used as-is via git submodule)
+- **Original License Text**: See `skills/humanizer/LICENSE`
+
+**Why we included it**: Helps refine academic writing to maintain appropriate scholarly tone while improving clarity and readability.
+
+---
+
+### 4. humanizer-zh
+
+**Original Repository**: [op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh)
+
+- **Author**: op7418
+- **License**: MIT License
+- **Included Version**: See `.gitmodules` for current commit hash
+- **Purpose**: Chinese de-AI rewriting, naturalization, and Chinese academic polishing
+- **Modifications**: None (used as-is via git submodule)
+- **Original License Text**: See `skills/humanizer-zh/LICENSE`
+
+**Why we included it**: Complements `humanizer` with a Chinese-first variant for more natural Chinese abstracts, paper sections, and bilingual revision workflows.
+
+---
+
+### 5. superpowers (skills-only)
+
+**Original Repository**: [obra/superpowers](https://github.com/obra/superpowers)
+
+- **Author**: obra
+- **License**: MIT License
+- **Included Version**: Synced snapshot of `skills/` (see git history for latest sync commit)
+- **Purpose**: Structured development workflow skills (planning, debugging, TDD, review workflows)
+- **Modifications**: Integrated as skills-only content under `skills/superpowers` (plugin/non-skill directories are intentionally excluded)
+- **Original License Text**: See upstream `obra/superpowers` repository
+
+**Why we included it**: Adds battle-tested workflow skills like brainstorming, writing-plans, systematic-debugging, and test-driven-development that complement academic and research implementation workflows.
+
+---
+
+### 6. paper-polish-workflow-skill
+
+**Original Repository**: [Lylll9436/Paper-Polish-Workflow-skill](https://github.com/Lylll9436/Paper-Polish-Workflow-skill)
+
+- **Author**: Lylll9436
+- **License**: MIT License
+- **Included Version**: See `.gitmodules` for current commit hash
+- **Purpose**: End-to-end academic paper translation, polishing, review simulation, and submission workflow
+- **Modifications**: None (used as-is via git submodule)
+- **Original License Text**: See `skills/paper-polish-workflow-skill/LICENSE`
+
+**Why we included it**: It adds a tightly integrated paper-writing workflow pack that complements Academic Forge's research and visualization skills with bilingual translation, polishing, reviewer simulation, literature search, and submission-focused helpers.
+
+---
+
+### 7. scientific-visualization (local built-in)
+
+**Source**: Local skill maintained in this repository at `skills/scientific-visualization`
+
+- **Author**: Academic Forge contributors
+- **License**: MIT License (inherits this forge's repository license)
+- **Included Version**: Tracked directly by this repository's commit history
+- **Purpose**: Publication-focused scientific plotting and figure polishing (matplotlib/seaborn/plotly)
+- **Modifications**: First-party local skill, no upstream mirror/submodule
+- **Original License Text**: See root `LICENSE`
+
+**Why we included it**: Academic projects regularly fail quality bars at the figure stage. This skill directly targets publication-readiness (layout consistency, accessibility-safe colors, export formats, and journal-oriented styling), which strongly complements writing and research-methodology skills.
+
+---
+
+## License Compliance
+
+This forge's structure (configuration files, scripts, documentation) is licensed under MIT. However, **each included skill retains its original license**. When using Academic Forge, you must comply with:
+
+1. The MIT License of this forge's structure
+2. The individual license of each skill you use
+
+### License Summary
+
+| Skill | License | Commercial Use | Attribution Required |
+|-------|---------|----------------|---------------------|
+| scientific-agent-skills | MIT | ✅ Yes | ✅ Yes |
+| AI-research-SKILLs | TBD* | Check repo | Check repo |
+| humanizer | TBD* | Check repo | Check repo |
+| humanizer-zh | MIT | ✅ Yes | ✅ Yes |
+| superpowers | MIT | ✅ Yes | ✅ Yes |
+| paper-polish-workflow-skill | MIT | ✅ Yes | ✅ Yes |
+| scientific-visualization | MIT | ✅ Yes | ✅ Yes |
+
+*Please check the original repository for current license information.
+
+## How to Give Credit
+
+If you use this forge in your work, we appreciate (but don't require) acknowledgment:
+
+### In Academic Papers
+
+```
+We used the Academic Forge skill collection for Claude Code
+(https://github.com/HughYau/academic-forge), which integrates
+skills from k-dense-ai, orchestra-research, blader, and op7418.
+```
+
+### In Projects
+
+Add to your README.md:
+
+```markdown
+This project uses [Academic Forge](https://github.com/HughYau/academic-forge)
+for AI-assisted academic writing.
+```
+
+### On Social Media
+
+```
+Writing my paper with @ClaudeAI and Academic Forge - amazing integration
+of skills from @k-dense-ai and @orchestra-research! 🎓
+```
+
+## Supporting Original Authors
+
+The best way to support the creators of these skills:
+
+1. ⭐ **Star their repositories** on GitHub
+2. 🐛 **Report bugs** or suggest improvements directly to their repos
+3. 💬 **Share their work** with others in the community
+4. 🤝 **Contribute** to their projects if you can
+5. 💰 **Sponsor** them if they have sponsorship options
+
+## Reporting Attribution Issues
+
+If you are an author of one of these skills and have concerns about attribution or licensing:
+
+1. Open an issue on this repository
+2. We will respond within 48 hours and make necessary corrections
+
+We are committed to proper attribution and respecting all licenses.
+
+## Contributing New Skills
+
+Want to add a skill to this forge? Please ensure:
+
+1. The skill has a clear, open-source license
+2. You have permission to include it (or it's clearly licensed for redistribution)
+3. You provide full attribution in this document
+4. You use a traceable integration method (prefer submodule; skills-only sync is acceptable when justified)
+
+## Version History
+
+This document tracks which versions of each skill are included:
+
+| Date | Skill | Version/Commit | Change |
+|------|-------|----------------|--------|
+| 2024-XX-XX | scientific-agent-skills | abc123... | Initial inclusion |
+| 2026-04-13 | scientific-agent-skills | upstream rename + metadata refresh | Migrated submodule path and project references from `claude-scientific-skills` |
+| 2024-XX-XX | AI-research-SKILLs | def456... | Initial inclusion |
+| 2024-XX-XX | humanizer | ghi789... | Initial inclusion |
+| 2026-04-03 | humanizer-zh | submodule from op7418/Humanizer-zh | Initial inclusion |
+| 2026-02-15 | superpowers (skills-only) | synced from obra/superpowers/skills | Initial inclusion |
+| 2026-03-21 | paper-polish-workflow-skill | submodule from Lylll9436/Paper-Polish-Workflow-skill | Initial inclusion |
+| 2026-03-04 | scientific-visualization (local) | tracked in this repository | Initial inclusion |
+
+To see the current linked submodule versions, run:
+```bash
+git submodule status
+```
+
+For `superpowers` (skills-only sync), check the latest sync commits in this repository's git history. For `scientific-visualization`, check normal file history in this repository.
+
+---
+
+## Thank You
+
+This forge exists because of the generosity of open-source contributors who share their work freely. Thank you to all skill creators for making the AI agent ecosystem richer and more powerful! 🙏
+

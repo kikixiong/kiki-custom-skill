@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kiki Paper Writing"
+  short_description: "Evidence-grounded academic paper drafting and revision"
+  default_prompt: "Use $kiki-paper-writing to plan, draft, revise, or audit this academic paper."

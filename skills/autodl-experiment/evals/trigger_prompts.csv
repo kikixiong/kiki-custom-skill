@@ -1,0 +1,11 @@
+id,should_trigger,prompt,expected_behavior
+t01,true,"Use $autodl-experiment to launch my training job on AutoDL","explicit invocation"
+t02,true,"我在 AutoDL 上租了 4090，帮我后台跑训练并保存日志","launch remote tmux job"
+t03,true,"给正在跑的远程 sh 加一个 50%、75%、失败邮件提醒，不要重启任务","sidecar monitoring with email alerts"
+t04,true,"AutoDL 里 HuggingFace 下载失败，帮我排查 network_turbo 和缓存","debug network/cache"
+t05,true,"把 AutoDL 上的 csv、json、日志和 run.sh 拉回本地","pullback artifacts"
+t06,true,"我想自定义 10,30,60,90,100 这些邮件通知节点","custom thresholds"
+t07,false,"帮我解释一下 cross entropy loss","ML theory only"
+t08,false,"我本地 Python 报 ModuleNotFoundError","local-only debugging unless remote context exists"
+t09,false,"帮我写一个普通爬虫","unrelated task"
+t10,true,"清空 /root/autodl-tmp 之前先问我确认，并拉回结果","destructive action must require confirmation"

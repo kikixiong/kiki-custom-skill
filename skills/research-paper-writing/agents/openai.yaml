@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Paper Writing"
+  short_description: "Academic paper writing and section-level refinement"
+  default_prompt: "Use $research-paper-writing to improve my paper's structure, flow, and section writing quality."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,8 @@
+{
+  "name": "af-peer-review",
+  "source_id": "scientific-agent-skills/scientific-skills/peer-review",
+  "source_name": "peer-review",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/peer-review/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-peer-review",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-peer-review"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "af-markdown-mermaid-writing",
+  "source_id": "scientific-agent-skills/scientific-skills/markdown-mermaid-writing",
+  "source_name": "markdown-mermaid-writing",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/markdown-mermaid-writing/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-markdown-mermaid-writing",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-markdown-mermaid-writing"
+}

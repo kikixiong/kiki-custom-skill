@@ -1,0 +1,7 @@
+interface:
+  display_name: "Quant AI Paper Scout"
+  short_description: "Scout AI papers for quant ideas"
+  default_prompt: "Use $quant-ai-paper-scout to search recent AI and time-series papers, triage them for quant transfer, and mine testable alpha ideas."
+
+policy:
+  allow_implicit_invocation: true

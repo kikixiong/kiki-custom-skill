@@ -1,0 +1,8 @@
+{
+  "name": "af-paper-lookup",
+  "source_id": "scientific-agent-skills/scientific-skills/paper-lookup",
+  "source_name": "paper-lookup",
+  "source_relative_path": "skills/scientific-agent-skills/scientific-skills/paper-lookup/SKILL.md",
+  "wrapper_dir": "@@KIKI_SKILLS_DIR@@/af-paper-lookup",
+  "active_link": "@@KIKI_SKILLS_DIR@@/af-paper-lookup"
+}

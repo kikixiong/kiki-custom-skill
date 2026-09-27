@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lean Modular Coding"
+  short_description: "Write focused, modular code without speculative complexity"
+  default_prompt: "Use $lean-modular-coding to create, change, refactor, or review code with cohesive modules and proportionate verification."

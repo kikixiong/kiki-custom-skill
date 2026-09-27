@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Figure Prompt Engineer"
+  short_description: "Create consistent scientific figure prompts"
+  default_prompt: "Use $craft-scientific-figure-prompts to create or revise a scientifically accurate figure prompt while preserving the project-wide visual style."
