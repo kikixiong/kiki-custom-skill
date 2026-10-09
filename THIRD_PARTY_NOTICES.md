@@ -13,6 +13,11 @@ all included files, and does not replace upstream licenses.
 - Additional ML/AI skills were copied from the owner's existing local installation;
   retain each file's original attribution and included license. Missing root-level
   licensing information is not treated as a new redistribution permission.
+- Skill Creator: https://github.com/anthropics/skills at revision
+  `683bc88e56f3e09ba94f7055977f3d3aa499f202`, under Apache-2.0. The full skill is
+  in `reference/system-skills/skill-creator/`; its original LICENSE.txt is retained.
+  Kiki added a compatibility note and its entrypoint link. See
+  `provenance/anthropic-skill-creator.json` for the pinned source and changes.
 - Plugin/system snapshots in `reference/` retain provider paths, versions, notices
   and runtime assumptions. They are reference copies, not installed integrations.
 - ElegantPaper and other pinned upstream assets retain their source notices and

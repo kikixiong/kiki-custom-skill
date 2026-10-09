@@ -84,6 +84,8 @@ python3 install.py --target both --profile a6000-4
 
 系统技能和插件由对应客户端自行管理，安装器不会把缓存冒充已安装插件，也不会覆盖 `.system`。需要专用工具、连接器、文档运行时或外部 API 的技能，只能使用当前机器实际提供的能力；GitHub、Overleaf 等授权不会随技能文件迁移。
 
+`skill-creator` 参考副本于 2026-10-09 按个人选择更新为 [Anthropic 版本](https://github.com/anthropics/skills/tree/683bc88e56f3e09ba94f7055977f3d3aa499f202/skills/skill-creator)，完整保留脚本、查看器和 Apache-2.0 许可证，并附 Codex/Claude 执行说明。维护者本机的同名入口已单独备份后更新；它仍位于 `reference/system-skills/skill-creator/`，**默认安装器不会把这次系统入口替换传播到其他机器**。来源与改动见 `provenance/anthropic-skill-creator.json`。Claude 专用评测脚本不代表 Codex 原生评测能力，本次未运行评测。
+
 SCFM 私有论文库未打包。需要它时配置 `KIKI_SCFM_LIBRARY` 或向 `scfm-paper-writing/scripts/library.py` 传入 `--library /真实路径`。Kiki Paper Writing 本身的写作资料已完整包含。
 
 保留个人实验偏好：Mac 不运行模型/数据实验；默认实验主机为 CNIC，用户明确指定其他主机时按任务执行。安装本仓库不授权启动实验、抢占 GPU、停止已有任务或改 SSH/VPN。
