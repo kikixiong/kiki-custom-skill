@@ -1,7 +1,7 @@
 {
   "name": "Kiki Custom Skill",
   "repository": "kikixiong/kiki-custom-skill",
-  "purpose": "Private personal-use collection for Kiki",
+  "purpose": "Portable skill collection for Codex and Claude Code",
   "skill_count": 200,
   "skills": [
     {
@@ -1017,8 +1017,7 @@
     "@@KIKI_PYTHON@@",
     "@@KIKI_LATEXMK@@",
     "@@KIKI_TEXBIN@@",
-    "@@KIKI_AGENT@@",
-    "@@KIKI_PROFILE@@"
+    "@@KIKI_AGENT@@"
   ],
   "validation": "File/static inspection only; no installer or skill execution tests were run."
 }

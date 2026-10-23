@@ -8,8 +8,8 @@ Troubleshooting guide for AutoDL Manager.
 
 **Symptoms:**
 ```bash
-autodl connect scbenchmark
-# ssh: connect to host ... port 15049: Connection refused
+autodl connect example-project
+# ssh: connect to host ... port <SSH_PORT>: Connection refused
 ```
 
 **Cause:** AutoDL reassigns ports when instances restart.
@@ -18,12 +18,12 @@ autodl connect scbenchmark
 1. Check AutoDL web console for new port
 2. Update config:
    ```bash
-   autodl add scbenchmark --host <host> --port <new-port>
+   autodl add example-project --host <host> --port <new-port>
    ```
 
 **Prevention:** Always check status first:
 ```bash
-autodl status scbenchmark
+autodl status example-project
 ```
 
 ### Password Authentication Failed
@@ -41,7 +41,7 @@ Permission denied (publickey,password)
 **Solution:**
 ```bash
 # Update password
-autodl add scbenchmark --password <new-password>
+autodl add example-project --password <new-password>
 
 # Or use SSH keys (better)
 ssh-keygen -t ed25519

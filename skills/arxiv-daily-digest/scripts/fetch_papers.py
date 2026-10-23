@@ -14,10 +14,9 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from pathlib import Path
+from local_config import CONFIG_DIR, DATA_DIR, load_json
 
 SCRIPT_DIR = Path(__file__).parent
-CONFIG_DIR = SCRIPT_DIR.parent / "config"
-DATA_DIR = SCRIPT_DIR.parent / "data"
 
 ARXIV_API_BASE = "https://export.arxiv.org/api/query"
 ARXIV_RSS_BASE = "https://rss.arxiv.org/rss"
@@ -29,9 +28,11 @@ _last_request_at = 0.0
 
 def load_categories():
     """Load arXiv categories from config"""
-    with open(CONFIG_DIR / "arxiv_categories.json") as f:
-        config = json.load(f)
-    return [cat["id"] for cat in config["categories"] if cat.get("check_daily", True)]
+    config = load_json("arxiv_categories.json")
+    categories = [cat["id"] for cat in config["categories"] if cat.get("check_daily", True)]
+    if not categories:
+        raise SystemExit(f"Select arXiv categories in {CONFIG_DIR / 'arxiv_categories.json'} first.")
+    return categories
 
 
 def fetch_category_papers_rss(category):

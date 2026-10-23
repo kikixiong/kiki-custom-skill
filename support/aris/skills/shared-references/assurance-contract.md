@@ -97,7 +97,7 @@ human-readable Markdown sibling). The JSON must contain at minimum:
   "audited_input_hashes": {
     "main.tex":                          "sha256:a3f8...",
     "sections/5.evidence.tex":           "sha256:b2d1...",
-    "/Users/me/project/results/run_2026_04_19.json": "sha256:c9e4..."
+    "/path/to/project/results/run_2026_04_19.json": "sha256:c9e4..."
   },
   "trace_path": ".aris/traces/paper-claim-audit/2026-04-21_run01/",
   "thread_id":  "019dae73-fc12-4ab8-...",
@@ -116,7 +116,7 @@ Field semantics:
   - Keys are **paths relative to the paper directory** (the argument
     passed to `verify_paper_audits.sh`) for files inside it, or
     **absolute paths** for files outside it (e.g. `../results/run.json`
-    is legal but `/Users/me/project/results/run.json` is more portable).
+    is legal but `/path/to/project/results/run.json` is more portable).
     Do NOT prefix in-paper files with `paper/` — the verifier already
     resolves relative to the paper dir and `paper/paper/main.tex` will
     false-fail. The verifier rehashes the current files and flags `STALE`

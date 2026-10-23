@@ -15,21 +15,18 @@ skill does not provide account authorization, GPU allocation or missing tools.
 
 # Research Task Executor
 
-## User's experiment environment
+## Execution environment
 
-Default authorized experiments run through `cnic-ps`; confirm actual hostname
-`ps`. For scbenchmark/scGRAIN use `/data1/jiaqi/scREBOUND`, with isolated
-`formal_worktrees/<run_id>` and `runs/<run_id>`. Derive other project roots,
-environment, datasets and weights from that project's existing configuration.
-Before launching an authorized run, inspect GPUs, disk, processes, environment,
-data/weight identity, destination and locks; respect current queue priorities.
-Keep jobs detached, assigned GPUs exclusive and checkpoints resumable.
+Resolve the authorized host, project root, Python environment, datasets, weights
+and device allocation from the task, project configuration or run manifest.
+Use isolated code/output directories appropriate to that project. Before an
+approved run, inspect devices, disk, processes, data/weights, destinations and
+locks; respect queue priorities and preserve resumable checkpoints.
 
-The local Mac is for code editing and small report artifacts. Never run training,
-forward/inference, probes, profiling or model/data experiments here, even on
-CPU/MPS or tiny inputs. A failed remote connection is not permission for a local
-fallback. A plan is not authorization to launch an experiment, seize a GPU, stop
-another task, overwrite outputs or change hyperparameters.
+Follow the user's local execution restrictions. An unavailable host does not
+authorize moving the experiment elsewhere. A plan does not authorize launching
+an experiment, seizing a device, stopping another task, overwriting outputs or
+changing hyperparameters.
 
 Use this for concrete AI/ML research-code tasks.
 
@@ -39,7 +36,7 @@ Use this for concrete AI/ML research-code tasks.
 2. Inspect existing code, scripts, configs, and result artifacts before editing.
 3. Choose the smallest complete implementation that preserves existing project patterns.
 4. Implement with focused changes.
-5. Use scoped static inspection or existing logs/results first. Honor explicit no-tests instructions. Run tests only when warranted; any model/data experiment or smoke run must be authorized and remote.
+5. Use scoped static inspection or existing logs/results first. Honor explicit no-tests instructions. Run tests only when warranted; any model/data experiment or smoke run must use the authorized execution environment.
 6. Update progress, pipeline, experiment registry, or issue tracker when useful.
 
 ## Chain Check

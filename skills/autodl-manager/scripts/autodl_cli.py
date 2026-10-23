@@ -73,7 +73,7 @@ def cli():
 
 @cli.command()
 @click.argument('name')
-@click.option('--host', required=True, help='SSH host (e.g., connect.westb.seetacloud.com)')
+@click.option('--host', required=True, help='SSH host (e.g., gpu.example.invalid)')
 @click.option('--port', required=True, type=int, help='SSH port')
 @click.option('--password', help='SSH password (will prompt if not provided)')
 @click.option('--user', default='root', help='SSH user (default: root)')

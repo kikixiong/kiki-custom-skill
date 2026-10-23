@@ -396,13 +396,13 @@ torchrun --standalone --nproc_per_node=8 train.py config/train_gpt2.py
 # Node 0 (master)
 torchrun --nproc_per_node=8 \
   --nnodes=4 --node_rank=0 \
-  --master_addr=192.168.1.100 --master_port=29500 \
+  --master_addr="${HEAD_NODE_IP:?Set HEAD_NODE_IP}" --master_port=29500 \
   train.py config/train_gpt2.py
 
 # Node 1-3 (workers)
 torchrun --nproc_per_node=8 \
   --nnodes=4 --node_rank=$RANK \
-  --master_addr=192.168.1.100 --master_port=29500 \
+  --master_addr="${HEAD_NODE_IP:?Set HEAD_NODE_IP}" --master_port=29500 \
   train.py config/train_gpt2.py
 ```
 

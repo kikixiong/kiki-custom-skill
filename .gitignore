@@ -12,3 +12,11 @@ credentials.json
 node_modules/
 .venv/
 .install-state/
+
+# Machine-specific overrides stay outside shared source
+.local/
+*.local.json
+*.local.md
+
+# arXiv runtime output is local state, not distributable skill content
+/skills/arxiv-daily-digest/data/

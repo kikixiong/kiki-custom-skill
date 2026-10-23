@@ -4133,7 +4133,7 @@ bash
 docker run -d -e JUPYTER_PORT=8000 \
   -e JUPYTER_PASSWORD="mypassword" \
   -e "SSH_KEY=$(cat ~/.ssh/container_key.pub)" \
-  -e USER_PASSWORD="unsloth2024" \
+  -e USER_PASSWORD="${CONTAINER_PASSWORD:?Set CONTAINER_PASSWORD}" \
   -p 8000:8000 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
   --gpus all \
@@ -4706,7 +4706,7 @@ Example 2 (bash):
 docker run -d -e JUPYTER_PORT=8000 \
   -e JUPYTER_PASSWORD="mypassword" \
   -e "SSH_KEY=$(cat ~/.ssh/container_key.pub)" \
-  -e USER_PASSWORD="unsloth2024" \
+  -e USER_PASSWORD="${CONTAINER_PASSWORD:?Set CONTAINER_PASSWORD}" \
   -p 8000:8000 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
   --gpus all \
@@ -9874,7 +9874,7 @@ bash
 docker run -d -e JUPYTER_PORT=8000 \
   -e JUPYTER_PASSWORD="mypassword" \
   -e "SSH_KEY=$(cat ~/.ssh/container_key.pub)" \
-  -e USER_PASSWORD="unsloth2024" \
+  -e USER_PASSWORD="${CONTAINER_PASSWORD:?Set CONTAINER_PASSWORD}" \
   -p 8000:8000 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
   --gpus all \
@@ -11791,7 +11791,7 @@ Example 2 (bash):
 docker run -d -e JUPYTER_PORT=8000 \
   -e JUPYTER_PASSWORD="mypassword" \
   -e "SSH_KEY=$(cat ~/.ssh/container_key.pub)" \
-  -e USER_PASSWORD="unsloth2024" \
+  -e USER_PASSWORD="${CONTAINER_PASSWORD:?Set CONTAINER_PASSWORD}" \
   -p 8000:8000 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
   --gpus all \

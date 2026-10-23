@@ -22,14 +22,13 @@ to check training means one check unless the user asks for continued monitoring.
 
 ## Evidence and environment
 
-- Resolve run ID, remote host, log/result paths, baseline, objective and launch
-  record from the project context. Use `cnic-ps` (actual hostname `ps`) by default.
-  For scbenchmark/scGRAIN use `/data1/jiaqi/scREBOUND/runs/<run_id>`.
+- Resolve run ID, execution environment, log/result paths, baseline, objective
+  and launch record from the project context. Do not assume a host or project.
 - Read logged loss, eval metrics, learning rate and gradient norms if available.
   Use the configured W&B run when available, with remote logs as a fallback.
-- Distinguish missing evidence from failure. Do not launch forward passes,
-  inference, probes, profiling, training or data experiments on the local Mac.
-  Do not start a new evaluation merely to fill a missing monitoring metric.
+- Distinguish missing evidence from failure and follow the user's execution
+  restrictions. Do not start a new evaluation, probe or profiling run merely
+  to fill a missing monitoring metric.
 
 ## Assessment
 
@@ -52,7 +51,7 @@ and never kill unrelated jobs or change GPU queue priorities.
 
 ## Output and recurring checks
 
-Report timestamp (Asia/Shanghai), run, evidence source, recent numeric metrics,
+Report the timestamp with the run's time zone (or the user-requested time zone), run, evidence source, recent numeric metrics,
 anomalies, decision and reason in this Codex task. Include exact remote paths or
 W&B links when known. Do not claim a task was stopped unless it actually was.
 

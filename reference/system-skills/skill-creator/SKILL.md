@@ -5,7 +5,7 @@ description: Create new skills, modify and improve existing skills, and measure 
 
 # Skill Creator
 
-> Kiki customization of the Anthropic upstream version. In Kiki's Codex or
+> Kiki customization of the Anthropic upstream version. In a Codex or
 > Claude Code environment, first read [execution notes](references/kiki-compatibility.md).
 > Use the evaluation depth requested by the user; routine updates need only static checks.
 

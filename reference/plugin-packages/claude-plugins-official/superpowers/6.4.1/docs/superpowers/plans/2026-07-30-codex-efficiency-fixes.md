@@ -465,7 +465,7 @@ paths natively."
 - [ ] **Step 1: Create the arm**
 
 ```bash
-git -C /Users/jesse/git/superpowers/superpowers worktree add --detach /tmp/sp-arm-fix codex-efficiency-fixes
+git -C /path/to/superpowers worktree add --detach /tmp/sp-arm-fix codex-efficiency-fixes
 git -C /tmp/sp-arm-fix log --oneline -1   # must show Task 5's commit
 ```
 
@@ -478,7 +478,7 @@ Write `superpowers-autoresearch/logs/2026-07-30-codex-efficiency-fixes.md` with:
 - [ ] **Step 3: Privacy sweep and commit (autoresearch)**
 
 ```bash
-cd /Users/jesse/git/superpowers/superpowers-autoresearch
+cd /path/to/superpowers-autoresearch
 git add logs/2026-07-30-codex-efficiency-fixes.md
 git diff --cached | grep -iE 'paradise|magic-kingdom|flower|pallas|web1|teststrip|PRI-[0-9]' && echo LEAK || echo clean   # must print clean
 git commit -m "docs: open the codex-efficiency fix-cycle hypothesis log"

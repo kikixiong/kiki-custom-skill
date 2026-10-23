@@ -1,16 +1,3 @@
 {
-  "instances": {
-    "example-instance": {
-      "host": "connect.westb.seetacloud.com",
-      "port": 15049,
-      "user": "root",
-      "password": "your-password-here",
-      "workdir": "/root/autodl-tmp/",
-      "gpu": "2x RTX4090",
-      "cpu": "50 cores",
-      "ram": "180GB",
-      "disk": "50GB",
-      "added_at": "2026-03-18"
-    }
-  }
+  "instances": {}
 }

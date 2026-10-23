@@ -1,147 +1,34 @@
-# arXiv Daily Digest Workflow
+# arXiv digest workflow
 
-## Daily Execution Flow
+## Local setup
 
-```
-Cron triggers at 09:00 GMT+8
-         ↓
-1. Fetch Papers (fetch_papers.py)
-   - Query arXiv API for configured categories
-   - Filter by submission date (last 2 days)
-   - Save raw papers to data/papers_YYYYMMDD.json
-         ↓
-2. Filter & Rank (filter_papers.py)
-   - Load research interests config
-   - Match papers against keywords
-   - Calculate relevance scores
-   - Categorize into top/medium/low priority
-         ↓
-3. Generate Digest (generate_digest.py)
-   - Format papers into markdown
-   - Add statistics and breakdown
-   - Save to data/digests/digest_YYYYMMDD.md
-         ↓
-4. Report in Codex
-   - Send digest via Telegram
-   - Announce completion
-```
+Read SKILL.md for the local configuration and storage locations. Copy the bundled
+JSON templates to the configuration directory without overwriting existing
+settings. Fill interests and arXiv categories from the user's request. Never
+commit the resulting personal settings or generated digests back into this repo.
 
-## Manual Testing
+`ARXIV_DIGEST_CONFIG_DIR` and `ARXIV_DIGEST_DATA_DIR` override the defaults.
+Configuration is required before fetching; empty templates intentionally fail
+with an actionable message instead of silently using someone else's topics.
 
-### Full workflow
-```bash
-cd @@KIKI_SKILLS_DIR@@/arxiv-daily-digest
-./scripts/run_digest.sh
-```
+## Processing
 
-### Step-by-step
+1. Check configuration with `scripts/local_config.py`.
+2. Fetch from configured arXiv categories into the runtime cache.
+3. Filter and rank by the user's keywords and priorities.
+4. Generate Markdown, honoring the selected display limits and storage path.
+5. Return the saved artifact. Schedule or send notifications only when requested.
 
-```bash
-# 1. Fetch papers
-python3 scripts/fetch_papers.py > /tmp/papers.json
-
-# 2. Filter papers
-cat /tmp/papers.json | python3 scripts/filter_papers.py > /tmp/filtered.json
-
-# 3. Generate digest
-cat /tmp/filtered.json | python3 scripts/generate_digest.py
-```
-
-## Customization Points
-
-### 1. Add Research Interest
-
-Edit `config/research_interests.json`:
-```json
-{
-  "id": "new_topic",
-  "name": "New Topic",
-  "keywords": ["keyword1", "keyword2"],
-  "priority": "high"
-}
-```
-
-### 2. Change Scoring Logic
-
-Edit `filter_papers.py`, function `calculate_relevance()`:
-```python
-# Current: High priority = 2x weight
-# Customize as needed
-```
-
-### 3. Adjust Categorization Thresholds
-
-Edit `filter_papers.py`, function `categorize_papers()`:
-```python
-# Current thresholds:
-# - Top picks: score >= 4 OR num_interests >= 2
-# - Worth reading: score >= 2
-# - Quick glance: score >= 1
-```
-
-### 4. Modify Digest Format
-
-Edit `generate_digest.py`, functions:
-- `format_paper_full()` - Top picks format
-- `format_paper_brief()` - Worth reading format
-- `format_paper_minimal()` - Quick glance format
+The shell orchestrator combines those steps. Individual scripts accept their
+existing file/stdin inputs and share the same configuration and data directories.
 
 ## Troubleshooting
 
-### No papers fetched
-- Check network connectivity
-- Verify arXiv API is accessible: `curl http://export.arxiv.org/api/query?search_query=cat:cs.AI&max_results=1`
-- Check category IDs in config
+- Missing configuration: initialize the local templates and fill required fields.
+- No matching papers: check selected categories, keywords, dates and source errors.
+- Source unavailable: report it; do not replace the user's topics or invent papers.
+- Delivery unavailable: return the local artifact; do not switch channels silently.
+- Duplicate caches: check the configured data directory before fetching again.
 
-### No relevant papers
-- Review keyword list
-- Add more variations and synonyms
-- Check if papers match interests manually
-
-### Digest too long for Telegram
-- Reduce max_papers limits in settings
-- Shorten abstract excerpts in format functions
-- Split into multiple messages
-
-### Cron job not running
-- Check cron status: use Codex automation tool
-- Verify schedule expression
-- Check session logs
-
-## File Structure
-
-```
-arxiv-daily-digest/
-├── SKILL.md                    # This file
-├── scripts/
-│   ├── run_digest.sh          # Main orchestrator
-│   ├── fetch_papers.py        # Step 1: Fetch from arXiv
-│   ├── filter_papers.py       # Step 2: Filter & rank
-│   └── generate_digest.py     # Step 3: Generate markdown
-├── config/
-│   ├── research_interests.json  # User interests
-│   ├── arxiv_categories.json    # Categories to monitor
-│   └── digest_settings.json     # Delivery settings
-├── data/
-│   ├── papers_YYYYMMDD.json     # Cached papers
-│   └── digests/
-│       └── digest_YYYYMMDD.md   # Generated digests
-└── references/
-    ├── arxiv-api.md             # API reference
-    └── workflow.md              # This file
-```
-
-## Performance
-
-- Paper fetching: ~5-10 seconds per category
-- Filtering: <1 second for 100 papers
-- Digest generation: <1 second
-- **Total**: ~30-60 seconds for full workflow
-
-## Future Improvements
-
-- Cache paper metadata to avoid re-fetching
-- Add LLM-powered summaries for top picks
-- Implement similarity deduplication (not just exact ID)
-- Add citation tracking
-- Weekly/monthly aggregated digests
+Scheduling is managed by the actual client, not by the JSON templates. Use the
+user's specified time zone and interval; installation creates no recurring job.

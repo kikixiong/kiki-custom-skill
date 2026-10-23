@@ -7,16 +7,15 @@ import json
 import sys
 from datetime import datetime
 from pathlib import Path
+from local_config import CONFIG_DIR, DATA_DIR, load_json
 from collections import Counter
 
 SCRIPT_DIR = Path(__file__).parent
-CONFIG_DIR = SCRIPT_DIR.parent / "config"
 
 
 def load_settings():
     """Load digest settings"""
-    with open(CONFIG_DIR / "digest_settings.json") as f:
-        return json.load(f)
+    return load_json("digest_settings.json")
 
 
 def format_paper_full(item):
@@ -184,7 +183,7 @@ def main():
     
     # Save to file if configured
     if settings["storage"]["save_digest"]:
-        output_dir = Path(SCRIPT_DIR).parent / settings["storage"]["save_path"]
+        output_dir = DATA_DIR / settings["storage"]["save_path"]
         output_dir.mkdir(parents=True, exist_ok=True)
         output_file = output_dir / f"digest_{datetime.now().strftime('%Y%m%d')}.md"
         

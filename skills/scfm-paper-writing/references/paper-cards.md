@@ -108,9 +108,8 @@ define a common comparison protocol rather than narrating isolated scores.
 
 **Boundary:** a high expression value is not universally more biologically important.
 Historical table settings do not override the project's later frozen protocol.
-The supplied title differs in word order from the repository's published citation;
-verify proceedings metadata for the bibliography. This is the project's baseline
-paper, not an independent validation of the current CoCoS extension.
+Verify proceedings metadata and the supplied source version before citing.
+A baseline paper does not independently validate the current manuscript's claims.
 
 ## state — measurement constraints motivate the prediction unit
 
@@ -198,9 +197,9 @@ linear probes. The downloaded file is a 2023 preprint, not the verified 2024
 journal version. Scale and superiority statements are historical author claims;
 do not adopt them as current rankings or as evidence for our own method.
 
-## cocos — project manuscript, excluded by default
+## Project manuscript — excluded by default
 
-Use the supplied v1 only as a revision target. Its text, figures and historical
+Use a configured project draft only as a revision target. Its text, figures and historical
 tables do not independently verify its own claims. Check current project records
 before adopting its method variant, baseline labels or scores. See
-[project-bridge.md](project-bridge.md) for the identified version boundary.
+[project-bridge.md](project-bridge.md) for version and evidence boundaries.

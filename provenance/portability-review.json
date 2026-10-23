@@ -1,0 +1,41 @@
+{
+  "review_date": "2026-10-23",
+  "scope": "Current repository files; Git history and already-installed client copies are outside this change.",
+  "changes": [
+    "Removed machine profiles and machine identity from the installer.",
+    "Added a one-sentence installation/configuration prompt with the repository URL.",
+    "Moved host, project path and execution-policy choices to current user/project and optional local configuration.",
+    "Replaced personal host/address/path examples with explicit placeholders while preserving technical and source attribution.",
+    "Removed preset research subscriptions, delivery time/channel and model selection from the daily digest.",
+    "Separated digest configuration and runtime data from installed skill files.",
+    "Removed 74 historical digest/cache files from the shared tree after a local backup."
+  ],
+  "inspection": {
+    "pre_report_files_scanned": 2360,
+    "text_files": 2279,
+    "binary_assets_raw_string_scan": 81,
+    "office_archives_unpacked_and_scanned": 20,
+    "result": "No actionable personal environment matches remain in inspected text/configuration and Office XML.",
+    "retained": "Source/author/license attribution, literature names, service/container default paths, loopback/bind addresses and synthetic technical examples.",
+    "limitations": "Binary string scans are not OCR or semantic inspection of images/PDFs; this is not a proof that arbitrary secrets are absent."
+  },
+  "verification": {
+    "passed": [
+      "Changed Python AST parsing",
+      "Changed JSON parsing",
+      "Changed shell script syntax",
+      "Manifest/runtime token consistency and 200 skill entrypoints",
+      "Read-only installer dry-run for Codex and Claude Code; 200 entries per client and no output directory created",
+      "Scoped staged diff and whitespace review"
+    ],
+    "not_run": [
+      "Skill functional/model/data experiments",
+      "Actual installation or remote deployment",
+      "Full builds/lint/E2E for bundled upstream projects",
+      "Independent review agent",
+      "Additional file hash checks"
+    ],
+    "evidence_reuse": "Unchanged passing checks were reused; the final config-validation edit received a fresh AST check.",
+    "remaining_risk": "Functional behavior on a freshly installed client has not been exercised; historical commits still contain earlier material."
+  }
+}

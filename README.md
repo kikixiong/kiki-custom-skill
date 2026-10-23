@@ -1,99 +1,82 @@
 # Kiki Custom Skill
 
-**Kiki 个人自用的技能集合。** 用于在自己的 Mac、A6000-4、A6000-8 等机器之间保存、安装和更新，不是面向公众的通用产品，也不代表所有内容由 Kiki 原创。
+面向 Codex 和 Claude Code 的可移植技能集合，包含 **200 个可安装技能**及其脚本、模板和共享资源。不同机器使用各自的用户目录、工具和项目配置；仓库不预设服务器、GPU、账号、实验路径或个人执行偏好。
 
-包含 **200 个个人技能**及其脚本、模板和共享资源。你自己的论文写作技能是 **`kiki-paper-writing`（Kiki Paper Writing）**；完整的多阶段论文工作流另存为 `kiki-paper-workflow`。
+[GitHub 仓库](https://github.com/kikixiong/kiki-custom-skill) · [技能目录](CATALOG.md) · [Codex 安装说明](INSTALL_CODEX.md) · [Claude Code 安装说明](INSTALL_CLAUDE_CODE.md)
 
-[查看全部技能](CATALOG.md) · [给 Codex 的安装说明](INSTALL_CODEX.md) · [给 Claude Code 的安装说明](INSTALL_CLAUDE_CODE.md)
+## 一句话安装与配置
 
-## 安装到哪里
+把下面这句话发给当前使用的 Codex 或 Claude Code：
 
-| 客户端 | 默认技能安装位置 | 辅助资源位置 |
+> 请帮我安装并配置 https://github.com/kikixiong/kiki-custom-skill：先阅读仓库 README 和当前客户端的安装说明，识别本机用户目录及已有配置，用安装器完成安装并备份同名技能；从我的项目约定中读取需要的运行环境，缺少必要信息时集中询问我，主机、路径和执行偏好只保存到本机配置，不写回仓库，不复制凭据、不启动实验，最后告诉我安装位置和启用方法。
+
+需要个性化时，可在同一句话后补充“远程主机用 `<SSH 别名>`，项目目录为 `<项目路径>`，运行环境为 `<环境名称>`，执行限制为 `<你的要求>`”。这些只是待填写字段；不使用远程实验时无需提供。安装器本身不连接远程主机。
+
+机器专属约定保存到当前客户端 home 下的 `skill-config/kiki-custom-skill/environment.md`，或现有项目的本地配置。该文件不随仓库分发，也不会被安装器覆盖。只记录必要的别名、路径和偏好，凭据继续由原有凭据管理方式保管。已有用户和项目指令优先，不为安装本仓库重写全局规则。
+
+## 安装位置
+
+| 客户端 | 默认技能目录 | 共享资源目录 |
 |---|---|---|
-| Codex | `~/.codex/skills/<技能目录>/SKILL.md` | `~/.codex/skill-support/kiki-custom-skill/` |
-| Claude Code | `~/.claude/skills/<技能目录>/SKILL.md` | `~/.claude/skill-support/kiki-custom-skill/` |
+| Codex | `~/.codex/skills/` | `~/.codex/skill-support/kiki-custom-skill/` |
+| Claude Code | `~/.claude/skills/` | `~/.claude/skill-support/kiki-custom-skill/` |
 
-在每台目标机器上执行安装。这里的 `~` 是**当前登录用户在那台机器上的 home**，不是 Mac 的 `/Users/...`，也不是其他服务器的 `/home/...`。
+`~` 始终表示当前机器的当前用户。Codex 的 `CODEX_HOME`、Claude Code 的 `CLAUDE_CONFIG_DIR` 和安装器的 `--codex-home` / `--claude-home` 参数均受支持。无需选择机器型号或预设 profile。
 
-Codex 设置了 `CODEX_HOME` 时，安装器使用 `$CODEX_HOME/skills`；Claude Code 设置了 `CLAUDE_CONFIG_DIR` 时使用其 `skills` 子目录。也可通过 `--codex-home` / `--claude-home` 明确指定。
+## 手动安装
 
-## 下载与安装
-
-需要 Python 3.10+、Git，以及这台机器已经具备的私有仓库访问权限。安装器只复制文件和填充本机路径，不安装依赖、不登录服务、不启动实验。
+需要 Python 3.10+、Git 和已有的仓库访问权限。安装器只复制文件并填充本机路径，不安装依赖、不登录服务、不启动实验。
 
 ```bash
-mkdir -p ~/repos
-git clone git@github.com:kikixiong/kiki-custom-skill.git ~/repos/kiki-custom-skill
-cd ~/repos/kiki-custom-skill
+git clone https://github.com/kikixiong/kiki-custom-skill.git
+cd kiki-custom-skill
 
-# 只配置 Codex
+# 选择当前使用的客户端
 python3 install.py --target codex
-
-# 或者只配置 Claude Code
+# 或
 python3 install.py --target claude
-
-# 或者同时配置两个客户端
+# 同一机器确实需要两个客户端时
 python3 install.py --target both
 ```
 
-HTTPS 已有凭据的机器也可使用 `https://github.com/kikixiong/kiki-custom-skill.git`。复用已有访问方式；不要把 token 放进仓库、URL 或聊天。
+也可使用已有的 SSH 仓库访问方式。不要把 token 放进命令、仓库或聊天。每台机器分别执行安装；在本机安装不等于向远端部署。
 
-机器配置示例，选择当前所在机器对应的一条执行：
-
-```bash
-# Mac
-python3 install.py --target both --profile mac
-
-# A6000-4
-python3 install.py --target both --profile a6000-4
-
-# A6000-8
-python3 install.py --target both --profile a6000-8
-```
-
-这些命令需要在各自机器上运行；在 Mac 上指定 `--profile a6000-4` 不会远程连接或部署到服务器。
-
-只安装部分技能时使用目录名：
+按需选择部分技能：
 
 ```bash
 python3 install.py --target codex --skills kiki-paper-writing kiki-paper-workflow
 ```
 
-安装器默认备份已有的同名技能，再放入本次副本；不删除其他技能。原目录是软链接时备份链接本身，不修改链接指向的外部库。备份位于对应客户端目录下的 `skill-backups/kiki-custom-skill/<时间戳>/`。处理中的错误会尝试回滚当前客户端已替换的条目；异常断电等情况可根据备份手动恢复。
+`kiki-paper-writing` 提供论文写作指导；`kiki-paper-workflow` 是另一套多阶段论文流程，按任务选择。查看 [CATALOG.md](CATALOG.md) 获取全部目录名。
+
+安装器先备份已有同名条目，再放入新副本；无关技能和 `.system` 保留。备份位于客户端 home 下的 `skill-backups/kiki-custom-skill/<时间戳>/`。替换软链接时只备份链接本身。处理中的错误会尝试回滚当前客户端已替换的条目；异常中断后可根据备份恢复。
+
+`--dry-run` 仅显示目标路径和同名冲突，不写入文件。仓库含 `@@KIKI_*@@` 路径标记，请使用安装器，不要直接把未渲染的模板链接到客户端技能目录。
 
 ## 更新
 
 ```bash
-cd ~/repos/kiki-custom-skill
 git pull --ff-only
-python3 install.py --target both --profile a6000-4
+python3 install.py --target codex
 ```
 
-按当前机器调整 `--target` 和 `--profile`。新建客户端会话加载新技能。日常维护优先修改仓库并提交，再在其他机器拉取；只改安装目录不会自动同步回 GitHub。
+按实际客户端选择 `codex`、`claude` 或 `both`。新建客户端会话加载更新。安装目录的修改不会自动回传到 GitHub；本机环境配置继续单独保留。
 
-`--dry-run` 仅显示目标路径和同名冲突，不写入文件。仓库内容包含安装时填充的 `@@KIKI_*@@` 路径标记，请使用安装器，不要直接把模板目录软链接到客户端技能目录。
+## 内容与能力边界
 
-## 内容范围
+- `skills/`：默认可安装的 200 个技能。
+- `support/`：共享工具、参考资源和跨客户端运行说明。
+- `reference/`：系统和插件的参考快照，不由安装器注册或覆盖。
+- `provenance/`、`THIRD_PARTY_NOTICES.md`：来源、版本和版权说明。
 
-- `skills/`：默认可安装的 200 个个人技能。
-- `support/`：共享科研工具、精选写作语料库和跨客户端运行说明。
-- `profiles/`：机器标签与个人执行偏好；不包含 IP、SSH 密钥或账号凭据。
-- `reference/system-skills/`：6 个系统入口的参考快照。
-- `reference/plugin-packages/`：58 个插件技能入口及其原包资源，仅供参考。
-- `provenance/`、`THIRD_PARTY_NOTICES.md`：来源和版权说明。
+技能文件不提供插件运行时、外部服务授权或 GPU 资源。使用当前客户端实际提供的工具。系统技能和插件由对应客户端管理；参考快照不代表已经安装的能力。
 
-系统技能和插件由对应客户端自行管理，安装器不会把缓存冒充已安装插件，也不会覆盖 `.system`。需要专用工具、连接器、文档运行时或外部 API 的技能，只能使用当前机器实际提供的能力；GitHub、Overleaf 等授权不会随技能文件迁移。
+`reference/system-skills/skill-creator/` 保存 Anthropic 版本及跨客户端执行说明，默认安装器不替换系统入口。其 Claude 专用评测脚本依赖 Claude CLI，不能据此宣称完成了 Codex 行为评测。
 
-`skill-creator` 参考副本于 2026-10-09 按个人选择更新为 [Anthropic 版本](https://github.com/anthropics/skills/tree/683bc88e56f3e09ba94f7055977f3d3aa499f202/skills/skill-creator)，完整保留脚本、查看器和 Apache-2.0 许可证，并附 Codex/Claude 执行说明。维护者本机的同名入口已单独备份后更新；它仍位于 `reference/system-skills/skill-creator/`，**默认安装器不会把这次系统入口替换传播到其他机器**。来源与改动见 `provenance/anthropic-skill-creator.json`。Claude 专用评测脚本不代表 Codex 原生评测能力，本次未运行评测。
+可选 SCFM 论文库由使用者自行提供，通过 `KIKI_SCFM_LIBRARY` 或 `--library` 指定；仓库不包含个人论文库。模型运行位置、设备选择和执行限制从当前任务及本机配置获得，安装行为本身不授权启动实验。
 
-SCFM 私有论文库未打包。需要它时配置 `KIKI_SCFM_LIBRARY` 或向 `scfm-paper-writing/scripts/library.py` 传入 `--library /真实路径`。Kiki Paper Writing 本身的写作资料已完整包含。
+## 来源与维护
 
-保留个人实验偏好：Mac 不运行模型/数据实验；默认实验主机为 CNIC，用户明确指定其他主机时按任务执行。安装本仓库不授权启动实验、抢占 GPU、停止已有任务或改 SSH/VPN。
+集合名称不表示全部内容由 Kiki 原创。保留第三方来源和许可证，详见 [来源说明](THIRD_PARTY_NOTICES.md)。这些来源信息及必要的技术示例不属于机器配置。
 
-## 维护状态
-
-本次按用户要求只做文件与静态检查，**没有运行安装器测试、技能功能测试或模型实验，也未部署到两台 A6000**。旧技能中的验证报告是历史资料，不是本次跨客户端验证结果。
-
-第三方许可证和必要来源信息保留，详见 [来源说明](THIRD_PARTY_NOTICES.md)。不要在未经检查的情况下把这个个人仓库改为公开。
-
-Claude Code 的个人技能目录与调用方式依据[官方技能文档](https://code.claude.com/docs/en/skills)；Codex 的默认路径与本机系统 `skill-installer` 说明保持一致。
+安装结果与技能功能验证分开报告；历史评测资料不代表当前机器已验证。维护时检查新文件中的个人路径、主机、账号状态和凭据，机器专属信息放到本机配置中。

@@ -1,14 +1,13 @@
 # Sources, ownership and personal-use scope
 
-Kiki Custom Skill is a private collection of Kiki's own material and customized
-third-party skills. The collection name does not claim original authorship of
+Kiki Custom Skill contains original material and adapted third-party skills. The collection name does not claim original authorship of
 all included files, and does not replace upstream licenses.
 
 - Personal writing guidance: `skills/kiki-paper-writing/`, including its bundled
   provenance and generalization limits. Separate full workflow: `kiki-paper-workflow`.
 - Imported research workflow collection: https://github.com/xll0328/skill_sony
   at revision `e2d15ad91892f90f0cdc7db6a82971f2de0b659d`. Operational names and
-  paths were adapted for personal use; original attribution remains in metadata.
+  paths were adapted for portable installation; original attribution remains in metadata.
 - ARIS helper, AcademicForge and figure/writing source records: `provenance/`.
 - Additional ML/AI skills were copied from the owner's existing local installation;
   retain each file's original attribution and included license. Missing root-level
@@ -26,3 +25,13 @@ all included files, and does not replace upstream licenses.
 This repository is intended for the owner's private use. No blanket license is
 granted over third-party material. Do not make this collection public without
 reviewing the source licenses and removing private project-specific material.
+
+## Portability adaptations
+
+Machine presets, personal runtime state and project-specific execution assumptions
+are not part of the shared installation. Concrete workstation paths in imported
+reference documents and deployment examples have been replaced by placeholders.
+Published source attribution, technical model/hardware examples and license terms
+are retained. Pinned revisions identify provenance; adapted copies are not claimed
+to be byte-identical to upstream. Original pinned assets and license files remain
+unchanged except where a separately documented adaptation is explicitly listed.

@@ -23,7 +23,7 @@ Identify the target section, scientific question, actual method, evidence availa
 and intended venue. Read [section-playbook.md](references/section-playbook.md)
 for the requested section and [domain-checks.md](references/domain-checks.md)
 for scientific boundaries. Read [project-bridge.md](references/project-bridge.md)
-only for SCBenchmark/CoCoS work.
+when the task includes a project manuscript or conflicting project versions.
 
 The paper library is configured in [library.json](references/library.json).
 It lives outside the skill so original PDFs are not duplicated into the skill.
@@ -49,7 +49,7 @@ It returns distinct papers, page locators, selection tags, source/version inform
 and a short excerpt. Geneformer and scVI have archived full-text HTML with heading
 units and anchors instead of PDF pages; use the returned `read --units` command.
 `--paper ID` restricts a paper. `--include-project` explicitly
-allows the user's CoCoS draft, excluded by default to avoid circular evidence.
+allows a project manuscript from the configured corpus, excluded by default to avoid circular evidence.
 
 1. Retrieve typically 2-4 distinct papers. Prefer a close mechanism/problem match
    and a relevant evaluation paper; venue prestige alone does not rank relevance.

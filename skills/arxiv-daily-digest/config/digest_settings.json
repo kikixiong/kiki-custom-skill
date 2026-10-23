@@ -1,22 +1,15 @@
 {
   "delivery": {
-    "channel": "telegram",
-    "time": "09:00",
-    "timezone": "Asia/Shanghai",
+    "channel": "local",
     "max_papers": {
       "top_picks": 5,
       "worth_reading": 10,
       "quick_glance": 15
     }
   },
-  "summarization": {
-    "model": "gpt-5.5",
-    "max_tokens": 300,
-    "temperature": 0.3
-  },
   "storage": {
     "save_digest": true,
-    "save_path": "data/digests/",
+    "save_path": "digests/",
     "retention_days": 30
   }
 }

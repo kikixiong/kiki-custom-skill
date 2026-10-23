@@ -20,14 +20,14 @@ ray start --head --port=6379 --dashboard-host=0.0.0.0
 
 # Output:
 # Started Ray on this node with:
-#   - Head node IP: 192.168.1.100
-#   - Dashboard: http://192.168.1.100:8265
+#   - Head node IP: <HEAD_NODE_IP>
+#   - Dashboard: http://<HEAD_NODE_IP>:8265
 ```
 
 **Worker nodes**:
 ```bash
 # Connect to head node
-ray start --address=192.168.1.100:6379
+ray start --address="${HEAD_NODE_IP:?Set HEAD_NODE_IP}:6379"
 
 # Output:
 # Started Ray on this node.
@@ -78,7 +78,7 @@ ray.init(address='auto')
 
 # Get cluster resources
 print(ray.cluster_resources())
-# {'CPU': 128.0, 'GPU': 32.0, 'memory': 549755813888, 'node:192.168.1.100': 1.0, ...}
+# {'CPU': 128.0, 'GPU': 32.0, 'memory': 549755813888, 'node:<HEAD_NODE_IP>': 1.0, ...}
 
 # Get available resources
 print(ray.available_resources())

@@ -35,7 +35,7 @@ login tests or demand fresh authentication as a prerequisite.
    reversible code changes; do not add another blanket approval gate. A read-only
    diagnosis request does not authorize edits or a workflow rerun.
 5. Use the user's lightweight verification policy. Honor a no-tests instruction,
-   reuse applicable prior evidence and never run model/data experiments on the Mac.
+   reuse applicable prior evidence and respect the user's execution-environment restrictions.
    Do not automatically install dependencies or change the environment.
 6. Report changes, evidence, checks actually performed and remaining uncertainty.
 

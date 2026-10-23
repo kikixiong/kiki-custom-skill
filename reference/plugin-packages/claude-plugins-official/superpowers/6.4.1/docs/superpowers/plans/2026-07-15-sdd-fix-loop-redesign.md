@@ -1567,9 +1567,9 @@ do not hand the commands back to him.
 - [ ] **Step 1: Prepare the two SUPERPOWERS_ROOT checkouts**
 
 ```bash
-git -C /Users/jesse/git/superpowers-workspace/superpowers worktree add /tmp/superpowers-baseline dev
+git -C /path/to/superpowers worktree add /tmp/superpowers-baseline dev
 export BASELINE_ROOT=/tmp/superpowers-baseline
-export REDESIGN_ROOT=/Users/jesse/git/superpowers-workspace/superpowers   # on sdd-fix-loop-redesign
+export REDESIGN_ROOT=/path/to/superpowers   # on sdd-fix-loop-redesign
 ```
 
 Confirm: `git -C "$REDESIGN_ROOT" branch --show-current` prints `sdd-fix-loop-redesign`; `git -C "$BASELINE_ROOT" branch --show-current` prints `dev` (detached at dev tip also fine).
@@ -1638,7 +1638,7 @@ deliberately deferred, scenario 1 is claude-only).
 cd evals
 git add docs/experiments/2026-07-sdd-fix-loop-redesign.md
 git commit -m "docs(experiments): sdd fix-loop redesign campaign — RED/GREEN/regression verdicts"
-git -C /Users/jesse/git/superpowers-workspace/superpowers worktree remove /tmp/superpowers-baseline
+git -C /path/to/superpowers worktree remove /tmp/superpowers-baseline
 ```
 
 - [ ] **Step 7: Hand off**

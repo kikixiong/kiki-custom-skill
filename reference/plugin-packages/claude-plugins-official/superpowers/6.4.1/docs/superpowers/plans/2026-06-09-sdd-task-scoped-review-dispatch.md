@@ -739,11 +739,11 @@ Expected: both tables still list `code-quality-reviewer` as a reviewer template 
 
 Live quorum runs launch agent CLIs in permissive modes — **trusted-maintainer operation; Jesse launches these**, per `evals/CLAUDE.md`. Requires `ANTHROPIC_API_KEY`.
 
-- [ ] **Step 1: Baseline (skills as released on dev)** — from the main checkout (`/Users/jesse/git/superpowers/superpowers`, on dev), or any checkout without this branch's changes:
+- [ ] **Step 1: Baseline (skills as released on dev)** — from the main checkout (`/path/to/superpowers`, on dev), or any checkout without this branch's changes:
 
 ```bash
 cd evals
-export SUPERPOWERS_ROOT=/Users/jesse/git/superpowers/superpowers
+export SUPERPOWERS_ROOT=/path/to/superpowers
 uv run quorum run scenarios/sdd-rejects-extra-features --coding-agent claude
 uv run quorum run scenarios/sdd-go-fractals --coding-agent claude
 uv run quorum run scenarios/sdd-svelte-todo --coding-agent claude
@@ -754,7 +754,7 @@ uv run quorum run scenarios/spec-reviewer-catches-planted-flaws --coding-agent c
 
 ```bash
 cd evals
-export SUPERPOWERS_ROOT=/Users/jesse/git/superpowers/superpowers/.claude/worktrees/sdd-review-dispatch
+export SUPERPOWERS_ROOT=/path/to/superpowers/.claude/worktrees/sdd-review-dispatch
 uv run quorum run scenarios/sdd-rejects-extra-features --coding-agent claude
 uv run quorum run scenarios/sdd-go-fractals --coding-agent claude
 uv run quorum run scenarios/sdd-svelte-todo --coding-agent claude

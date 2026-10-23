@@ -1,7 +1,0 @@
-{
-  "name": "mac",
-  "platform": "Darwin",
-  "role": "local authoring; no model/data experiments",
-  "default_experiment_host": "cnic-ps",
-  "automatic_experiment_launch": false
-}

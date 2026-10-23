@@ -15,21 +15,20 @@ skill does not provide account authorization, GPU allocation or missing tools.
 
 # Server GPU Diagnosis
 
-Diagnose the requested remote GPU environment. The default host is SSH
-`cnic-ps`; check that its actual hostname is `ps`. No GPU/model/data diagnostics
-may fall back to CPU or MPS on the user's Mac.
+Diagnose the environment identified by the current task or run manifest.
+Confirm its host identity and follow the user's device and execution restrictions;
+do not assume a server or fall back to another machine without authorization.
 
 ## Locate the environment
 
-For scbenchmark/scGRAIN, use `/data1/jiaqi/scREBOUND` and the actual run's
-`formal_worktrees/<run_id>` / `runs/<run_id>` records. Other projects use their
-own recorded roots. Identify the exact Python executable, container or conda
-environment from the launch record; do not guess an environment name.
+Use the project's recorded root and the run's code/output locations. Identify
+the Python executable, container or environment from the launch record; do not
+guess a project path or environment name.
 
 ## Diagnosis ladder
 
-1. Read remote hostname, job/namespace, GPU allocation and visibility settings.
-2. Read remote `nvidia-smi`, device-node visibility, disk status and the target
+1. Read target hostname, job/namespace, GPU allocation and visibility settings.
+2. Read `nvidia-smi` on the target, device-node visibility, disk status and the target
    process's existing logs. Respect assigned devices and locks.
 3. Inspect environment/package metadata and project dependency pins. Distinguish
    driver visibility, container visibility and framework compatibility. A working
@@ -38,14 +37,14 @@ environment from the launch record; do not guess an environment name.
    them. Do not execute a script just because it is named `preflight`: it may
    allocate GPUs, run a model or mutate shared state.
 5. If a framework-level diagnostic is needed within the user's authorized scope,
-   run only the smallest relevant check on the remote host in the recorded
+   run only the smallest relevant check on the authorized host in the recorded
    environment and assigned GPU context. Do not run training/forward/inference
    or profiling as an implicit diagnosis step.
 
 ## Interpretation and output
 
 - Driver visible but framework unavailable: inspect package/runtime compatibility.
-- Missing device nodes: inspect the current remote namespace/container allocation.
+- Missing device nodes: inspect the current target namespace/container allocation.
 - Partial visibility: inspect scheduler allocation and CUDA_VISIBLE_DEVICES.
 - OOM: inspect recorded memory use, batch/context settings and other processes;
   do not kill processes or change hyperparameters automatically.

@@ -1139,7 +1139,7 @@ If you're new, follow our step-by-step [Fine-tuning Guide](https://docs.unsloth.
 docker run -d -e JUPYTER_PORT=8000 \
   -e JUPYTER_PASSWORD="mypassword" \
   -e "SSH_KEY=$(cat ~/.ssh/container_key.pub)" \
-  -e USER_PASSWORD="unsloth2024" \
+  -e USER_PASSWORD="${CONTAINER_PASSWORD:?Set CONTAINER_PASSWORD}" \
   -p 8000:8000 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
   --gpus all \
@@ -1204,7 +1204,7 @@ ssh -i ~/.ssh/container_key -p 2222 unsloth@localhost
 docker run -d -e JUPYTER_PORT=8000 \
   -e JUPYTER_PASSWORD="mypassword" \
   -e "SSH_KEY=$(cat ~/.ssh/container_key.pub)" \
-  -e USER_PASSWORD="unsloth2024" \
+  -e USER_PASSWORD="${CONTAINER_PASSWORD:?Set CONTAINER_PASSWORD}" \
   -p 8000:8000 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
   --gpus all \
@@ -4865,7 +4865,7 @@ If you're new, follow our step-by-step [Fine-tuning Guide](https://docs.unsloth.
 docker run -d -e JUPYTER_PORT=8000 \
   -e JUPYTER_PASSWORD="mypassword" \
   -e "SSH_KEY=$(cat ~/.ssh/container_key.pub)" \
-  -e USER_PASSWORD="unsloth2024" \
+  -e USER_PASSWORD="${CONTAINER_PASSWORD:?Set CONTAINER_PASSWORD}" \
   -p 8000:8000 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
   --gpus all \
@@ -4915,7 +4915,7 @@ ssh -i ~/.ssh/container_key -p 2222 unsloth@localhost
 docker run -d -e JUPYTER_PORT=8000 \
   -e JUPYTER_PASSWORD="mypassword" \
   -e "SSH_KEY=$(cat ~/.ssh/container_key.pub)" \
-  -e USER_PASSWORD="unsloth2024" \
+  -e USER_PASSWORD="${CONTAINER_PASSWORD:?Set CONTAINER_PASSWORD}" \
   -p 8000:8000 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
   --gpus all \

@@ -1,13 +1,13 @@
 # Kiki execution notes for the Anthropic Skill Creator
 
 This copy retains the Anthropic workflow and bundled scripts. These notes adapt
-execution to Kiki's Codex and Claude Code environments; they do not make the
+execution to the current Codex or Claude Code environment; they do not make the
 Claude-specific scripts native Codex evaluation tools.
 
 ## Choose the requested depth
 
 For importing an upstream version or making a narrow edit, use file and static
-checks. Follow Kiki's lightweight verification policy; do not automatically run
+checks. Follow the current user's verification policy; do not automatically run
 baseline agents, benchmarks, repeated review rounds, or description optimization.
 Use those workflows when the user requests evaluation or authorizes a specific
 evaluation plan. Reuse intent and decisions already clear from the conversation.
@@ -25,9 +25,9 @@ evaluation plan. Reuse intent and decisions already clear from the conversation.
 - `scripts/quick_validate.py` and packaging require PyYAML. The file validator
   checks structure; it does not establish behavioral quality. Do not install
   model runtimes or launch model/data evaluations as part of a file update.
-- Kiki's Mac prohibition on model/data experiments also applies to evaluation
-  workloads here. Use an authorized remote environment for such workloads;
-  never fall back to local CPU or MPS experiments.
+- Evaluation workloads must follow the current user's execution and data-handling
+  restrictions. Use the authorized environment; do not infer a particular host
+  or silently switch execution location.
 
 ## Review output
 

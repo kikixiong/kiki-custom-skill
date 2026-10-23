@@ -53,6 +53,8 @@ Use this skill when:
 - Instructions to enable
 - Verify turbo status
 
+Example hosts use the reserved `.invalid` domain. Fill `SSH_PORT` and any hardware-description placeholders from the actual instance before running a command.
+
 ## Commands
 
 ### Instance Management
@@ -66,20 +68,19 @@ Add a new AutoDL instance.
 - `--password` - SSH password (optional, will prompt)
 - `--user` - SSH user (default: root)
 - `--workdir` - Working directory (default: /root/autodl-tmp/)
-- `--gpu` - GPU info (e.g., "2x RTX4090")
+- `--gpu` - GPU info (e.g., "<GPU_DESCRIPTION>")
 - `--cpu` - CPU info
 - `--ram` - RAM size
 - `--disk` - Disk size
 
 **Example:**
 ```bash
-autodl add scbenchmark \
-  --host connect.westb.seetacloud.com \
-  --port 15049 \
-  --password "yourpass" \
-  --gpu "2x RTX4090" \
-  --cpu "50 cores" \
-  --ram "180GB"
+autodl add example-project \
+  --host gpu.example.invalid \
+  --port "$SSH_PORT" \
+  --gpu "<GPU_DESCRIPTION>" \
+  --cpu "<CPU_DESCRIPTION>" \
+  --ram "<RAM_DESCRIPTION>"
 ```
 
 #### `autodl list`
@@ -94,11 +95,11 @@ autodl list
 # Output:
 # 📋 AutoDL Instances (2):
 #
-#   scbenchmark
-#     Host: connect.westb.seetacloud.com:15049
+#   example-project
+#     Host: gpu.example.invalid:<SSH_PORT>
 #
 #   qwen2-audio
-#     Host: connect.westb.seetacloud.com:24275
+#     Host: gpu.example.invalid:<SSH_PORT>
 ```
 
 #### `autodl remove <name>`
@@ -116,8 +117,8 @@ SSH to instance with auto-login.
 
 **Example:**
 ```bash
-autodl connect scbenchmark
-# 🔌 Connecting to scbenchmark...
+autodl connect example-project
+# 🔌 Connecting to example-project...
 # [Opens SSH session in /root/autodl-tmp/]
 ```
 
@@ -142,9 +143,9 @@ Comprehensive status check.
 
 **Example output:**
 ```bash
-autodl status scbenchmark
+autodl status example-project
 
-🔍 Checking status: scbenchmark
+🔍 Checking status: example-project
 
 GPU Status:
   ✅ GPU 0: NVIDIA GeForce RTX 4090
@@ -160,7 +161,7 @@ Conda Status:
 
 Network Turbo:
   ⚠️  Network turbo available but not active
-     Run: autodl turbo scbenchmark
+     Run: autodl turbo example-project
 ```
 
 **CPU-only mode example:**
@@ -192,19 +193,19 @@ Detailed disk usage analysis.
 
 **Example:**
 ```bash
-autodl disk scbenchmark
+autodl disk example-project
 
-💾 Disk Usage: scbenchmark
+💾 Disk Usage: example-project
 
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/vda1        50G   41G  9.1G  82% /root/autodl-tmp
 
 📂 Largest directories:
 
-7.6G    /root/autodl-tmp/intersect_embeddings/
-2.4G    /root/autodl-tmp/genept_official/
-1.2G    /root/autodl-tmp/scbenchmark/
-856M    /root/autodl-tmp/gene-fusion/
+7.6G    /root/autodl-tmp/example-dataset/
+2.4G    /root/autodl-tmp/example-model/
+1.2G    /root/autodl-tmp/example-project/
+856M    /root/autodl-tmp/example-run/
 ```
 
 ### Setup & Utilities
@@ -219,9 +220,9 @@ Initialize a new instance.
 
 **Example:**
 ```bash
-autodl setup scbenchmark
+autodl setup example-project
 
-⚙️  Setting up instance: scbenchmark
+⚙️  Setting up instance: example-project
 
 1. Checking conda...
    Initializing conda...
@@ -229,14 +230,14 @@ autodl setup scbenchmark
 
 2. Checking network turbo...
    ✅ Network turbo available at /etc/network_turbo
-   💡 Run 'autodl turbo scbenchmark' to activate
+   💡 Run 'autodl turbo example-project' to activate
 
 3. Ensuring workdir exists...
    ✅ Workdir ready: /root/autodl-tmp/
 
 ✅ Setup complete!
 
-Connect with: autodl connect scbenchmark
+Connect with: autodl connect example-project
 ```
 
 #### `autodl turbo <name>`
@@ -248,12 +249,12 @@ Enable network acceleration.
 
 **Example:**
 ```bash
-autodl turbo scbenchmark
+autodl turbo example-project
 
-🚀 Enabling network turbo on scbenchmark...
+🚀 Enabling network turbo on example-project...
 
 💡 To use turbo in your session:
-   autodl connect scbenchmark
+   autodl connect example-project
    source /etc/network_turbo
 
    This significantly speeds up downloads, git clone, pip install, etc.
@@ -268,7 +269,7 @@ autodl turbo scbenchmark
 ```bash
 # 1. Add instance
 autodl add my-instance \
-  --host connect.westb.seetacloud.com \
+  --host gpu.example.invalid \
   --port 12345 \
   --gpu "2x A6000"
 
@@ -288,10 +289,10 @@ source /etc/network_turbo
 
 ```bash
 # Check before connecting
-autodl status scbenchmark
+autodl status example-project
 
 # Connect if all good
-autodl connect scbenchmark
+autodl connect example-project
 ```
 
 ### Monitoring Disk
@@ -300,15 +301,15 @@ autodl connect scbenchmark
 
 ```bash
 # Quick check
-autodl status scbenchmark
+autodl status example-project
 # ⚠️  82% used
 
 # Detailed analysis
-autodl disk scbenchmark
+autodl disk example-project
 # Shows largest dirs
 
 # Connect and clean up
-autodl connect scbenchmark
+autodl connect example-project
 # rm -rf /root/autodl-tmp/old-experiment/
 ```
 
@@ -318,7 +319,7 @@ autodl connect scbenchmark
 
 ```bash
 # Check current mode
-autodl status scbenchmark
+autodl status example-project
 
 # If CPU-only mode:
 # GPU Status:
@@ -338,16 +339,16 @@ autodl status scbenchmark
 ```json
 {
   "instances": {
-    "scbenchmark": {
-      "host": "connect.westb.seetacloud.com",
-      "port": 15049,
+    "example-project": {
+      "host": "gpu.example.invalid",
+      "port": "<SSH_PORT>",
       "user": "root",
       "password": "yourpassword",
       "workdir": "/root/autodl-tmp/",
-      "gpu": "2x RTX4090",
-      "cpu": "50 cores",
-      "ram": "180GB",
-      "disk": "50GB",
+      "gpu": "<GPU_DESCRIPTION>",
+      "cpu": "<CPU_DESCRIPTION>",
+      "ram": "<RAM_DESCRIPTION>",
+      "disk": "<DISK_DESCRIPTION>",
       "added_at": "2026-03-18"
     }
   }
@@ -458,8 +459,8 @@ When autoresearch tracks a remote experiment on AutoDL, the watchdog checks:
 active_experiments:
   - id: "exp_001"
     type: remote
-    ssh_host: "root@connect.westb.seetacloud.com"
-    ssh_port: 11525
+    ssh_host: "root@gpu.example.invalid"
+    ssh_port: "<SSH_PORT>"
     progress_file: "/root/autodl-tmp/project/logs/train.log"
     result_file: "/root/autodl-tmp/project/results/metrics.json"
     stall_threshold_min: 60
@@ -594,21 +595,21 @@ autodl status <name>
 Add to HEARTBEAT.md:
 ```bash
 # Check AutoDL disk space
-autodl status scbenchmark | grep "Disk Status"
+autodl status example-project | grep "Disk Status"
 ```
 
 ### 2. Training Notifications
 
 When training completes, log to memory:
 ```bash
-autodl status scbenchmark >> memory/daily/$(date +%Y-%m-%d).md
+autodl status example-project >> memory/daily/$(date +%Y-%m-%d).md
 ```
 
 ### 3. WhatsApp/Telegram Alerts
 
 Alert on disk >90%:
 ```bash
-DISK=$(autodl status scbenchmark | grep "used")
+DISK=$(autodl status example-project | grep "used")
 if [[ $DISK =~ "9[0-9]%" ]]; then
   message send --to user "⚠️ AutoDL disk >90%"
 fi

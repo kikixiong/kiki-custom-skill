@@ -34,4 +34,4 @@ The upstream Claude skills suggest automatic commits and exact trigger words. In
 - Do not auto-commit or push unless the user explicitly asks.
 - When committing is requested, follow the actual project AGENTS.md and user instructions; no upstream-specific Lore protocol is assumed.
 - Preserve artifacts such as `PROGRESS.md`, `PIPELINE.md`, `EXPERIMENTS.csv`, and `ISSUES.md` when useful.
-- Use the user's lightweight verification policy, respect no-tests requests, and keep all model/data experiments on the authorized remote host.
+- Use the user's lightweight verification policy, respect no-tests requests, and use the execution environment authorized for the task.

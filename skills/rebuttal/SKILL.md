@@ -55,7 +55,7 @@ Workflow 4:   rebuttal (post-submission external reviews)
 - **MAX_INTERNAL_DRAFT_ROUNDS = 2** — draft → lint → revise.
 - **MAX_STRESS_TEST_ROUNDS = 1** — One Codex MCP critique round.
 - **MAX_FOLLOWUP_ROUNDS = 3** — per reviewer thread.
-- **AUTO_EXPERIMENT = false** — Prepare the supplementary experiment plan and explain the evidence gap. Execute through `/research-task-executor` only when the user has authorized that exact experiment scope, using CNIC and existing GPU allocations. A configuration flag or reviewer request alone is not launch authorization.
+- **AUTO_EXPERIMENT = false** — Prepare the supplementary experiment plan and explain the evidence gap. Execute through `/research-task-executor` only when the user has authorized that exact experiment scope, using the configured execution environment and existing device allocations. A configuration flag or reviewer request alone is not launch authorization.
 - **QUICK_MODE = false** — When `true`, only run Phase 0-3 (parse reviews, atomize concerns, build strategy). Outputs `ISSUE_BOARD.md` + `STRATEGY_PLAN.md` and stops — no drafting, no stress test. Useful for quickly understanding what reviewers want before deciding how to respond.
 - **REBUTTAL_DIR = `rebuttal/`**
 

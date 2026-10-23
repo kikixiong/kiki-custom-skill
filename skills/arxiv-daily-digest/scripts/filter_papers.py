@@ -7,16 +7,18 @@ import json
 import re
 import sys
 from pathlib import Path
+from local_config import CONFIG_DIR, DATA_DIR, load_json
 from collections import defaultdict
 
 SCRIPT_DIR = Path(__file__).parent
-CONFIG_DIR = SCRIPT_DIR.parent / "config"
 
 
 def load_interests():
     """Load research interests from config"""
-    with open(CONFIG_DIR / "research_interests.json") as f:
-        return json.load(f)["interests"]
+    interests = load_json("research_interests.json")["interests"]
+    if not interests:
+        raise SystemExit(f"Configure research interests in {CONFIG_DIR / 'research_interests.json'} first.")
+    return interests
 
 
 def calculate_relevance(paper, interests):

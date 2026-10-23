@@ -294,7 +294,7 @@ Thanks to @mattvanhorn, @nawfal, @Nick Galatis, @silvertakana, @nestorluiscamach
 - **Native tool preference (Step 1a)** — when the harness exposes its own worktree tool (e.g. Codex), the skill defers to it. The user's stated preference is respected when expressed.
 - **Provenance-based cleanup** — `finishing-a-development-branch` only cleans up worktrees inside `.worktrees/` (created by superpowers); anything outside is left alone. Fixes #940 (Option 2 was incorrectly cleaning up worktrees), #999 (merge-then-remove ordering), and #238 (`cd` to repo root before `git worktree remove`).
 - **Detached HEAD handling** — the finishing menu collapses to two options when there is no branch to merge from.
-- **Hardcoded `/Users/jesse` paths** in skill examples replaced with generic placeholders. (#858, PR #1122)
+- **Hardcoded `/Users/<user>` paths** in skill examples replaced with generic placeholders. (#858, PR #1122)
 
 ### Contributor Guidelines for AI Agents
 

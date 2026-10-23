@@ -7,7 +7,7 @@
   "upstream_file_count": 18,
   "modifications": {
     "SKILL.md": "Added a link to Kiki execution notes; upstream workflow otherwise retained.",
-    "references/kiki-compatibility.md": "Added lightweight verification and Codex/Claude runtime notes."
+    "references/kiki-compatibility.md": "Cross-client execution notes; host, device and verification policies come from the current user and project."
   },
   "upstream_files": {
     "LICENSE.txt": "4f881c52d1f72f4cfb720e339e2d35c3058d01a9",

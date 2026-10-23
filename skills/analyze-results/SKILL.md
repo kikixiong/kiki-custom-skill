@@ -20,9 +20,9 @@ Analyze: $ARGUMENTS
 ## Workflow
 
 ### Step 1: Locate Results
-Resolve the actual run and evaluation configuration from its manifest. Default experiment host: `cnic-ps` (hostname `ps`). For scbenchmark/scGRAIN use `/data1/jiaqi/scREBOUND/runs/<run_id>`; other projects use their recorded result directories.
-- Analyze raw experiment data and run statistical/data checks on the remote host.
-- The Mac may read small exported aggregate tables and prepare reports/figures; it must not run model/data experiments, probes or replacement evaluations.
+Resolve the run, execution environment, result directory and evaluation configuration from its manifest or the current project. Do not assume a host or project path.
+- Analyze data where the task and its data-handling policy permit. Use existing aggregate tables for reports when appropriate.
+- Follow the user's execution restrictions; do not launch probes or replacement evaluations merely to fill missing results.
 - Reuse already saved metrics. Preserve seed, split, metric definition and data/weight provenance; do not infer them from filenames alone.
 
 ### Step 2: Build Comparison Table

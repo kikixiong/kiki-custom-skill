@@ -158,10 +158,10 @@ if is_last_day_of_month(today):
 python3 scripts/memory_manager.py search "temporal conformal"
 
 # Search for project
-python3 scripts/memory_manager.py search "scbenchmark"
+python3 scripts/memory_manager.py search "example-project"
 
 # Search for person/tool
-python3 scripts/memory_manager.py search "Jiaqi" 
+python3 scripts/memory_manager.py search "example-user"
 ```
 
 ### Search Results Interpretation
@@ -276,8 +276,8 @@ git push origin main || true
 **Good:**
 ```markdown
 ## 📝 Events
-- 14:30 - Deployed scbenchmark to AutoDL server
-  - Used port 43495, 2x RTX4090
+- 14:30 - Deployed example-project to AutoDL server
+  - Used port <SSH_PORT>, <GPU_DESCRIPTION>
   - Training started successfully
 
 ## 💡 Learnings

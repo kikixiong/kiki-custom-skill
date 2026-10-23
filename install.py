@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install Kiki's personal skills for Codex and/or Claude Code using stdlib only.
+"""Install Kiki Custom Skill for Codex and/or Claude Code using stdlib only.
 
 This copies files and renders local paths. It does not run skill code, install
 dependencies/plugins, log into services, connect to other machines or run tests.
@@ -52,7 +52,7 @@ def copy_rendered(source, target, replacements, client, skill_names):
             path.write_text(text, encoding='utf-8')
 
 
-def install_client(client, agent_home, selected, profile, dry_run):
+def install_client(client, agent_home, selected, dry_run):
     skills_root = agent_home / 'skills'
     support_root = agent_home / 'skill-support' / 'kiki-custom-skill'
     plan = {
@@ -60,7 +60,6 @@ def install_client(client, agent_home, selected, profile, dry_run):
         'agent_home': str(agent_home),
         'skills_directory': str(skills_root),
         'support_directory': str(support_root),
-        'profile': profile['name'],
         'skill_count': len(selected),
         'conflicts_to_backup': [name for name in selected if present(skills_root / name)],
         'reference_plugins_and_system_skills_installed': False,
@@ -98,7 +97,6 @@ def install_client(client, agent_home, selected, profile, dry_run):
             '@@KIKI_LATEXMK@@': latexmk,
             '@@KIKI_TEXBIN@@': texbin,
             '@@KIKI_AGENT@@': client,
-            '@@KIKI_PROFILE@@': profile['name'],
         }
         if set(replacements) != TOKEN_NAMES:
             raise ValueError('Manifest token list and installer must be updated together.')
@@ -123,7 +121,7 @@ def install_client(client, agent_home, selected, profile, dry_run):
 
         result = dict(plan, installed_at=datetime.now(timezone.utc).isoformat(),
                       source_checkout=str(REPO), backup_directory=str(backup_root),
-                      skills=selected, machine=platform.node(), profile_settings=profile)
+                      skills=selected)
         (support_root / 'installation-state.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         print(json.dumps(result, ensure_ascii=False, indent=2))
     except BaseException:
@@ -144,8 +142,7 @@ def install_client(client, agent_home, selected, profile, dry_run):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target', required=True, choices=['codex', 'claude', 'both'])
-    parser.add_argument('--profile', choices=['auto', 'mac', 'a6000-4', 'a6000-8', 'generic'], default='auto')
-    parser.add_argument('--skills', nargs='+', help='Optional skill directory names; default is all 200 personal skills.')
+    parser.add_argument('--skills', nargs='+', help='Optional skill directory names; default is all skills in manifest.json.')
     parser.add_argument('--codex-home', type=Path, default=Path(os.environ.get('CODEX_HOME') or Path.home() / '.codex'))
     parser.add_argument('--claude-home', type=Path, default=Path(os.environ.get('CLAUDE_CONFIG_DIR') or Path.home() / '.claude'))
     parser.add_argument('--dry-run', action='store_true', help='Print paths/conflicts only; write no files.')
@@ -155,14 +152,12 @@ def main():
     unknown = set(selected) - known
     if unknown:
         parser.error('Unknown skill directories: ' + ', '.join(sorted(unknown)))
-    profile_name = args.profile if args.profile != 'auto' else ('mac' if platform.system() == 'Darwin' else 'generic')
-    profile = json.loads((REPO / 'profiles' / (profile_name + '.json')).read_text(encoding='utf-8'))
     clients = ['codex', 'claude'] if args.target == 'both' else [args.target]
     homes = {'codex': args.codex_home.expanduser().resolve(), 'claude': args.claude_home.expanduser().resolve()}
     if args.target == 'both' and homes['codex'] == homes['claude']:
         parser.error('Codex and Claude Code must have different installation homes.')
     for client in clients:
-        install_client(client, homes[client], selected, profile, args.dry_run)
+        install_client(client, homes[client], selected, args.dry_run)
 
 
 if __name__ == '__main__':

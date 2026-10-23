@@ -15,21 +15,18 @@ skill does not provide account authorization, GPU allocation or missing tools.
 
 # Research Code Autopilot
 
-## User's experiment environment
+## Execution environment
 
-Default authorized experiments run through `cnic-ps`; confirm actual hostname
-`ps`. For scbenchmark/scGRAIN use `/data1/jiaqi/scREBOUND`, with isolated
-`formal_worktrees/<run_id>` and `runs/<run_id>`. Derive other project roots,
-environment, datasets and weights from that project's existing configuration.
-Before launching an authorized run, inspect GPUs, disk, processes, environment,
-data/weight identity, destination and locks; respect current queue priorities.
-Keep jobs detached, assigned GPUs exclusive and checkpoints resumable.
+Resolve the authorized host, project root, Python environment, datasets, weights
+and device allocation from the task, project configuration or run manifest.
+Use isolated code/output directories appropriate to that project. Before an
+approved run, inspect devices, disk, processes, data/weights, destinations and
+locks; respect queue priorities and preserve resumable checkpoints.
 
-The local Mac is for code editing and small report artifacts. Never run training,
-forward/inference, probes, profiling or model/data experiments here, even on
-CPU/MPS or tiny inputs. A failed remote connection is not permission for a local
-fallback. A plan is not authorization to launch an experiment, seize a GPU, stop
-another task, overwrite outputs or change hyperparameters.
+Follow the user's local execution restrictions. An unavailable host does not
+authorize moving the experiment elsewhere. A plan does not authorize launching
+an experiment, seizing a device, stopping another task, overwriting outputs or
+changing hyperparameters.
 
 Use this skill for code-heavy research work where the goal is a reproducible experimental result, not just a passing unit test.
 
@@ -56,8 +53,8 @@ Honor a no-tests request and reuse applicable prior results. Do not run blanket
 `pytest` or assume a script's `--help`/`--dry-run` is free of model/data execution.
 
 Any authorized smoke run, tiny-dataset check, CPU fallback experiment or metric
-evaluation still belongs on the remote host, with the agreed data/configuration
-and allocated resources. Do not change the scientific setup just to shorten a
+evaluation belongs in the agreed execution environment, with the agreed data,
+configuration and allocated resources. Do not change the scientific setup just to shorten a
 test. Label partial results as partial and never strengthen claims from a pilot.
 
 ## Final Report

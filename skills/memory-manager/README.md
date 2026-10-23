@@ -141,10 +141,10 @@ git commit -m "Monthly summary + long-term update: March 2026"
 python3 memory-manager/scripts/memory_manager.py search "temporal conformal"
 
 # Search project name
-python3 memory-manager/scripts/memory_manager.py search "scbenchmark"
+python3 memory-manager/scripts/memory_manager.py search "example-project"
 
 # Search user info
-python3 memory-manager/scripts/memory_manager.py search "Jiaqi"
+python3 memory-manager/scripts/memory_manager.py search "example-user"
 ```
 
 **Result format:**

@@ -1,10 +1,11 @@
 {
   "collection": "Kiki Custom Skill",
-  "purpose": "personal use",
+  "purpose": "portable skill collection",
   "source_of_truth": "https://github.com/kikixiong/kiki-custom-skill",
   "portable_installation": true,
   "runtime_profile": "compatibility.md",
   "paper_writing": "kiki-paper-writing",
   "full_paper_workflow": "kiki-paper-workflow",
-  "client_paths": "Rendered by install.py for the target machine; preserve these adaptations when resyncing."
+  "client_paths": "Rendered by install.py for the target machine; preserve these adaptations when resyncing.",
+  "local_environment_file": "@@KIKI_AGENT_HOME@@/skill-config/kiki-custom-skill/environment.md"
 }

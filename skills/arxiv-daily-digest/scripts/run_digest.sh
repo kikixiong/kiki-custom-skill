@@ -4,13 +4,15 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-WORKSPACE_DIR="$(dirname "$SCRIPT_DIR")"
-DATA_DIR="$WORKSPACE_DIR/data"
+DATA_DIR="$(python3 "$SCRIPT_DIR/local_config.py" --data-dir)"
 TODAY=$(date +%Y%m%d)
 
 echo "🔬 arXiv Daily Digest - $(date)"
 echo "======================================"
 echo
+
+# Check local configuration before any network request.
+python3 "$SCRIPT_DIR/local_config.py"
 
 # Step 1: Fetch papers from arXiv
 echo "📥 Step 1: Fetching papers from arXiv..."
@@ -48,13 +50,7 @@ DIGEST=$(echo "$CATEGORIZED" | python3 "$SCRIPT_DIR/generate_digest.py")
 echo "   ✅ Digest generated"
 echo
 
-# Save digest to file
-DIGEST_FILE="$DATA_DIR/digests/digest_${TODAY}.md"
-mkdir -p "$(dirname "$DIGEST_FILE")"
-echo "$DIGEST" > "$DIGEST_FILE"
-
-echo "💾 Digest saved to: $DIGEST_FILE"
-echo
+# generate_digest.py saves to the configured runtime storage directory.
 
 # Output digest for delivery
 echo "======================================"

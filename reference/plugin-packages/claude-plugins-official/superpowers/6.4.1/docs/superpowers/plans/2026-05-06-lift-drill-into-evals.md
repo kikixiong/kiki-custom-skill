@@ -10,7 +10,7 @@
 
 **Spec:** `docs/superpowers/specs/2026-05-06-lift-drill-into-evals-design.md` — read this first.
 
-**Drill source location:** `/Users/jesse/Documents/GitHub/superpowers/drill/` (sibling to `superpowers/`).
+**Drill source location:** `/path/to/drill/` (sibling to `superpowers/`).
 
 ---
 
@@ -21,7 +21,7 @@
 - [ ] **Step 1: Verify clean working tree**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git status --short
 ```
 
@@ -58,7 +58,7 @@ Expected output begins with whatever commit `origin/dev` points to (currently `b
 - [ ] **Step 1: Get the current drill HEAD SHA**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/drill
+cd /path/to/drill
 DRILL_SHA=$(git rev-parse HEAD)
 echo "$DRILL_SHA"
 ```
@@ -66,7 +66,7 @@ echo "$DRILL_SHA"
 - [ ] **Step 2: Verify drill has no uncommitted work**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/drill
+cd /path/to/drill
 git status --short
 ```
 
@@ -88,8 +88,8 @@ echo "DRILL_SHA=$DRILL_SHA"  # write this down for use in Task 3
 - [ ] **Step 1: Verify source and destination paths**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
-test -d /Users/jesse/Documents/GitHub/superpowers/drill && echo "drill source: OK"
+cd /path/to/superpowers
+test -d /path/to/drill && echo "drill source: OK"
 test ! -d evals && echo "evals/ does not yet exist: OK"
 ```
 
@@ -98,7 +98,7 @@ Expected: both echoes print.
 - [ ] **Step 2: rsync drill to evals/ with explicit excludes**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 rsync -a \
   --exclude=.git \
   --exclude=.venv \
@@ -108,7 +108,7 @@ rsync -a \
   --exclude='*.egg-info' \
   --exclude=.private-journal \
   --exclude='*.pyc' \
-  /Users/jesse/Documents/GitHub/superpowers/drill/ \
+  /path/to/drill/ \
   evals/
 ```
 
@@ -128,7 +128,7 @@ Expected: every command returns no output. If any returns a path, manually `rm -
 - [ ] **Step 4: Confirm the source SHA for the commit message**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/drill
+cd /path/to/drill
 DRILL_SHA=$(git rev-parse HEAD)
 echo "$DRILL_SHA"
 ```
@@ -172,7 +172,7 @@ EOF
 - [ ] **Step 1: Get list of files that exist in drill but should NOT be in evals (the excludes)**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/drill
+cd /path/to/drill
 find . \
   \( -name '.git' -prune \
   -o -name '.venv' -prune \
@@ -189,7 +189,7 @@ wc -l /tmp/drill-files.txt
 - [ ] **Step 2: Get list of files in evals/**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 find evals -type f | sed 's|^evals/|./|' | sort > /tmp/evals-files.txt
 wc -l /tmp/evals-files.txt
 ```
@@ -207,10 +207,10 @@ Expected: no output.
 - [ ] **Step 4: Per-file checksum verification**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/drill
+cd /path/to/drill
 while read -r f; do
   sha1=$(shasum -a 256 "$f" | cut -d' ' -f1)
-  sha2=$(shasum -a 256 "/Users/jesse/Documents/GitHub/superpowers/superpowers/evals/${f#./}" | cut -d' ' -f1)
+  sha2=$(shasum -a 256 "/path/to/superpowers/evals/${f#./}" | cut -d' ' -f1)
   if [ "$sha1" != "$sha2" ]; then
     echo "MISMATCH: $f ($sha1 vs $sha2)"
   fi
@@ -222,7 +222,7 @@ Expected: no output (every file's checksum matches between drill and evals).
 - [ ] **Step 5: Smoke check - install dependencies**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 uv sync
 ```
 
@@ -231,7 +231,7 @@ Expected: `Installed N packages` or similar. No errors.
 - [ ] **Step 6: Smoke check - drill list**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 uv run drill list 2>&1 | head -5
 ```
 
@@ -243,13 +243,13 @@ Dispatch a `general-purpose` subagent with this prompt:
 
 ```
 You are verifying a verbatim copy of the drill repo at
-/Users/jesse/Documents/GitHub/superpowers/drill into
-/Users/jesse/Documents/GitHub/superpowers/superpowers/evals.
+/path/to/drill into
+/path/to/superpowers/evals.
 
 Verify:
 
 1. The lift commit message records the SHA reported by:
-  cd /Users/jesse/Documents/GitHub/superpowers/drill && git rev-parse HEAD
+  cd /path/to/drill && git rev-parse HEAD
 
 2. None of these excluded paths exist under evals/: .git/, .venv/,
 results/, .env/, __pycache__/, *.egg-info/, .private-journal/.
@@ -277,7 +277,7 @@ If the subagent reports any FAIL, fix the underlying issue (delete the leaked fi
 - [ ] **Step 1: Read the current cli.py header**
 
 ```bash
-sed -n '1,20p' /Users/jesse/Documents/GitHub/superpowers/superpowers/evals/drill/cli.py
+sed -n '1,20p' /path/to/superpowers/evals/drill/cli.py
 ```
 
 Expected output:
@@ -328,7 +328,7 @@ def test_set_superpowers_root_default_respects_existing(monkeypatch):
 - [ ] **Step 3: Run the test and watch it fail**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 uv run pytest tests/test_cli.py -k set_superpowers_root_default -v
 ```
 
@@ -336,7 +336,7 @@ Expected: 2 tests fail with `AttributeError: module 'drill.cli' has no attribute
 
 - [ ] **Step 4: Add the helper to cli.py**
 
-Edit `/Users/jesse/Documents/GitHub/superpowers/superpowers/evals/drill/cli.py`. Replace lines 1–14 with:
+Edit `/path/to/superpowers/evals/drill/cli.py`. Replace lines 1–14 with:
 
 ```python
 """Drill CLI: run, compare, list."""
@@ -376,7 +376,7 @@ The bottom-of-module call to `_set_superpowers_root_default()` runs at import ti
 - [ ] **Step 5: Run the test and watch it pass**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 uv run pytest tests/test_cli.py -k set_superpowers_root_default -v
 ```
 
@@ -385,7 +385,7 @@ Expected: 2 tests pass.
 - [ ] **Step 6: Commit**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git add evals/drill/cli.py evals/tests/test_cli.py
 git commit -m "evals: default SUPERPOWERS_ROOT to parent of evals/ if unset
 
@@ -414,8 +414,8 @@ The five `claude*.yaml` backend configs interpolate `${SUPERPOWERS_ROOT}` into `
 - [ ] **Step 1: Confirm current state**
 
 ```bash
-grep -A3 'required_env:' /Users/jesse/Documents/GitHub/superpowers/superpowers/evals/backends/codex.yaml
-grep -A2 'required_env:' /Users/jesse/Documents/GitHub/superpowers/superpowers/evals/backends/gemini.yaml
+grep -A3 'required_env:' /path/to/superpowers/evals/backends/codex.yaml
+grep -A2 'required_env:' /path/to/superpowers/evals/backends/gemini.yaml
 ```
 
 Expected outputs include `- SUPERPOWERS_ROOT` lines.
@@ -423,7 +423,7 @@ Expected outputs include `- SUPERPOWERS_ROOT` lines.
 - [ ] **Step 2: Read codex.yaml fully**
 
 ```bash
-cat /Users/jesse/Documents/GitHub/superpowers/superpowers/evals/backends/codex.yaml
+cat /path/to/superpowers/evals/backends/codex.yaml
 ```
 
 - [ ] **Step 3: Edit codex.yaml — drop the `- SUPERPOWERS_ROOT` line under `required_env`**
@@ -463,7 +463,7 @@ required_env: []
 - [ ] **Step 5: Run drill's pytest suite to ensure nothing broke**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 uv run pytest -x 2>&1 | tail -20
 ```
 
@@ -472,7 +472,7 @@ Expected: all tests pass. If `tests/test_backend.py` complains about `required_e
 - [ ] **Step 6: Commit**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git add evals/backends/codex.yaml evals/backends/gemini.yaml
 git commit -m "evals: drop SUPERPOWERS_ROOT from codex/gemini required_env
 
@@ -492,7 +492,7 @@ because they interpolate \${SUPERPOWERS_ROOT} into --plugin-dir args."
 - [ ] **Step 1: Run the test suite**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 uv run pytest tests/test_backend.py -v 2>&1 | tail -30
 ```
 
@@ -523,7 +523,7 @@ def test_codex_does_not_require_superpowers_root():
 - [ ] **Step 4: Re-run the test suite**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 uv run pytest -x 2>&1 | tail -10
 ```
 
@@ -532,7 +532,7 @@ Expected: all tests pass.
 - [ ] **Step 5: Commit (only if step 1 had failures)**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git add evals/tests/test_backend.py
 git commit -m "evals: update test_backend.py for relaxed required_env contract"
 ```
@@ -596,7 +596,7 @@ ANTHROPIC_API_KEY=sk-...
 - [ ] **Step 3: Commit**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git add evals/README.md evals/CLAUDE.md
 git commit -m "evals: drop SUPERPOWERS_ROOT setup step from README/CLAUDE
 
@@ -612,7 +612,7 @@ The cli.py helper now defaults the env var. Mention as override only."
 - [ ] **Step 1: Run drill's full pytest suite**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 unset SUPERPOWERS_ROOT
 uv run pytest 2>&1 | tail -5
 ```
@@ -622,7 +622,7 @@ Expected: all tests pass. The `unset` ensures we're testing the helper, not an i
 - [ ] **Step 2: Run drill list**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 unset SUPERPOWERS_ROOT
 uv run drill list 2>&1 | head -10
 ```
@@ -633,7 +633,7 @@ Expected: scenario list, no error about missing SUPERPOWERS_ROOT.
 
 ```bash
 set -a
-source /Users/jesse/Documents/GitHub/prime-radiant-inc/sprout/.env
+source /Users/<user>/Documents/GitHub/prime-radiant-inc/sprout/.env
 set +a
 echo "ANTHROPIC_API_KEY set: ${ANTHROPIC_API_KEY:+yes}"
 ```
@@ -643,7 +643,7 @@ Expected: `ANTHROPIC_API_KEY set: yes`.
 - [ ] **Step 4: Run a cheap drill scenario**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 unset SUPERPOWERS_ROOT
 uv run drill run triggering-test-driven-development -b claude 2>&1 | tail -3
 ```
@@ -718,7 +718,7 @@ If all 6 verify SAFE TO DELETE, proceed to step 2. If any verifies KEEP, that on
 - [ ] **Step 2: Verify the runner is still useful for unrelated cases**
 
 ```bash
-ls /Users/jesse/Documents/GitHub/superpowers/superpowers/tests/skill-triggering/prompts/
+ls /path/to/superpowers/tests/skill-triggering/prompts/
 ```
 
 If the prompts/ directory is empty after the planned deletions, also delete `tests/skill-triggering/run-test.sh` and `run-all.sh` (they have nothing to run). Otherwise keep the runner.
@@ -726,7 +726,7 @@ If the prompts/ directory is empty after the planned deletions, also delete `tes
 - [ ] **Step 3: Delete and commit**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git rm tests/skill-triggering/prompts/dispatching-parallel-agents.txt
 git rm tests/skill-triggering/prompts/executing-plans.txt
 git rm tests/skill-triggering/prompts/requesting-code-review.txt
@@ -765,7 +765,7 @@ Per the spec's updated coverage map, most of these have no drill counterpart. Th
 - [ ] **Step 1: Read each .sh file and prompt to confirm**
 
 ```bash
-for f in /Users/jesse/Documents/GitHub/superpowers/superpowers/tests/explicit-skill-requests/*.sh /Users/jesse/Documents/GitHub/superpowers/superpowers/tests/explicit-skill-requests/prompts/*.txt; do
+for f in /path/to/superpowers/tests/explicit-skill-requests/*.sh /path/to/superpowers/tests/explicit-skill-requests/prompts/*.txt; do
   echo "=== $f ==="
   cat "$f" | head -30
 done
@@ -782,7 +782,7 @@ Use the subagent prompt template above with:
 If SAFE TO DELETE:
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git rm tests/explicit-skill-requests/run-claude-describes-sdd.sh
 git commit -m "tests: remove run-claude-describes-sdd.sh (covered by drill mid-conversation-skill-invocation)
 
@@ -805,8 +805,8 @@ These are entire fixture directories with `design.md`, `plan.md`, `scaffold.sh`.
 - [ ] **Step 1: Confirm drill has fixture parity**
 
 ```bash
-ls /Users/jesse/Documents/GitHub/superpowers/superpowers/evals/fixtures/sdd-go-fractals/
-ls /Users/jesse/Documents/GitHub/superpowers/superpowers/evals/fixtures/sdd-svelte-todo/
+ls /path/to/superpowers/evals/fixtures/sdd-go-fractals/
+ls /path/to/superpowers/evals/fixtures/sdd-svelte-todo/
 ```
 
 Expected: each contains `design.md`, `plan.md`, `scaffold.sh` (or equivalent) matching the source under `tests/subagent-driven-dev/`.
@@ -820,7 +820,7 @@ Subagent prompt: same template, with bash "test" being the directory's `scaffold
 For each that returns SAFE TO DELETE:
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git rm -r tests/subagent-driven-dev/go-fractals/   # or svelte-todo
 git commit -m "tests: remove subagent-driven-dev/<fixture> (covered by drill sdd-<fixture>)
 
@@ -843,7 +843,7 @@ Subagent prompt template with the bash test content and the drill scenario YAML.
 If SAFE TO DELETE:
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git rm tests/claude-code/test-document-review-system.sh
 git commit -m "tests: remove test-document-review-system.sh (covered by drill spec-reviewer-catches-planted-flaws)
 
@@ -863,7 +863,7 @@ Subagent prompt template with both contents.
 If SAFE TO DELETE:
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git rm tests/claude-code/test-requesting-code-review.sh
 git commit -m "tests: remove test-requesting-code-review.sh (covered by drill code-review-catches-planted-bugs)
 
@@ -883,7 +883,7 @@ Subagent prompt template with both contents.
 If SAFE TO DELETE:
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git rm tests/claude-code/test-worktree-native-preference.sh
 git commit -m "tests: remove test-worktree-native-preference.sh (covered by drill worktree-creation-under-pressure)
 
@@ -917,7 +917,7 @@ Add a comment at the top of `tests/claude-code/test-subagent-driven-development-
 ```
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git add tests/claude-code/test-subagent-driven-development-integration.sh
 git commit -m "tests: annotate SDD integration test with drill coverage notes
 
@@ -933,7 +933,7 @@ This is a meta/describe-skill test (per spec). No drill scenario covers describe
 - [ ] **Step 1: Confirm by reading the file**
 
 ```bash
-cat /Users/jesse/Documents/GitHub/superpowers/superpowers/tests/claude-code/test-subagent-driven-development.sh
+cat /path/to/superpowers/tests/claude-code/test-subagent-driven-development.sh
 ```
 
 Expected: tests asking the agent to describe SDD skills, not exercise them.
@@ -949,7 +949,7 @@ Add at the top:
 ```
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git add tests/claude-code/test-subagent-driven-development.sh
 git commit -m "tests: annotate SDD describe-skill test with kept-by-design note
 
@@ -968,7 +968,7 @@ test behavior, not description. No drill coverage; kept by design."
 - [ ] **Step 1: Build list of deleted-file paths**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git diff --name-only --diff-filter=D dev..HEAD | sort > /tmp/deleted-paths.txt
 cat /tmp/deleted-paths.txt
 ```
@@ -976,7 +976,7 @@ cat /tmp/deleted-paths.txt
 - [ ] **Step 2: Search for active references**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 while read -r path; do
   echo "=== $path ==="
   grep -rln "$path" \
@@ -1031,7 +1031,7 @@ Don't modify the actual references — they're historical.
 Dispatch a `general-purpose` subagent:
 
 ```
-Working directory: /Users/jesse/Documents/GitHub/superpowers/superpowers
+Working directory: /path/to/superpowers
 
 These bash test paths were deleted on the current branch; some are
 already addressed, but I want a second pair of eyes:
@@ -1049,7 +1049,7 @@ Address every reported hit before continuing.
 - [ ] **Step 6: Commit the active updates**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git add -u  # picks up edits to existing files
 git commit -m "docs: update references to lifted-and-deleted bash tests
 
@@ -1073,7 +1073,7 @@ not rewritten."
 
 The file is currently Claude-Code-centric. Split into two top-level sections.
 
-Open `/Users/jesse/Documents/GitHub/superpowers/superpowers/docs/testing.md` and replace the file content with this structure (preserve the existing Plugin-test details where applicable):
+Open `/path/to/superpowers/docs/testing.md` and replace the file content with this structure (preserve the existing Plugin-test details where applicable):
 
 ```markdown
 # Testing Superpowers
@@ -1131,7 +1131,7 @@ Find the Contributing section. Add a line:
 
 - [ ] **Step 4: Update top-level .gitignore**
 
-Open `/Users/jesse/Documents/GitHub/superpowers/superpowers/.gitignore` and add at the bottom:
+Open `/path/to/superpowers/.gitignore` and add at the bottom:
 
 ```
 # Eval harness — drill ships its own gitignore at evals/.gitignore;
@@ -1144,7 +1144,7 @@ evals/.env
 - [ ] **Step 5: Commit**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git add docs/testing.md CLAUDE.md README.md .gitignore
 git commit -m "docs: introduce evals/ as the canonical skill-behavior eval harness
 
@@ -1165,7 +1165,7 @@ git commit -m "docs: introduce evals/ as the canonical skill-behavior eval harne
 - [ ] **Step 1: Run drill's pytest**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 unset SUPERPOWERS_ROOT
 uv run pytest 2>&1 | tail -5
 ```
@@ -1176,9 +1176,9 @@ Expected: all tests pass.
 
 ```bash
 set -a
-source /Users/jesse/Documents/GitHub/prime-radiant-inc/sprout/.env
+source /Users/<user>/Documents/GitHub/prime-radiant-inc/sprout/.env
 set +a
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/evals
+cd /path/to/superpowers/evals
 unset SUPERPOWERS_ROOT
 uv run drill run triggering-test-driven-development -b claude 2>&1 | tail -3
 ```
@@ -1188,7 +1188,7 @@ Expected: `claude: 1 passed, 0 failed, 0 errors`. If FAIL, the docs / scrub / de
 - [ ] **Step 3: Run remaining plugin tests that survived**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers/tests/brainstorm-server
+cd /path/to/superpowers/tests/brainstorm-server
 node server.test.js 2>&1 | tail -3
 ```
 
@@ -1203,7 +1203,7 @@ Expected: `Results: 25 passed, 0 failed`.
 - [ ] **Step 1: Build the diff for reviewers**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git log --oneline dev..HEAD
 git diff dev..HEAD --stat
 ```
@@ -1219,7 +1219,7 @@ Adversarial review competition: 5 points to whoever finds the most
 legitimate issues. You're competing against a parallel reviewer
 assigned the identical task.
 
-**Branch:** f/evals-lift, in /Users/jesse/Documents/GitHub/superpowers/superpowers
+**Branch:** f/evals-lift, in /path/to/superpowers
 **Base:** dev (currently b4363df)
 **Spec:** docs/superpowers/specs/2026-05-06-lift-drill-into-evals-design.md
 
@@ -1272,7 +1272,7 @@ Per the cross-platform PR pattern, count legitimate findings (false positives co
 - [ ] **Step 1: Push the branch**
 
 ```bash
-cd /Users/jesse/Documents/GitHub/superpowers/superpowers
+cd /path/to/superpowers
 git push -u origin f/evals-lift
 ```
 

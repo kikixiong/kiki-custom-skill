@@ -327,10 +327,10 @@ active_experiments:
     started: "2026-03-20T14:00:00Z"
     stall_threshold_min: 60
     # remote-specific
-    ssh_host: "root@connect.westb.seetacloud.com"
-    ssh_port: 11525
-    progress_file: "/root/autodl-tmp/scbenchmark/logs/train.log"
-    result_file: "/root/autodl-tmp/scbenchmark/results/metrics.json"
+    ssh_host: "root@gpu.example.invalid"
+    ssh_port: "<SSH_PORT>"
+    progress_file: "<PROJECT_ROOT>/logs/train.log"
+    result_file: "<PROJECT_ROOT>/results/metrics.json"
   - id: "exp_002"
     type: subagent
     hypothesis: "H5"

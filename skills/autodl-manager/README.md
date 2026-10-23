@@ -44,29 +44,28 @@ sudo apt-get install sshpass
 ### 2. Add Your First Instance
 
 ```bash
-python3 scripts/autodl_cli.py add scbenchmark \
-  --host connect.westb.seetacloud.com \
-  --port 15049 \
-  --password "yourpass" \
-  --gpu "2x RTX4090"
+python3 scripts/autodl_cli.py add example-project \
+  --host gpu.example.invalid \
+  --port "$SSH_PORT" \
+  --gpu "<GPU_DESCRIPTION>"
 ```
 
 ### 3. Setup the Instance
 
 ```bash
 # Initialize conda and check turbo
-python3 scripts/autodl_cli.py setup scbenchmark
+python3 scripts/autodl_cli.py setup example-project
 ```
 
 ### 4. Check Status
 
 ```bash
-python3 scripts/autodl_cli.py status scbenchmark
+python3 scripts/autodl_cli.py status example-project
 ```
 
 **Example output:**
 ```
-🔍 Checking status: scbenchmark
+🔍 Checking status: example-project
 
 GPU Status:
   ✅ GPU 0: NVIDIA GeForce RTX 4090
@@ -85,9 +84,11 @@ Network Turbo:
 ### 5. Connect
 
 ```bash
-python3 scripts/autodl_cli.py connect scbenchmark
+python3 scripts/autodl_cli.py connect example-project
 # Opens SSH session in /root/autodl-tmp/
 ```
+
+Example hosts use the reserved `.invalid` domain. Fill `SSH_PORT` and any hardware-description placeholders from the actual instance before running a command.
 
 ## Commands
 
@@ -139,7 +140,7 @@ autodl_cli.py turbo <name>
 ```bash
 # 1. Add instance
 autodl_cli.py add my-instance \
-  --host connect.westb.seetacloud.com \
+  --host gpu.example.invalid \
   --port 12345 \
   --gpu "2x A6000"
 
@@ -163,7 +164,7 @@ python train.py
 
 ```bash
 # Check everything
-autodl_cli.py status scbenchmark
+autodl_cli.py status example-project
 
 # If GPU shows "No GPU detected":
 # - Instance is in CPU-only mode (saving cost)
@@ -200,10 +201,10 @@ autodl_cli.py connect train-gpu2
 
 ```bash
 # Check disk
-autodl_cli.py disk scbenchmark
+autodl_cli.py disk example-project
 
 # Shows:
-# 💾 Disk Usage: scbenchmark
+# 💾 Disk Usage: example-project
 # 
 # Filesystem      Size  Used Avail Use% Mounted on
 # /dev/vda1        50G   45G   5G  90% /root/autodl-tmp
@@ -213,7 +214,7 @@ autodl_cli.py disk scbenchmark
 # 2.4G    /root/autodl-tmp/cached-models/
 
 # Connect and clean up
-autodl_cli.py connect scbenchmark
+autodl_cli.py connect example-project
 # rm -rf /root/autodl-tmp/old-experiment/
 ```
 
@@ -227,16 +228,16 @@ autodl_cli.py connect scbenchmark
 ```json
 {
   "instances": {
-    "scbenchmark": {
-      "host": "connect.westb.seetacloud.com",
-      "port": 15049,
+    "example-project": {
+      "host": "gpu.example.invalid",
+      "port": "<SSH_PORT>",
       "user": "root",
       "password": "yourpass",
       "workdir": "/root/autodl-tmp/",
-      "gpu": "2x RTX4090",
-      "cpu": "50 cores",
-      "ram": "180GB",
-      "disk": "50GB"
+      "gpu": "<GPU_DESCRIPTION>",
+      "cpu": "<CPU_DESCRIPTION>",
+      "ram": "<RAM_DESCRIPTION>",
+      "disk": "<DISK_DESCRIPTION>"
     }
   }
 }
@@ -248,7 +249,7 @@ autodl_cli.py connect scbenchmark
 
 Log instance status to daily entry:
 ```bash
-autodl_cli.py status scbenchmark >> memory/daily/$(date +%Y-%m-%d).md
+autodl_cli.py status example-project >> memory/daily/$(date +%Y-%m-%d).md
 ```
 
 ### With Notifications
@@ -256,7 +257,7 @@ autodl_cli.py status scbenchmark >> memory/daily/$(date +%Y-%m-%d).md
 Alert on disk >90%:
 ```bash
 # In HEARTBEAT.md or cron
-DISK=$(autodl_cli.py status scbenchmark | grep "used" | grep -oE "[0-9]+%")
+DISK=$(autodl_cli.py status example-project | grep "used" | grep -oE "[0-9]+%")
 if [[ ${DISK%\%} -gt 90 ]]; then
     message send --to telegram "⚠️ AutoDL disk ${DISK}"
 fi
@@ -267,7 +268,7 @@ fi
 Periodic checks:
 ```bash
 # Every 2 hours, check disk
-0 */2 * * * autodl_cli.py disk scbenchmark | grep "9[0-9]%" && notify_user
+0 */2 * * * autodl_cli.py disk example-project | grep "9[0-9]%" && notify_user
 ```
 
 ## Troubleshooting
@@ -366,7 +367,7 @@ python train.py
 ```bash
 # Add
 autodl_cli.py add new-instance \
-  --host connect.westb.seetacloud.com \
+  --host gpu.example.invalid \
   --port 23456
 
 # Setup
@@ -384,10 +385,10 @@ nvidia-smi  # Check GPU
 
 ```bash
 # Disk is 95% full
-autodl_cli.py disk scbenchmark
+autodl_cli.py disk example-project
 # Shows largest dirs
 
-autodl_cli.py connect scbenchmark
+autodl_cli.py connect example-project
 # Clean up manually:
 # conda clean --all
 # rm -rf old-experiments/

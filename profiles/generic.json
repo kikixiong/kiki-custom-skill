@@ -1,7 +1,0 @@
-{
-  "name": "generic",
-  "platform": "auto",
-  "role": "follow the task and actual host configuration",
-  "default_experiment_host": "cnic-ps",
-  "automatic_experiment_launch": false
-}

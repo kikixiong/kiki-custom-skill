@@ -45,9 +45,9 @@ session. Gemini/OpenRouter keys and a local model installation are not required.
    `figures/ai_generated/` or requested output directory. Preserve sources and
    captions, and disclose raster limitations if editable vector output was requested.
 
-Use the current model/tool configuration; do not run a local generative model on
-the Mac. The user's local experiment prohibition still applies. Only use actual
-author names/affiliations from the manuscript or user input.
+Use the current model/tool configuration and the user's permitted execution
+environment. Do not install or launch another backend implicitly. Use author
+names and affiliations from the manuscript or user input.
 
 ## Optional backend
 

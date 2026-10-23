@@ -409,17 +409,17 @@ ls -la ./checkpoints/llama-70b-ppo/
 
 **Head node (Node 1)**:
 ```bash
-ray start --head --node-ip-address 10.0.0.1 --num-gpus 8
+ray start --head --node-ip-address "${HEAD_NODE_IP:?Set HEAD_NODE_IP}" --num-gpus 8
 ```
 
 **Worker nodes (Nodes 2-8)**:
 ```bash
-ray start --address 10.0.0.1:6379 --num-gpus 8
+ray start --address "${HEAD_NODE_IP:?Set HEAD_NODE_IP}:6379" --num-gpus 8
 ```
 
 **Submit job**:
 ```bash
-ray job submit --address="http://10.0.0.1:8265" \
+ray job submit --address="http://${HEAD_NODE_IP:?Set HEAD_NODE_IP}:8265" \
   --runtime-env-json='{"working_dir": "/openrlhf"}' \
   -- python3 -m openrlhf.cli.train_ppo_ray \
   --ref_num_nodes 2 --ref_num_gpus_per_node 8 \

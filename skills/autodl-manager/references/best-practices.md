@@ -235,13 +235,13 @@ Before starting training on new instance:
 
 ```bash
 # 1. Check status
-autodl status scbenchmark
+autodl status example-project
 # ✅ GPU available
 # ✅ Disk <80%
 # ✅ Conda initialized
 
 # 2. Connect
-autodl connect scbenchmark
+autodl connect example-project
 
 # 3. Enable turbo (for pip install)
 source /etc/network_turbo
@@ -303,7 +303,7 @@ logging.info(f'Epoch {epoch}, Loss: {loss:.4f}')
 
 ```bash
 # From local machine
-watch -n 60 'autodl disk scbenchmark'
+watch -n 60 'autodl disk example-project'
 
 # Or set up notifications
 # (see Integration section)
@@ -535,7 +535,7 @@ Store passwords in macOS Keychain or Linux keyring.
 
 ```bash
 # In daily entry
-autodl status scbenchmark >> memory/daily/$(date +%Y-%m-%d).md
+autodl status example-project >> memory/daily/$(date +%Y-%m-%d).md
 ```
 
 ### With Notifications
@@ -544,7 +544,7 @@ autodl status scbenchmark >> memory/daily/$(date +%Y-%m-%d).md
 
 ```bash
 # In cron or HEARTBEAT.md
-DISK=$(autodl status scbenchmark | grep "used" | grep -oE "[0-9]+%")
+DISK=$(autodl status example-project | grep "used" | grep -oE "[0-9]+%")
 if [[ ${DISK%\%} -gt 85 ]]; then
     message send --to telegram "⚠️ AutoDL disk ${DISK}"
 fi
@@ -573,7 +573,7 @@ send_notification(f'Training complete! Final loss: {loss:.4f}')
 
 ```bash
 # Every 2 hours, check disk
-0 */2 * * * autodl disk scbenchmark | grep -E "9[0-9]%|100%" && notify_user
+0 */2 * * * autodl disk example-project | grep -E "9[0-9]%|100%" && notify_user
 ```
 
 ---
@@ -644,7 +644,7 @@ watch -n 300 'autodl disk training-gpu'
 
 ### 2. Port Changes
 
-**Problem:** SSH port changed from 43495 to 15049 without notice.
+**Problem:** SSH port changed from `<OLD_SSH_PORT>` to `<NEW_SSH_PORT>` without notice.
 
 **Lesson:**
 - Verify port in AutoDL console when connection fails

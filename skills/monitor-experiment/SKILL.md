@@ -20,12 +20,9 @@ default. Do not create recurring monitoring merely because this skill is loaded.
 
 ## Locate the run
 
-Use launch notes or the run manifest for host, run ID, job/session, log and result
-paths. Default to SSH `cnic-ps` and confirm actual hostname `ps` before remote
-operations. For scbenchmark/scGRAIN, runs live under
-`/data1/jiaqi/scREBOUND/runs/<run_id>` and code under
-`/data1/jiaqi/scREBOUND/formal_worktrees/<run_id>`. For other projects use their
-recorded paths. Replace placeholders with actual values before any command.
+Use launch notes or the run manifest for execution host, run ID, job/session,
+code, log and result paths. Confirm the actual target before operations; do not
+assume a host alias or directory layout. Resolve placeholders before commands.
 
 Monitor another existing backend only when the user/run context identifies it.
 Do not assume `screen`, create a cloud instance or launch a replacement job.
@@ -35,8 +32,8 @@ Do not assume `screen`, create a cloud instance or launch a replacement job.
 1. Read a bounded tail of the identified remote log and the relevant job/process
    state. If the run uses tmux/screen/scheduler, use that run's recorded session.
    Prefer existing logs over creating shared `/tmp` screen dumps.
-2. Read small saved JSON/CSV summaries from the run directory. Parse raw experiment
-   data on the remote host; do not download datasets or rerun evaluation locally.
+2. Read small saved JSON/CSV summaries from the run directory. Follow the run's data-handling
+   and execution policy; do not transfer datasets or rerun evaluation implicitly.
 3. If a W&B run is already configured, use its exact URL/entity/project/run ID.
    Reuse access; missing W&B is not a failed experiment and does not require setup.
 4. Compare baseline and treatment only when their evaluation settings match.

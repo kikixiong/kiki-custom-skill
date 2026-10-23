@@ -957,7 +957,7 @@ debug: false
 distributed_type: FSDP
 downcast_bf16: 'no'
 machine_rank: 0 # Set to 0 for the main machine, increment by one for other machines
-main_process_ip: 10.0.0.4 # Set to main machine's IP
+main_process_ip: <HEAD_NODE_IP> # Set to main machine's IP
 main_process_port: 5000
 main_training_function: main
 mixed_precision: bf16
