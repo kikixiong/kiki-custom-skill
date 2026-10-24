@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Emerging Techniques, Long Context, RoPE, YaRN, ALiBi, Position Interpolation, Extended Context, Rotary Embeddings, Attention Bias, Context Extension, Positional Encoding]
 dependencies: [transformers, torch, flash-attn]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

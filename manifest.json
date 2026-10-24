@@ -2,7 +2,7 @@
   "name": "Kiki Custom Skill",
   "repository": "kikixiong/kiki-custom-skill",
   "purpose": "Portable skill collection for Codex and Claude Code",
-  "skill_count": 200,
+  "skill_count": 210,
   "skills": [
     {
       "directory": "0-autoresearch-skill",
@@ -235,6 +235,11 @@
       "description": "OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, content moderation, or vision-language tasks without fine-tuning. Best for general-purpose image understanding."
     },
     {
+      "directory": "coding-router",
+      "name": "coding-router",
+      "description": "软件开发与 GitHub 请求的总入口：仓库/PR/issue、CI 失败修复、review 意见、提交推送开 PR、代码结构与重构、测试验证强度、学术主页/GitHub Pages、接手项目、科研代码复现。先用它再按表读取具体 skill"
+    },
+    {
       "directory": "constitutional-ai",
       "name": "constitutional-ai",
       "description": "Anthropic's method for training harmless AI through self-improvement. Two-phase approach - supervised learning with self-critique/revision, then RLAIF (RL from AI Feedback). Use for safety alignment, reducing harmful outputs without human labels. Powers Claude's safety system."
@@ -298,6 +303,11 @@
       "directory": "experiment-plan",
       "name": "experiment-plan",
       "description": "把研究主张转化为实验矩阵、评估协议、运行顺序和算力预算。"
+    },
+    {
+      "directory": "experiment-router",
+      "name": "experiment-router",
+      "description": "实验与科研代码的总入口：实验规划、结果分析、可信度审计、实验监控、训练检查、科研代码实现/复现、算法核验、项目进度、AutoDL、GPU/CUDA 排障、wandb/MLflow/SwanLab/TensorBoard。先用它再按表读取具体 skill"
     },
     {
       "directory": "factor-alpha-lab",
@@ -470,6 +480,11 @@
       "description": "Large Language and Vision Assistant. Enables visual instruction tuning and image-based conversations. Combines CLIP vision encoder with Vicuna/LLaMA language models. Supports multi-turn image chat, visual question answering, and instruction following. Use for vision-language chatbots or image understanding tasks. Best for conversational image analysis."
     },
     {
+      "directory": "llm-app-router",
+      "name": "llm-app-router",
+      "description": "LLM 应用、RAG、Agent 与安全的总入口：LangChain、LlamaIndex、DSPy、多 agent、结构化输出/JSON、向量库、embedding、tracing 评测、guardrails、越狱/注入检测，先用它再按表读取具体 skill"
+    },
+    {
       "directory": "lm-evaluation-harness",
       "name": "evaluating-llms-harness",
       "description": "Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs."
@@ -500,9 +515,29 @@
       "description": "生成 Mermaid 流程图、时序图、类图等文本图形。"
     },
     {
+      "directory": "meta-router",
+      "name": "meta-router",
+      "description": "元技能与通用请求的总入口：施压纠偏(pua/再试试/又错了)、模糊输入澄清、记忆/知识图谱/经验沉淀、skill 查找安装与版本(oneskill)、Mermaid 图、Markdown 文档、组会简报与 ElegantPaper 报告。先用它再按表读取具体 skill"
+    },
+    {
       "directory": "miles",
       "name": "miles-rl-training",
       "description": "Provides guidance for enterprise-grade RL training using miles, a production-ready fork of slime. Use when training large MoE models with FP8/INT4, needing train-inference alignment, or requiring speculative RL for maximum throughput."
+    },
+    {
+      "directory": "ml-domain-router",
+      "name": "ml-domain-router",
+      "description": "多模态、机器人与可解释性的总入口：CLIP、BLIP-2、LLaVA、SAM、Stable Diffusion、Whisper、MusicGen、pi0/OpenVLA/Cosmos Policy、LIBERO、TransformerLens、SAE、nnsight、pyvene、activation patching。先用它再按表读取具体 skill"
+    },
+    {
+      "directory": "ml-infer-router",
+      "name": "ml-infer-router",
+      "description": "推理部署、量化、评测与算力的总入口：vLLM/SGLang/TensorRT-LLM/llama.cpp 部署，投机解码，AWQ/GPTQ/HQQ/bitsandbytes/GGUF 量化，剪枝，lm-eval/代码评测，Modal/Lambda/SkyPilot 云 GPU。先用它再按表读取具体 skill"
+    },
+    {
+      "directory": "ml-train-router",
+      "name": "ml-train-router",
+      "description": "模型训练、微调与 RL 的总入口：分布式训练、DeepSpeed/FSDP/Megatron、LoRA/QLoRA 微调、SFT/DPO/GRPO/PPO、RLHF、蒸馏合并、MoE、长上下文、分词、语料清洗。先用它再按表读取具体 skill"
     },
     {
       "directory": "mlflow",
@@ -640,6 +675,11 @@
       "description": "从论文生成会议海报，面向 A0/A1 PDF、PPTX 与 SVG。"
     },
     {
+      "directory": "paper-router",
+      "name": "paper-router",
+      "description": "论文与学术文本请求的总入口：选题定位、大纲、起草/改写章节、中英文润色、去 AI 味、翻译、引用、审稿自查、数字/证明核验、论文图表、slides/海报、LaTeX 编译、Overleaf 同步、rebuttal、基金、综述。任何论文写作、改稿、投稿、返修请求即使看起来是简单改写也先用它，再按表读取具体 skill。"
+    },
+    {
       "directory": "paper-slides",
       "name": "paper-slides",
       "description": "从论文生成 Beamer/PDF、可编辑 PPTX、讲稿和演讲备注。"
@@ -750,6 +790,11 @@
       "description": "把量化研究请求分派到因子、回测、数据或组合分析流程。"
     },
     {
+      "directory": "quant-router",
+      "name": "quant-router",
+      "description": "量化金融研究的总入口：因子/alpha、IC、回测审查、未来函数、聚宽 JoinQuant、组合风险归因、数据管线时点、AI 量化论文与 idea。先用它再按表读取具体 skill"
+    },
+    {
       "directory": "ray-data",
       "name": "ray-data",
       "description": "Scalable data processing for ML workloads. Streaming execution across CPU/GPU, supports Parquet/CSV/JSON/images. Integrates with Ray Train, PyTorch, TensorFlow. Scales from single machine to 100s of nodes. Use for batch inference, data preprocessing, multi-modal data loading, or distributed ETL pipelines."
@@ -798,6 +843,11 @@
       "directory": "research-review",
       "name": "research-review",
       "description": "调用独立代理对研究想法、论文或实验结果做批判性审查。"
+    },
+    {
+      "directory": "research-router",
+      "name": "research-router",
+      "description": "调研与选题的总入口：论文检索（arXiv/Semantic Scholar/DOI）、单篇速读、每日论文追踪、相关工作、系统综述、深度研究、头脑风暴选题、idea 评估、证据批判、研究 wiki、自主科研编排。先用它再按表读取具体 skill"
     },
     {
       "directory": "research-start-routing",

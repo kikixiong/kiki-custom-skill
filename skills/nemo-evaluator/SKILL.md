@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Evaluation, NeMo, NVIDIA, Benchmarking, MMLU, HumanEval, Multi-Backend, Slurm, Docker, Reproducible, Enterprise]
 dependencies: [nemo-evaluator-launcher>=0.1.25, docker]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

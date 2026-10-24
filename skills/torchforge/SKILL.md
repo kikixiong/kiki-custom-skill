@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Reinforcement Learning, PyTorch, GRPO, SFT, Monarch, TorchTitan, Meta]
 dependencies: [torch>=2.9.0, torchtitan>=0.2.0, vllm, monarch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [MLOps, SwanLab, Experiment Tracking, Open Source, Visualization, PyTorch, Transformers, PyTorch Lightning, Fastai, Self-Hosted]
 dependencies: [swanlab>=0.7.11, pillow>=9.0.0, soundfile>=0.12.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

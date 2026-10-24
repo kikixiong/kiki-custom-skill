@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Emerging Techniques, Speculative Decoding, Medusa, Lookahead Decoding, Fast Inference, Draft Models, Tree Attention, Parallel Generation, Latency Reduction, Inference Optimization]
 dependencies: [transformers, torch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

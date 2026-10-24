@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Optimization, AWQ, Quantization, 4-Bit, Activation-Aware, Memory Optimization, Fast Inference, vLLM Integration, Marlin Kernels]
 dependencies: [autoawq, transformers>=4.45.0, torch>=2.0.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

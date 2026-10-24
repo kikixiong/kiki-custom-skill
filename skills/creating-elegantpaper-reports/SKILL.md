@@ -1,6 +1,7 @@
 ---
 name: creating-elegantpaper-reports
 description: Use when a user requests a human-readable Chinese or English report, midterm or progress report, experiment report, mentor or lab update, Overleaf-ready LaTeX source, printable PDF, or a decision between transient Markdown notes and a formal ElegantPaper deliverable.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

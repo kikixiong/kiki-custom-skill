@@ -1,6 +1,7 @@
 ---
 name: lean-modular-coding
 description: Use when creating, changing, refactoring, or reviewing code in any language, especially when work may produce oversized entry points, fragmented files, speculative abstractions, defensive scaffolding, or disproportionate testing.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

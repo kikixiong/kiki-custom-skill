@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Cosmos Policy, VLA, Robotics, LIBERO, RoboCasa, Simulation, Evaluation, Profiling, EGL Rendering]
 dependencies: [torch>=2.1.0, mujoco>=3.0.0, robosuite>=1.4.0, "robocasa @ git+https://github.com/moojink/robocasa-cosmos-policy.git", transformers>=4.40.0, "cosmos-policy @ git+https://github.com/NVlabs/cosmos-policy.git"]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

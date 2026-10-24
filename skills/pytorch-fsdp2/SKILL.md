@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [PyTorch, FSDP2, Fully Sharded Data Parallel, Distributed Training, DTensor, Device Mesh, Sharded Checkpointing, Mixed Precision, Offload, Torch Distributed]
 dependencies: [torch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

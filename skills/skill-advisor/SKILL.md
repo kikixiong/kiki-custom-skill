@@ -1,6 +1,7 @@
 ---
 name: skill-advisor
 description: Search and discover existing Codex skills before creating new ones. Prevents duplicate skills by indexing available skills and finding similar functionality. Use when the user wants to create a new skill, asks about available skills, or needs recommendations on skill reuse versus creation.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

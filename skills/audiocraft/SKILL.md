@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Multimodal, Audio Generation, Text-to-Music, Text-to-Audio, MusicGen]
 dependencies: [audiocraft, torch>=2.0.0, transformers>=4.30.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

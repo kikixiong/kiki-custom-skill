@@ -1,6 +1,7 @@
 ---
 name: autodl-experiment
 description: Launch, monitor, troubleshoot, notify, and archive AutoDL or SeetaCloud SSH GPU experiments. Use for remote training/evaluation jobs, tmux/screen launches, conda/CUDA/HuggingFace setup, SMTP email progress alerts, failure alerts, result pullback, and append-only runbook notes. Do not use for local-only debugging unless a remote SSH GPU instance is involved.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

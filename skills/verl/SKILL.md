@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Reinforcement Learning, RLHF, GRPO, PPO, Post-Training, Distributed Training]
 dependencies: [verl>=0.3.0, torch>=2.0.0, ray>=2.41.0, vllm>=0.8.2, transformers>=4.40.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

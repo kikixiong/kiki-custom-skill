@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Model Architecture, NanoGPT, GPT-2, Educational, Andrej Karpathy, Transformer, Minimalist, From Scratch, Training]
 dependencies: [torch, transformers, datasets, tiktoken, wandb]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

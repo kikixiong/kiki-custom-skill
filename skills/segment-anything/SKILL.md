@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Multimodal, Image Segmentation, Computer Vision, SAM, Zero-Shot]
 dependencies: [segment-anything, transformers>=4.30.0, torch>=1.7.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

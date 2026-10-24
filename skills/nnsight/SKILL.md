@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [nnsight, NDIF, Remote Execution, Mechanistic Interpretability, Model Internals]
 dependencies: [nnsight>=0.5.0, torch>=2.0.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

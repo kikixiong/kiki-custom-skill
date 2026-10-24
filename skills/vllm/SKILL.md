@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [vLLM, Inference Serving, PagedAttention, Continuous Batching, High Throughput, Production, OpenAI API, Quantization, Tensor Parallelism]
 dependencies: [vllm, torch, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

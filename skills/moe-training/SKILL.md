@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Emerging Techniques, MoE, Mixture Of Experts, Sparse Models, DeepSpeed, Expert Parallelism, Mixtral, DeepSeek, Routing, Load Balancing, Efficient Training]
 dependencies: [deepspeed, transformers, torch, accelerate]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

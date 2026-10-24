@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [MLOps, Weights And Biases, WandB, Experiment Tracking, Hyperparameter Tuning, Model Registry, Collaboration, Real-Time Visualization, PyTorch, TensorFlow, HuggingFace]
 dependencies: [wandb]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

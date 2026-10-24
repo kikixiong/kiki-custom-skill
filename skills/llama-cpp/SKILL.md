@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Inference Serving, Llama.cpp, CPU Inference, Apple Silicon, Edge Deployment, GGUF, Quantization, Non-NVIDIA, AMD GPUs, Intel GPUs, Embedded]
 dependencies: [llama-cpp-python]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

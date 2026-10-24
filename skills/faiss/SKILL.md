@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [RAG, FAISS, Similarity Search, Vector Search, Facebook AI, GPU Acceleration, Billion-Scale, K-NN, HNSW, High Performance, Large Scale]
 dependencies: [faiss-cpu, faiss-gpu, numpy]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

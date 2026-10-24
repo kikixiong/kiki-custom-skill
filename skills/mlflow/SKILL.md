@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [MLOps, MLflow, Experiment Tracking, Model Registry, ML Lifecycle, Deployment, Model Versioning, PyTorch, TensorFlow, Scikit-Learn, HuggingFace]
 dependencies: [mlflow, sqlalchemy, boto3]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

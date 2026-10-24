@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Tokenization, SentencePiece, Language-Independent, BPE, Unigram, Multilingual, CJK Languages, Unicode, Deterministic, Google]
 dependencies: [sentencepiece, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

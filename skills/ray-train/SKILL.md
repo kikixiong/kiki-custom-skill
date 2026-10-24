@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Ray Train, Distributed Training, Orchestration, Ray, Hyperparameter Tuning, Fault Tolerance, Elastic Scaling, Multi-Node, PyTorch, TensorFlow]
 dependencies: ["ray[train]", torch, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

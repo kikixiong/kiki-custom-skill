@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [DeepSpeed, Distributed Training, ZeRO, Pipeline Parallelism, Mixed Precision, Optimization, Microsoft, Large-Scale Training, FP16, FP8]
 dependencies: [deepspeed, torch, transformers, accelerate]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

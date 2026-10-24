@@ -1,6 +1,7 @@
 ---
 name: arxiv-daily-digest
 description: Automatically fetch, filter, rank, and summarize arXiv papers based on the user's configured research interests. Use when the user wants daily arXiv paper updates, personalized paper recommendations, research interest configuration, or scheduled research digests.
+disable-model-invocation: true
 ---
 
 ## Runtime configuration

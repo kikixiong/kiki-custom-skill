@@ -1,6 +1,7 @@
 ---
 name: creating-research-meeting-reports
 description: Use when preparing a pre- or post-meeting research brief from notes, drafts, slides, tables, logs, or meeting decisions for supervisor, lab, project, or research-review discussions.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

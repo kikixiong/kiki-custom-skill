@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Megatron-Core, Large-Scale Training, NVIDIA, Tensor Parallelism, Pipeline Parallelism, Model Parallelism, H100, Distributed Training, Production]
 dependencies: [megatron-core, torch, apex, transformer-engine]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

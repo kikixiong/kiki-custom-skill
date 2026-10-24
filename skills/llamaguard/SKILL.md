@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Safety Alignment, LlamaGuard, Content Moderation, Meta, Guardrails, Safety Classification, Input Filtering, Output Filtering, AI Safety]
 dependencies: [transformers, torch, vllm]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

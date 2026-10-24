@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Infrastructure, GPU Cloud, Training, Inference, Lambda Labs]
 dependencies: [lambda-cloud-client>=1.0.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

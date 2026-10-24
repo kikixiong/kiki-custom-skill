@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [RAG, Vector Search, Qdrant, Semantic Search, Embeddings, Similarity Search, HNSW, Production, Distributed]
 dependencies: [qdrant-client>=1.12.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

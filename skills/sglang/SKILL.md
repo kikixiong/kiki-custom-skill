@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Inference Serving, SGLang, Structured Generation, RadixAttention, Prefix Caching, Constrained Decoding, Agents, JSON Output, Fast Inference, Production Scale]
 dependencies: [sglang, torch, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

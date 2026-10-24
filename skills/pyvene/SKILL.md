@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Causal Intervention, pyvene, Activation Patching, Causal Tracing, Interpretability]
 dependencies: [pyvene>=0.1.8, torch>=2.0.0, transformers>=4.30.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

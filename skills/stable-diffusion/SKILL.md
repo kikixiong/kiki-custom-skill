@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Image Generation, Stable Diffusion, Diffusers, Text-to-Image, Multimodal, Computer Vision]
 dependencies: [diffusers>=0.30.0, transformers>=4.41.0, accelerate>=0.31.0, torch>=2.0.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

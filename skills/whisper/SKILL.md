@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Whisper, Speech Recognition, ASR, Multimodal, Multilingual, OpenAI, Speech-To-Text, Transcription, Translation, Audio Processing]
 dependencies: [openai-whisper, transformers, torch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Observability, LangSmith, Tracing, Evaluation, Monitoring, Debugging, Testing, LLM Ops, Production]
 dependencies: [langsmith>=0.2.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Infrastructure, Multi-Cloud, Orchestration, GPU, Cost Optimization, SkyPilot]
 dependencies: [skypilot>=0.7.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -1,6 +1,7 @@
 ---
 name: scfm-paper-writing
 description: Write or revise single-cell foundation model papers using a local, section-aware literature library. Retrieve close scFM exemplars, compare scientific positioning, and adapt argument structure to the user's evidence; use alongside kiki-paper-writing for scGPT, Geneformer, cell representations, contrastive pretraining, or perturbation-model manuscripts.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Infrastructure, Serverless, GPU, Cloud, Deployment, Modal]
 dependencies: [modal>=0.64.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

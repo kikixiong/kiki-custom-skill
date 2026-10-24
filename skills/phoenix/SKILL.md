@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Observability, Phoenix, Arize, Tracing, Evaluation, Monitoring, LLM Ops, OpenTelemetry]
 dependencies: [arize-phoenix>=12.0.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

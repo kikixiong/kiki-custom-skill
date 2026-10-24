@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Model Architecture, LitGPT, Lightning AI, LLM Implementation, LoRA, QLoRA, Fine-Tuning, Llama, Gemma, Phi, Mistral, Educational]
 dependencies: [litgpt, torch, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

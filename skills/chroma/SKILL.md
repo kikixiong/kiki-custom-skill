@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [RAG, Chroma, Vector Database, Embeddings, Semantic Search, Open Source, Self-Hosted, Document Retrieval, Metadata Filtering]
 dependencies: [chromadb, sentence-transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

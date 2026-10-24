@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Safety Alignment, Prompt Injection, Jailbreak Detection, Meta, Input Validation, Security, Content Filtering, Multilingual]
 dependencies: [transformers, torch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

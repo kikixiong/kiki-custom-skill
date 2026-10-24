@@ -1,6 +1,7 @@
 ---
 name: self-improvement
 description: Capture useful learnings from failures, user corrections, missing capabilities, outdated assumptions, and recurring workflow discoveries. Use when a command fails unexpectedly, the user says a prior answer was wrong, a better reusable pattern is found, or durable guidance should be promoted into AGENTS.md or a project learning log.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

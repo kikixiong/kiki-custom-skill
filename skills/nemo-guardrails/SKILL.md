@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Safety Alignment, NeMo Guardrails, NVIDIA, Jailbreak Detection, Guardrails, Colang, Runtime Safety, Hallucination Detection, PII Filtering, Production]
 dependencies: [nemoguardrails]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [OpenPI, Physical Intelligence, VLA, Robotics, JAX, PyTorch, Fine-Tuning, Policy Serving, ALOHA, DROID, LIBERO, pi0]
 dependencies: [uv>=0.4.0, jax>=0.4.30, torch>=2.1.0, transformers>=4.53.2]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

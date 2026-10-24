@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Multimodal, Vision-Language, Image Captioning, VQA, Zero-Shot]
 dependencies: [transformers>=4.30.0, torch>=1.10.0, Pillow]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

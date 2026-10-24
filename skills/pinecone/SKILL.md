@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [RAG, Pinecone, Vector Database, Managed Service, Serverless, Hybrid Search, Production, Auto-Scaling, Low Latency, Recommendations]
 dependencies: [pinecone-client]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Sentence Transformers, Embeddings, Semantic Similarity, RAG, Multilingual, Multimodal, Pre-Trained Models, Clustering, Semantic Search, Production]
 dependencies: [sentence-transformers, transformers, torch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -1,6 +1,7 @@
 ---
 name: lightweight-development-verification
 description: Use when planning, implementing, reviewing, testing, building, linting, running E2E, checking generated-file hashes, or coordinating subagents for software changes where validation should match risk and duplicate gates should be avoided.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

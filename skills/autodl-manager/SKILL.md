@@ -1,6 +1,7 @@
 ---
 name: autodl-manager
 description: Manage AutoDL cloud GPU instances with SSH connection, GPU status detection, disk monitoring, conda initialization, and network acceleration. Use when connecting to AutoDL, checking instance status, monitoring disk space, setting up new instances, or managing multiple AutoDL servers. Automatically detects GPU-enabled vs CPU-only instances.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

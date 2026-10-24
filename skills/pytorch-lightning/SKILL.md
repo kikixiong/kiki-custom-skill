@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [PyTorch Lightning, Training Framework, Distributed Training, DDP, FSDP, DeepSpeed, High-Level API, Callbacks, Best Practices, Scalable]
 dependencies: [lightning, torch, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

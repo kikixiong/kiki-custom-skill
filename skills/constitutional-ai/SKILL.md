@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Safety Alignment, Constitutional AI, RLAIF, Self-Critique, Harmlessness, Anthropic, AI Safety, RL From AI Feedback, Claude]
 dependencies: [transformers, torch, trl]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

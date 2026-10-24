@@ -10,6 +10,7 @@ metadata:
   source-repository: xll0328/skill_sony
   source-revision: e2d15ad91892f90f0cdc7db6a82971f2de0b659d
   local-profile: kiki-custom-skill
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

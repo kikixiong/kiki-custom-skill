@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [LLaVA, Vision-Language, Multimodal, Visual Question Answering, Image Chat, CLIP, Vicuna, Conversational AI, Instruction Tuning, VQA]
 dependencies: [transformers, torch, pillow]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

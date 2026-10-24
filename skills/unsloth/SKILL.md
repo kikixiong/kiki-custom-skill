@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Fine-Tuning, Unsloth, Fast Training, LoRA, QLoRA, Memory-Efficient, Optimization, Llama, Mistral, Gemma, Qwen]
 dependencies: [unsloth, torch, transformers, trl, datasets, peft]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

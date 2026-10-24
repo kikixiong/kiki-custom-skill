@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Prompt Engineering, DSPy, Declarative Programming, RAG, Agents, Prompt Optimization, LM Programming, Stanford NLP, Automatic Optimization, Modular AI]
 dependencies: [dspy, openai, anthropic]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Emerging Techniques, Model Merging, Mergekit, SLERP, TIES, DARE, Task Arithmetic, Model Fusion, No Retraining, Multi-Capability, Arcee AI]
 dependencies: [mergekit, transformers, torch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

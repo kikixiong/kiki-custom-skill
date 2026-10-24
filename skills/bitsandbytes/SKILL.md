@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Optimization, Bitsandbytes, Quantization, 8-Bit, 4-Bit, Memory Optimization, QLoRA, NF4, INT8, HuggingFace, Efficient Inference]
 dependencies: [bitsandbytes, transformers, accelerate, torch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

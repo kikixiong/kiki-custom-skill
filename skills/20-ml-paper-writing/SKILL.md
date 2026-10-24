@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Academic Writing, NeurIPS, ICML, ICLR, ACL, AAAI, COLM, OSDI, NSDI, ASPLOS, SOSP, LaTeX, Paper Writing, Citations, Research, Systems]
 dependencies: [semanticscholar, arxiv, habanero, requests]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

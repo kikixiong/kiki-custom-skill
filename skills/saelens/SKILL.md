@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Sparse Autoencoders, SAE, Mechanistic Interpretability, Feature Discovery, Superposition]
 dependencies: [sae-lens>=6.0.0, transformer-lens>=2.0.0, torch>=2.0.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Research Ideation, Brainstorming, Problem Discovery, Creative Thinking, Research Strategy]
 dependencies: []
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

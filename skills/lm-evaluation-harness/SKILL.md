@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Evaluation, LM Evaluation Harness, Benchmarking, MMLU, HumanEval, GSM8K, EleutherAI, Model Quality, Academic Benchmarks, Industry Standard]
 dependencies: [lm-eval, transformers, vllm]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

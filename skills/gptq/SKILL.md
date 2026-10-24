@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Optimization, GPTQ, Quantization, 4-Bit, Post-Training, Memory Optimization, Consumer GPUs, Fast Inference, QLoRA, Group-Wise Quantization]
 dependencies: [auto-gptq, transformers, optimum, peft]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Model Architecture, Mamba, State Space Models, SSM, Linear Complexity, Long Context, Efficient Inference, Hardware-Aware, Alternative To Transformers]
 dependencies: [mamba-ssm, torch, transformers, causal-conv1d]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -1,6 +1,6 @@
 # Kiki Custom Skill — 技能目录
 
-默认安装下列 200 个技能；系统和插件快照位于 `reference/`，不自动安装。
+默认安装下列 210 个技能；系统和插件快照位于 `reference/`，不自动安装。
 
 | 技能目录 | 名称 | 用途 |
 |---|---|---|
@@ -50,6 +50,7 @@
 | [chroma](skills/chroma/SKILL.md) | chroma | Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source projects. |
 | [citation-audit](skills/citation-audit/SKILL.md) | citation-audit | 检查引用是否真实、作者年份是否准确、被引论文是否支持对应论断。 |
 | [clip](skills/clip/SKILL.md) | clip | OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, content moderation, or vision-language tasks without fine-tuning. Best for general-purpose image understanding. |
+| [coding-router](skills/coding-router/SKILL.md) | coding-router | 软件开发与 GitHub 请求的总入口：仓库/PR/issue、CI 失败修复、review 意见、提交推送开 PR、代码结构与重构、测试验证强度、学术主页/GitHub Pages、接手项目、科研代码复现。先用它再按表读取具体 skill |
 | [constitutional-ai](skills/constitutional-ai/SKILL.md) | constitutional-ai | Anthropic's method for training harmless AI through self-improvement. Two-phase approach - supervised learning with self-critique/revision, then RLAIF (RL from AI Feedback). Use for safety alignment, reducing harmful outputs without human labels. Powers Claude's safety system. |
 | [cosmos-policy](skills/cosmos-policy/SKILL.md) | evaluating-cosmos-policy | Evaluates NVIDIA Cosmos Policy on LIBERO and RoboCasa simulation environments. Use when setting up cosmos-policy for robot manipulation evaluation, running headless GPU evaluations with EGL rendering, or profiling inference latency on cluster or local GPU machines. |
 | [craft-scientific-figure-prompts](skills/craft-scientific-figure-prompts/SKILL.md) | craft-scientific-figure-prompts | Analyze reference figures and their prompts, extract transferable visual and organizational grammar, maintain a project-wide style profile across multiple figures, and produce robust model-agnostic prompts for scientific overview figures, method diagrams, architecture schematics, graphical abstracts, and research posters. Use when Codex must learn or preserve figure style, adapt it to a paper, thesis, proposal, or technical project, rewrite or audit a long image-generation prompt, keep a multi-figure project visually consistent, preserve scientific evidence states, or iteratively improve a generated figure without copying the reference's scientific content. |
@@ -63,6 +64,7 @@
 | [experiment-audit](skills/experiment-audit/SKILL.md) | experiment-audit | 审查评估代码与结果来源，定位伪标签、异常归一化和无来源结果。 |
 | [experiment-integrity-audit](skills/experiment-integrity-audit/SKILL.md) | experiment-integrity-audit | 检查数据泄漏、划分、基线公平性、指标、统计与可复现性。 |
 | [experiment-plan](skills/experiment-plan/SKILL.md) | experiment-plan | 把研究主张转化为实验矩阵、评估协议、运行顺序和算力预算。 |
+| [experiment-router](skills/experiment-router/SKILL.md) | experiment-router | 实验与科研代码的总入口：实验规划、结果分析、可信度审计、实验监控、训练检查、科研代码实现/复现、算法核验、项目进度、AutoDL、GPU/CUDA 排障、wandb/MLflow/SwanLab/TensorBoard。先用它再按表读取具体 skill |
 | [factor-alpha-lab](skills/factor-alpha-lab/SKILL.md) | factor-alpha-lab | 研究因子与信号，分析 IC、衰减、换手和中性化。 |
 | [faiss](skills/faiss/SKILL.md) | faiss | Facebook's library for efficient similarity search and clustering of dense vectors. Supports billions of vectors, GPU acceleration, and various index types (Flat, IVF, HNSW). Use for fast k-NN search, large-scale vector retrieval, or when you need pure similarity search without metadata. Best for high-performance applications. |
 | [figure-designer](skills/figure-designer/SKILL.md) | figure-designer | 规划 Figure 1、方法总览图和实验图的布局、标注与信息结构。 |
@@ -97,13 +99,18 @@
 | [llamaguard](skills/llamaguard/SKILL.md) | llamaguard | Meta's 7-8B specialized moderation model for LLM input/output filtering. 6 safety categories - violence/hate, sexual content, weapons, substances, self-harm, criminal planning. 94-95% accuracy. Deploy with vLLM, HuggingFace, Sagemaker. Integrates with NeMo Guardrails. |
 | [llamaindex](skills/llamaindex/SKILL.md) | llamaindex | Data framework for building LLM applications with RAG. Specializes in document ingestion (300+ connectors), indexing, and querying. Features vector indices, query engines, agents, and multi-modal support. Use for document Q&A, chatbots, knowledge retrieval, or building RAG pipelines. Best for data-centric LLM applications. |
 | [llava](skills/llava/SKILL.md) | llava | Large Language and Vision Assistant. Enables visual instruction tuning and image-based conversations. Combines CLIP vision encoder with Vicuna/LLaMA language models. Supports multi-turn image chat, visual question answering, and instruction following. Use for vision-language chatbots or image understanding tasks. Best for conversational image analysis. |
+| [llm-app-router](skills/llm-app-router/SKILL.md) | llm-app-router | LLM 应用、RAG、Agent 与安全的总入口：LangChain、LlamaIndex、DSPy、多 agent、结构化输出/JSON、向量库、embedding、tracing 评测、guardrails、越狱/注入检测，先用它再按表读取具体 skill |
 | [lm-evaluation-harness](skills/lm-evaluation-harness/SKILL.md) | evaluating-llms-harness | Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs. |
 | [long-context](skills/long-context/SKILL.md) | long-context | Extend context windows of transformer models using RoPE, YaRN, ALiBi, and position interpolation techniques. Use when processing long documents (32k-128k+ tokens), extending pre-trained models beyond original context limits, or implementing efficient positional encodings. Covers rotary embeddings, attention biases, interpolation methods, and extrapolation strategies for LLMs. |
 | [mamba](skills/mamba/SKILL.md) | mamba-architecture | State-space model with O(n) complexity vs Transformers' O(n²). 5× faster inference, million-token sequences, no KV cache. Selective SSM with hardware-aware design. Mamba-1 (d_state=16) and Mamba-2 (d_state=128, multi-head). Models 130M-2.8B on HuggingFace. |
 | [megatron-core](skills/megatron-core/SKILL.md) | training-llms-megatron | Trains large language models (2B-462B parameters) using NVIDIA Megatron-Core with advanced parallelism strategies. Use when training models >1B parameters, need maximum GPU efficiency (47% MFU on H100), or require tensor/pipeline/sequence/context/expert parallelism. Production-ready framework used for Nemotron, LLaMA, DeepSeek. |
 | [memory-manager](skills/memory-manager/SKILL.md) | memory-manager | Manage hierarchical memory system with daily entries, weekly/monthly compaction, and long-term knowledge base. Use when creating daily logs, reviewing/summarizing past memories, maintaining MEMORY.md, searching memory, or organizing the memory directory structure. |
 | [mermaid-diagram](skills/mermaid-diagram/SKILL.md) | mermaid-diagram | 生成 Mermaid 流程图、时序图、类图等文本图形。 |
+| [meta-router](skills/meta-router/SKILL.md) | meta-router | 元技能与通用请求的总入口：施压纠偏(pua/再试试/又错了)、模糊输入澄清、记忆/知识图谱/经验沉淀、skill 查找安装与版本(oneskill)、Mermaid 图、Markdown 文档、组会简报与 ElegantPaper 报告。先用它再按表读取具体 skill |
 | [miles](skills/miles/SKILL.md) | miles-rl-training | Provides guidance for enterprise-grade RL training using miles, a production-ready fork of slime. Use when training large MoE models with FP8/INT4, needing train-inference alignment, or requiring speculative RL for maximum throughput. |
+| [ml-domain-router](skills/ml-domain-router/SKILL.md) | ml-domain-router | 多模态、机器人与可解释性的总入口：CLIP、BLIP-2、LLaVA、SAM、Stable Diffusion、Whisper、MusicGen、pi0/OpenVLA/Cosmos Policy、LIBERO、TransformerLens、SAE、nnsight、pyvene、activation patching。先用它再按表读取具体 skill |
+| [ml-infer-router](skills/ml-infer-router/SKILL.md) | ml-infer-router | 推理部署、量化、评测与算力的总入口：vLLM/SGLang/TensorRT-LLM/llama.cpp 部署，投机解码，AWQ/GPTQ/HQQ/bitsandbytes/GGUF 量化，剪枝，lm-eval/代码评测，Modal/Lambda/SkyPilot 云 GPU。先用它再按表读取具体 skill |
+| [ml-train-router](skills/ml-train-router/SKILL.md) | ml-train-router | 模型训练、微调与 RL 的总入口：分布式训练、DeepSpeed/FSDP/Megatron、LoRA/QLoRA 微调、SFT/DPO/GRPO/PPO、RLHF、蒸馏合并、MoE、长上下文、分词、语料清洗。先用它再按表读取具体 skill |
 | [mlflow](skills/mlflow/SKILL.md) | mlflow | Track ML experiments, manage model registry with versioning, deploy models to production, and reproduce experiments with MLflow - framework-agnostic ML lifecycle platform |
 | [modal](skills/modal/SKILL.md) | modal-serverless-gpu | Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic scaling. |
 | [model-merging](skills/model-merging/SKILL.md) | model-merging | Merge multiple fine-tuned models using mergekit to combine capabilities without retraining. Use when creating specialized models by blending domain-specific expertise (math + coding + chat), improving performance beyond single models, or experimenting rapidly with model variants. Covers SLERP, TIES-Merging, DARE, Task Arithmetic, linear merging, and production deployment strategies. |
@@ -131,6 +138,7 @@
 | [paper-illustration](skills/paper-illustration/SKILL.md) | paper-illustration | 使用 Codex 原生图像工具制作和修改论文插图，按需衔接可编辑结构图与科研绘图。 |
 | [paper-plan](skills/paper-plan/SKILL.md) | paper-plan | 根据研究结论与实验结果生成论文大纲。 |
 | [paper-poster](skills/paper-poster/SKILL.md) | paper-poster | 从论文生成会议海报，面向 A0/A1 PDF、PPTX 与 SVG。 |
+| [paper-router](skills/paper-router/SKILL.md) | paper-router | 论文与学术文本请求的总入口：选题定位、大纲、起草/改写章节、中英文润色、去 AI 味、翻译、引用、审稿自查、数字/证明核验、论文图表、slides/海报、LaTeX 编译、Overleaf 同步、rebuttal、基金、综述。任何论文写作、改稿、投稿、返修请求即使看起来是简单改写也先用它，再按表读取具体 skill。 |
 | [paper-slides](skills/paper-slides/SKILL.md) | paper-slides | 从论文生成 Beamer/PDF、可编辑 PPTX、讲稿和演讲备注。 |
 | [paper-write](skills/paper-write/SKILL.md) | paper-write | 按照大纲逐节起草 LaTeX 论文正文。 |
 | [peft](skills/peft/SKILL.md) | peft-fine-tuning | Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter serving. HuggingFace's official library integrated with transformers ecosystem. |
@@ -153,6 +161,7 @@
 | [quant-ai-research-autopilot](skills/quant-ai-research-autopilot/SKILL.md) | quant-ai-research-autopilot | 组织 AI 量化方向的文献、idea、查新和实验设计。 |
 | [quant-data-pipeline-audit](skills/quant-data-pipeline-audit/SKILL.md) | quant-data-pipeline-audit | 检查行情、基本面、特征和时点一致性等量化数据管线。 |
 | [quant-research-routing](skills/quant-research-routing/SKILL.md) | quant-research-routing | 把量化研究请求分派到因子、回测、数据或组合分析流程。 |
+| [quant-router](skills/quant-router/SKILL.md) | quant-router | 量化金融研究的总入口：因子/alpha、IC、回测审查、未来函数、聚宽 JoinQuant、组合风险归因、数据管线时点、AI 量化论文与 idea。先用它再按表读取具体 skill |
 | [ray-data](skills/ray-data/SKILL.md) | ray-data | Scalable data processing for ML workloads. Streaming execution across CPU/GPU, supports Parquet/CSV/JSON/images. Integrates with Ray Train, PyTorch, TensorFlow. Scales from single machine to 100s of nodes. Use for batch inference, data preprocessing, multi-modal data loading, or distributed ETL pipelines. |
 | [ray-train](skills/ray-train/SKILL.md) | ray-train | Distributed training orchestration across clusters. Scales PyTorch/TensorFlow/HuggingFace from laptop to 1000s of nodes. Built-in hyperparameter tuning with Ray Tune, fault tolerance, elastic scaling. Use when training massive models across multiple machines or running distributed hyperparameter sweeps. |
 | [rebuttal](skills/rebuttal/SKILL.md) | rebuttal | 拆解审稿意见，基于已有证据起草回复并管理后续轮次。 |
@@ -163,6 +172,7 @@
 | [research-paper-writing](skills/research-paper-writing/SKILL.md) | research-paper-writing | 改善 ML/CV/NLP 论文结构、段落衔接和审稿人阅读体验。 |
 | [research-progress-tracker](skills/research-progress-tracker/SKILL.md) | research-progress-tracker | 用进度文档和实验登记表维护项目状态及下一步任务。 |
 | [research-review](skills/research-review/SKILL.md) | research-review | 调用独立代理对研究想法、论文或实验结果做批判性审查。 |
+| [research-router](skills/research-router/SKILL.md) | research-router | 调研与选题的总入口：论文检索（arXiv/Semantic Scholar/DOI）、单篇速读、每日论文追踪、相关工作、系统综述、深度研究、头脑风暴选题、idea 评估、证据批判、研究 wiki、自主科研编排。先用它再按表读取具体 skill |
 | [research-start-routing](skills/research-start-routing/SKILL.md) | research-start-routing | 把科研启动与继续推进请求分派到进度、算法审查和任务执行技能。 |
 | [research-task-executor](skills/research-task-executor/SKILL.md) | research-task-executor | 执行一个明确的科研代码或实验实现任务，并更新任务记录。 |
 | [research-wiki](skills/research-wiki/SKILL.md) | research-wiki | 关联论文、想法、实验与结论，维护持久化研究知识库。 |

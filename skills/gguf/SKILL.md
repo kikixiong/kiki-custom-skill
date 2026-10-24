@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [GGUF, Quantization, llama.cpp, CPU Inference, Apple Silicon, Model Compression, Optimization]
 dependencies: [llama-cpp-python>=0.2.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

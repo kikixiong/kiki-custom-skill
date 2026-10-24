@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Optimization, Flash Attention, Attention Optimization, Memory Efficiency, Speed Optimization, Long Context, PyTorch, SDPA, H100, FP8, Transformers]
 dependencies: [flash-attn, torch, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

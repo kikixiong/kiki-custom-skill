@@ -1,6 +1,6 @@
 # Kiki Custom Skill
 
-面向 Codex 和 Claude Code 的可移植技能集合，包含 **200 个可安装技能**及其脚本、模板和共享资源。不同机器使用各自的用户目录、工具和项目配置；仓库不预设服务器、GPU、账号、实验路径或个人执行偏好。
+面向 Codex 和 Claude Code 的可移植技能集合，包含 **210 个可安装技能**（10 个分类 router + 200 个叶子技能）及其脚本、模板和共享资源。不同机器使用各自的用户目录、工具和项目配置；仓库不预设服务器、GPU、账号、实验路径或个人执行偏好。
 
 [GitHub 仓库](https://github.com/kikixiong/kiki-custom-skill) · [技能目录](CATALOG.md) · [Codex 安装说明](INSTALL_CODEX.md) · [Claude Code 安装说明](INSTALL_CLAUDE_CODE.md)
 
@@ -53,6 +53,18 @@ python3 install.py --target codex --skills kiki-paper-writing kiki-paper-workflo
 
 `--dry-run` 仅显示目标路径和同名冲突，不写入文件。仓库含 `@@KIKI_*@@` 路径标记，请使用安装器，不要直接把未渲染的模板链接到客户端技能目录。
 
+## 分类路由
+
+200 个技能全部进入自动列表会超出 Claude Code 的技能描述预算，排在后面的技能只剩名字。因此叶子技能的 frontmatter 带 `disable-model-invocation: true`，自动列表里只保留 10 个分类 router（`paper-router`、`research-router`、`experiment-router`、`ml-train-router`、`ml-infer-router`、`llm-app-router`、`ml-domain-router`、`quant-router`、`coding-router`、`meta-router`）和 `pua`、`prompt-clarifier`。模型先调用 router，再按表 Read 叶子技能的 `SKILL.md`；同一技能可以出现在多个 router 中。用户仍可用 `/技能名` 直接调用任一叶子。
+
+Claude Code 中建议在 `settings.json` 加只读规则，避免每次读取叶子都弹出权限确认：
+
+```json
+"permissions": { "allow": ["Read(//root/.claude/skills/**)", "Read(//root/.claude/skill-support/**)"] }
+```
+
+路径按本机 home 调整。新增技能后，把它加进对应 router 的表格，并运行 `python3 support/routing/check_routers.py ~/.claude/skills` 检查孤儿和失效引用。
+
 ## 更新
 
 ```bash
@@ -64,7 +76,7 @@ python3 install.py --target codex
 
 ## 内容与能力边界
 
-- `skills/`：默认可安装的 200 个技能。
+- `skills/`：默认可安装的 210 个技能，其中 10 个 `*-router` 为分类入口。
 - `support/`：共享工具、参考资源和跨客户端运行说明。
 - `reference/`：系统和插件的参考快照，不由安装器注册或覆盖。
 - `provenance/`、`THIRD_PARTY_NOTICES.md`：来源、版本和版权说明。

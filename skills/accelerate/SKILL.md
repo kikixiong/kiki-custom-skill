@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Distributed Training, HuggingFace, Accelerate, DeepSpeed, FSDP, Mixed Precision, PyTorch, DDP, Unified API, Simple]
 dependencies: [accelerate, torch, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

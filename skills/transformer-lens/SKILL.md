@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Mechanistic Interpretability, TransformerLens, Activation Patching, Circuit Analysis]
 dependencies: [transformer-lens>=2.0.0, torch>=2.0.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

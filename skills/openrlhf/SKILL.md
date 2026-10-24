@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Post-Training, OpenRLHF, RLHF, PPO, GRPO, RLOO, DPO, Ray, vLLM, Distributed Training, Large Models, ZeRO-3]
 dependencies: [openrlhf, ray, vllm, torch, transformers, deepspeed]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

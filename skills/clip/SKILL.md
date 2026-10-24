@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Multimodal, CLIP, Vision-Language, Zero-Shot, Image Classification, OpenAI, Image Search, Cross-Modal Retrieval, Content Moderation]
 dependencies: [transformers, torch, pillow]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

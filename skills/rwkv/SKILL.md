@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [RWKV, Model Architecture, RNN, Transformer Hybrid, Linear Complexity, Infinite Context, Efficient Inference, Linux Foundation, Alternative Architecture]
 dependencies: [rwkv, torch, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

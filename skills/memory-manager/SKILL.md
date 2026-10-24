@@ -1,6 +1,7 @@
 ---
 name: memory-manager
 description: Manage hierarchical memory system with daily entries, weekly/monthly compaction, and long-term knowledge base. Use when creating daily logs, reviewing/summarizing past memories, maintaining MEMORY.md, searching memory, or organizing the memory directory structure.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

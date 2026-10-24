@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Evaluation, Code Generation, HumanEval, MBPP, MultiPL-E, Pass@k, BigCode, Benchmarking, Code Models]
 dependencies: [bigcode-evaluation-harness, transformers>=4.25.1, accelerate>=0.13.2, datasets>=2.6.1]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

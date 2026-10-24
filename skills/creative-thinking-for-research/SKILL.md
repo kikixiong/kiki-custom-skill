@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Creative Thinking, Research Ideation, Analogical Reasoning, Problem Reformulation, Cognitive Science]
 dependencies: []
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

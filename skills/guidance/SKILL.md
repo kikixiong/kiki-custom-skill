@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Prompt Engineering, Guidance, Constrained Generation, Structured Output, JSON Validation, Grammar, Microsoft Research, Format Enforcement, Multi-Step Workflows]
 dependencies: [guidance, transformers]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

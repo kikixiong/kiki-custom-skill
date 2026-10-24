@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Fine-Tuning, Axolotl, LLM, LoRA, QLoRA, DPO, KTO, ORPO, GRPO, YAML, HuggingFace, DeepSpeed, Multimodal]
 dependencies: [axolotl, torch, transformers, datasets, peft, accelerate, deepspeed]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

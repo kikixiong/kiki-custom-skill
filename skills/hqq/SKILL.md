@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Quantization, HQQ, Optimization, Memory Efficiency, Inference, Model Compression]
 dependencies: [hqq>=0.2.0, torch>=2.0.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

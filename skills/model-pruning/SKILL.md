@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Emerging Techniques, Model Pruning, Wanda, SparseGPT, Sparsity, Model Compression, N:M Sparsity, One-Shot Pruning, Structured Pruning, Unstructured Pruning, Fast Inference]
 dependencies: [transformers, torch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Post-Training, SimPO, Preference Optimization, Alignment, DPO Alternative, Reference-Free, LLM Alignment, Efficient Training]
 dependencies: [torch, transformers, datasets, trl, accelerate]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

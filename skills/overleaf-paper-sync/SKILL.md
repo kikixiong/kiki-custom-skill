@@ -1,6 +1,7 @@
 ---
 name: overleaf-paper-sync
 description: Orchestrate evidence-grounded LaTeX paper planning and revision through a review-gated Overleaf Git workflow. Use when a user wants to write or revise an Overleaf paper one paragraph, caption, equation block, table, or other small reviewable slice at a time; push every revision candidate to Overleaf for web review; wait for explicit approval before continuing; or reconcile feedback and web edits without batching or overwriting accepted text.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

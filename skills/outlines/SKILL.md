@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Prompt Engineering, Outlines, Structured Generation, JSON Schema, Pydantic, Local Models, Grammar-Based Generation, vLLM, Transformers, Type Safety]
 dependencies: [outlines, transformers, vllm, pydantic]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

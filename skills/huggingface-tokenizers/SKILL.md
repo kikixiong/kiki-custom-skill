@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Tokenization, HuggingFace, BPE, WordPiece, Unigram, Fast Tokenization, Rust, Custom Tokenizer, Alignment Tracking, Production]
 dependencies: [tokenizers, transformers, datasets]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

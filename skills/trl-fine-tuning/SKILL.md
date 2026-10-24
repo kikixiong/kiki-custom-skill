@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Post-Training, TRL, Reinforcement Learning, Fine-Tuning, SFT, DPO, PPO, GRPO, RLHF, Preference Alignment, HuggingFace]
 dependencies: [trl, transformers, datasets, peft, accelerate, torch]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

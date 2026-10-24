@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Reinforcement Learning, MoE, FP8, INT4, Enterprise, SGLang, Megatron-LM]
 dependencies: [sglang-router>=0.2.3, ray, torch>=2.0.0, transformers>=4.40.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

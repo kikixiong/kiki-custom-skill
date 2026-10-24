@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Emerging Techniques, Knowledge Distillation, Model Compression, Teacher-Student, MiniLLM, Reverse KLD, Soft Targets, Temperature Scaling, Logit Distillation, Model Transfer]
 dependencies: [transformers, torch, datasets]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

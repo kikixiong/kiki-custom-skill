@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Agents, LangChain, RAG, Tool Calling, ReAct, Memory Management, Vector Stores, LLM Applications, Chatbots, Production]
 dependencies: [langchain, langchain-core, langchain-openai, langchain-anthropic]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

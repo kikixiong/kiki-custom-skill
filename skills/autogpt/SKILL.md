@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Agents, AutoGPT, Autonomous Agents, Workflow Automation, Visual Builder, AI Platform]
 dependencies: [autogpt-platform>=0.4.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

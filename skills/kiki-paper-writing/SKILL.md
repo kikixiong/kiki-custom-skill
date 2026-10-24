@@ -1,6 +1,7 @@
 ---
 name: kiki-paper-writing
 description: Evidence-grounded planning, drafting, revision, comparison, and final audit for AI/ML and technical research papers. Use when writing from an idea or outline; revising an Abstract, Introduction, Method, Figure Caption, Related Work, Experiments, Conclusion, or Table; choosing among versions; calibrating claims; formalizing notation; processing iterative user feedback; or aligning story, evidence, figures, tables, citations, and LaTeX across a paper.
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

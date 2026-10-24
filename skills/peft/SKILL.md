@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Fine-Tuning, PEFT, LoRA, QLoRA, Parameter-Efficient, Adapters, Low-Rank, Memory Optimization, Multi-Adapter]
 dependencies: [peft>=0.13.0, transformers>=4.45.0, torch>=2.0.0, bitsandbytes>=0.43.0]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

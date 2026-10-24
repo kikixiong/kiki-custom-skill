@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [MLOps, TensorBoard, Visualization, Training Metrics, Model Debugging, PyTorch, TensorFlow, Experiment Tracking, Performance Profiling]
 dependencies: [tensorboard, torch, tensorflow]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

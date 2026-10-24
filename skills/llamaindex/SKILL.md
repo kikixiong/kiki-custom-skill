@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Agents, LlamaIndex, RAG, Document Ingestion, Vector Indices, Query Engines, Knowledge Retrieval, Data Framework, Multimodal, Private Data, Connectors]
 dependencies: [llama-index, openai, anthropic]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

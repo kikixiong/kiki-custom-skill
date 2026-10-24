@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Prompt Engineering, Instructor, Structured Output, Pydantic, Data Extraction, JSON Parsing, Type Safety, Validation, Streaming, OpenAI, Anthropic]
 dependencies: [instructor, pydantic, openai, anthropic]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

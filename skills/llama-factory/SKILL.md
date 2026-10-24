@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Fine-Tuning, LLaMA Factory, LLM, WebUI, No-Code, QLoRA, LoRA, Multimodal, HuggingFace, Llama, Qwen, Gemma]
 dependencies: [llmtuner, torch, transformers, datasets, peft, accelerate, gradio]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration

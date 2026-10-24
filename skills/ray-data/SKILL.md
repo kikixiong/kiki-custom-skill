@@ -6,6 +6,7 @@ author: Orchestra Research
 license: MIT
 tags: [Data Processing, Ray Data, Distributed Computing, ML Pipelines, Batch Inference, ETL, Scalable, Ray, PyTorch, TensorFlow]
 dependencies: ["ray[data]", pyarrow, pandas]
+disable-model-invocation: true
 ---
 
 ## Kiki runtime configuration
