@@ -5,16 +5,16 @@ description: 论文与学术文本请求的总入口：选题定位、大纲、�
 
 # Paper Router
 
-论文类 skill 已设为仅手动调用（`disable-model-invocation: true`），不在自动列表里。本 skill 是它们的二级目录。
+本分类的叶子 skill 已设为仅显式调用（Claude Code：frontmatter `disable-model-invocation: true`；Codex：`agents/openai.yaml` 中 `policy.allow_implicit_invocation: false`），不在自动列表里。本 skill 是它们的二级目录。
 
 ## 用法
 
 1. 按下表判断请求阶段，选 1 个主 skill（必要时再加 1～2 个辅助）。拿不准时先看“易混淆对照”。
-2. 用 Read 工具读取所选 skill 的 SKILL.md 绝对路径，按其正文执行。**不要**用 Skill 工具调它（已禁止模型调用，会失败）。
+2. 用文件读取工具读取 `@@KIKI_SKILLS_DIR@@/<目录名>/SKILL.md`，按其正文执行。**不要**通过技能调用机制加载叶子（Claude Code 的 Skill 工具会因仅显式调用而失败）。
 3. 叶子 skill 正文里的相对路径（`references/`、`scripts/` 等）按该 SKILL.md 所在目录解析。
-4. 叶子 skill 要求“调用/使用某 skill”时，同样改为 Read `@@KIKI_SKILLS_DIR@@/<name>/SKILL.md`。
-5. 正文提到 Codex 专有能力（Codex MCP、原生 imagegen、`~/.codex`、fork_turns）时，换成 Claude Code 等价物（Agent 子代理、本地绘图脚本）；没有等价物就告诉用户。
-6. 用户点名某个 skill 或 `/名字` 时，直接用那个，不再路由。
+4. 叶子 skill 要求“调用/使用某 skill”时，同样改为读取 `@@KIKI_SKILLS_DIR@@/<name>/SKILL.md`。
+5. 正文含 Codex 专有能力（Codex MCP、原生 imagegen、`~/.codex`、automation API）时：在 Codex 中照常使用；在 Claude Code 中换成等价物（Agent 子代理、本地脚本），没有等价物就告诉用户。
+6. 用户点名某个 skill（`/名字` 或 `$名字`）时，直接用那个，不再路由。
 7. 一次选定后告诉用户“用的是 X”，方便纠正。
 
 路径前缀统一为 `@@KIKI_SKILLS_DIR@@/`，下文只写目录名，实际读取 `@@KIKI_SKILLS_DIR@@/<目录名>/SKILL.md`。

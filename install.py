@@ -52,7 +52,58 @@ def copy_rendered(source, target, replacements, client, skill_names):
             path.write_text(text, encoding='utf-8')
 
 
-def install_client(client, agent_home, selected, dry_run):
+MANUAL_RE = re.compile(r'^disable-model-invocation:\s*true\s*\n', re.M)
+
+
+def apply_routing(skill_dir, client, routing):
+    """Leaf skills are explicit-only so only the *-router entries fill the
+    automatic skill list. Claude Code reads the SKILL.md frontmatter flag;
+    Codex reads policy.allow_implicit_invocation in agents/openai.yaml."""
+    skill_md = skill_dir / 'SKILL.md'
+    text = skill_md.read_text(encoding='utf-8')
+    if not MANUAL_RE.search(text):
+        return
+    if not routing:
+        skill_md.write_text(MANUAL_RE.sub('', text, count=1), encoding='utf-8')
+        return
+    if client != 'codex':
+        return
+    meta = skill_dir / 'agents' / 'openai.yaml'
+    yaml = meta.read_text(encoding='utf-8') if meta.exists() else ''
+    if re.search(r'^\s+allow_implicit_invocation:', yaml, re.M):
+        yaml = re.sub(r'^(\s+allow_implicit_invocation:)\s*\S+', r'\1 false', yaml, flags=re.M)
+    elif re.search(r'^policy:\s*$', yaml, re.M):
+        yaml = re.sub(r'^policy:\s*$', 'policy:\n  allow_implicit_invocation: false', yaml, count=1, flags=re.M)
+    else:
+        yaml = yaml.rstrip('\n') + ('\n' if yaml else '') + 'policy:\n  allow_implicit_invocation: false\n'
+    meta.parent.mkdir(parents=True, exist_ok=True)
+    meta.write_text(yaml, encoding='utf-8')
+
+
+def claude_read_rules(agent_home):
+    # Claude Code permission rules use a leading // for absolute paths.
+    return [f'Read(/{agent_home / "skills"}/**)', f'Read(/{agent_home / "skill-support"}/**)']
+
+
+def grant_claude_read(agent_home, backup_root):
+    """Opt-in: let Claude Code read leaf SKILL.md files without a prompt each time."""
+    settings = agent_home / 'settings.json'
+    data = json.loads(settings.read_text(encoding='utf-8')) if settings.exists() else {}
+    allow = data.setdefault('permissions', {}).setdefault('allow', [])
+    added = [rule for rule in claude_read_rules(agent_home) if rule not in allow]
+    if not added:
+        return []
+    if settings.exists():
+        backup_root.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(settings, backup_root / 'settings.json')
+    allow.extend(added)
+    tmp = settings.with_suffix('.json.kiki-tmp')
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    os.replace(tmp, settings)
+    return added
+
+
+def install_client(client, agent_home, selected, dry_run, routing=True, allow_read=False):
     skills_root = agent_home / 'skills'
     support_root = agent_home / 'skill-support' / 'kiki-custom-skill'
     plan = {
@@ -63,7 +114,11 @@ def install_client(client, agent_home, selected, dry_run):
         'skill_count': len(selected),
         'conflicts_to_backup': [name for name in selected if present(skills_root / name)],
         'reference_plugins_and_system_skills_installed': False,
+        'routing': 'routers + explicit-only leaves' if routing else 'disabled (all skills auto-invocable)',
     }
+    if client == 'claude' and routing:
+        plan['claude_read_permission'] = ('will be added' if allow_read else
+                                          'not added; rerun with --claude-allow-read or add manually') + ': ' + ', '.join(claude_read_rules(agent_home))
     if dry_run:
         print(json.dumps(plan, ensure_ascii=False, indent=2))
         return
@@ -104,6 +159,7 @@ def install_client(client, agent_home, selected, dry_run):
         copy_rendered(REPO / 'support', stage / 'support', replacements, client, names)
         for name in selected:
             copy_rendered(REPO / 'skills' / name, stage / 'skills' / name, replacements, client, names)
+            apply_routing(stage / 'skills' / name, client, routing)
 
         # All file preparation precedes mutation of an existing installed skill.
         operations = [(stage / 'support', support_root, backup_root / 'support')]
@@ -119,6 +175,8 @@ def install_client(client, agent_home, selected, dry_run):
             os.replace(prepared, destination)
             item['installed_new'] = True
 
+        if client == 'claude' and routing and allow_read:
+            plan['claude_read_permission_added'] = grant_claude_read(agent_home, backup_root)
         result = dict(plan, installed_at=datetime.now(timezone.utc).isoformat(),
                       source_checkout=str(REPO), backup_directory=str(backup_root),
                       skills=selected)
@@ -146,18 +204,29 @@ def main():
     parser.add_argument('--codex-home', type=Path, default=Path(os.environ.get('CODEX_HOME') or Path.home() / '.codex'))
     parser.add_argument('--claude-home', type=Path, default=Path(os.environ.get('CLAUDE_CONFIG_DIR') or Path.home() / '.claude'))
     parser.add_argument('--dry-run', action='store_true', help='Print paths/conflicts only; write no files.')
+    parser.add_argument('--no-routing', action='store_true',
+                        help='Keep every skill auto-invocable instead of routers + explicit-only leaves.')
+    parser.add_argument('--claude-allow-read', action='store_true',
+                        help='Add Read allow rules for the skill directories to the Claude Code settings.json (backed up first).')
     args = parser.parse_args()
     known = {entry['directory'] for entry in MANIFEST['skills']}
-    selected = sorted(set(args.skills or known))
-    unknown = set(selected) - known
+    selected = set(args.skills or known)
+    unknown = selected - known
     if unknown:
         parser.error('Unknown skill directories: ' + ', '.join(sorted(unknown)))
+    routers = {name for name in known if name.endswith('-router')}
+    if args.skills and not args.no_routing and routers - selected:
+        # Explicit-only leaves are unreachable automatically without their routers.
+        print('Including category routers: ' + ', '.join(sorted(routers - selected)), file=sys.stderr)
+        selected |= routers
+    selected = sorted(selected)
     clients = ['codex', 'claude'] if args.target == 'both' else [args.target]
     homes = {'codex': args.codex_home.expanduser().resolve(), 'claude': args.claude_home.expanduser().resolve()}
     if args.target == 'both' and homes['codex'] == homes['claude']:
         parser.error('Codex and Claude Code must have different installation homes.')
     for client in clients:
-        install_client(client, homes[client], selected, args.dry_run)
+        install_client(client, homes[client], selected, args.dry_run,
+                       routing=not args.no_routing, allow_read=args.claude_allow_read)
 
 
 if __name__ == '__main__':

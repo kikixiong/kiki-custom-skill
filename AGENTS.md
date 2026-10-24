@@ -17,6 +17,13 @@ relevant INSTALL_CODEX.md or INSTALL_CLAUDE_CODE.md before installation.
   Do not execute functional tests or model/data experiments unless requested.
 - Preserve licenses, authorship and source provenance. Collection branding does
   not change ownership. Record portability adaptations to imported material.
+- Category routing: leaf skills carry `disable-model-invocation: true` and
+  are reached through the ten `*-router` skills, which tell the model to read
+  the leaf SKILL.md directly. Do not strip these flags to "fix" availability;
+  use `install.py --no-routing` instead. On Claude Code, routing needs Read
+  allow rules for the skill directories (`--claude-allow-read`); ask before
+  editing settings.json. Every new leaf must be added to a router table, then
+  run `support/routing/check_routers.py`.
 - `reference/` is an archive, not an automatically installed capability. Explain
   actual platform limitations rather than claiming tools work everywhere.
 - Review intended changes and scan for personal environment data before commit.

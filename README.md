@@ -53,17 +53,64 @@ python3 install.py --target codex --skills kiki-paper-writing kiki-paper-workflo
 
 `--dry-run` 仅显示目标路径和同名冲突，不写入文件。仓库含 `@@KIKI_*@@` 路径标记，请使用安装器，不要直接把未渲染的模板链接到客户端技能目录。
 
-## 分类路由
+## 分类路由（安装前必读）
 
-200 个技能全部进入自动列表会超出 Claude Code 的技能描述预算，排在后面的技能只剩名字。因此叶子技能的 frontmatter 带 `disable-model-invocation: true`，自动列表里只保留 10 个分类 router（`paper-router`、`research-router`、`experiment-router`、`ml-train-router`、`ml-infer-router`、`llm-app-router`、`ml-domain-router`、`quant-router`、`coding-router`、`meta-router`）和 `pua`、`prompt-clarifier`。模型先调用 router，再按表 Read 叶子技能的 `SKILL.md`；同一技能可以出现在多个 router 中。用户仍可用 `/技能名` 直接调用任一叶子。
+技能全部进入自动列表会超出客户端的技能描述预算：Claude Code 实测 200 个技能时，排在字母后面的约 100 个只剩名字、没有描述，模型无法据此选择。因此本集合默认采用两级结构：
 
-Claude Code 中建议在 `settings.json` 加只读规则，避免每次读取叶子都弹出权限确认：
+- **自动列表只放 12 个入口**：10 个分类 router 加 `pua`、`prompt-clarifier`（后两个按语气触发，跨所有领域）。
+- **其余 198 个叶子技能设为仅显式调用**，不进自动列表，但用户仍可用 `/名字`（Claude Code）或 `$名字`（Codex）直接调用。
+- **模型先调用 router，再用文件读取工具读取叶子的 `SKILL.md`**，按其正文执行。同一叶子可以出现在多个 router 中。
 
-```json
-"permissions": { "allow": ["Read(//root/.claude/skills/**)", "Read(//root/.claude/skill-support/**)"] }
+| router | 覆盖 |
+|---|---|
+| `paper-router` | 论文选题、起草、润色、去 AI 味、翻译、引用、审稿自查、核验、图表、slides/海报、编译、Overleaf、rebuttal、基金、综述 |
+| `research-router` | 论文检索、单篇速读、每日追踪、相关工作、系统综述、深度研究、选题、idea 评估、研究 wiki |
+| `experiment-router` | 实验规划、结果分析、可信度审计、监控、训练检查、科研代码、算法核验、项目进度、AutoDL、GPU 排障、实验追踪 |
+| `ml-train-router` | 分布式训练、DeepSpeed/FSDP/Megatron、LoRA/QLoRA、SFT/DPO/GRPO/PPO、RLHF、蒸馏合并、MoE、长上下文、分词 |
+| `ml-infer-router` | vLLM/SGLang/TensorRT-LLM/llama.cpp、投机解码、AWQ/GPTQ/HQQ/bitsandbytes/GGUF、剪枝、评测、云 GPU |
+| `llm-app-router` | LangChain、LlamaIndex、DSPy、多 agent、结构化输出、向量库、embedding、tracing、guardrails |
+| `ml-domain-router` | CLIP、BLIP-2、LLaVA、SAM、Stable Diffusion、Whisper、MusicGen、VLA 机器人、TransformerLens/SAE 可解释性 |
+| `quant-router` | 因子/alpha、IC、回测审查、聚宽、组合风险归因、数据管线时点、AI 量化论文 |
+| `coding-router` | GitHub 仓库/PR/issue、CI 修复、review 意见、提交推送、代码结构、验证强度、学术主页 |
+| `meta-router` | 模糊输入澄清、记忆与知识图谱、经验沉淀、skill 查重、Mermaid、Markdown 文档、组会简报、ElegantPaper 报告 |
+
+### 两个客户端的实现方式
+
+| | Claude Code | Codex |
+|---|---|---|
+| 叶子仅显式调用 | 仓库里的 `SKILL.md` frontmatter 已带 `disable-model-invocation: true` | 安装器在每个叶子的 `agents/openai.yaml` 写入 `policy.allow_implicit_invocation: false` |
+| router 读取叶子 | Read 工具读取 `~/.claude/skills/<名字>/SKILL.md` | shell 读取 `~/.codex/skills/<名字>/SKILL.md` |
+| 读取权限 | **必须配置**，见下文 | 默认沙箱可读用户目录，通常无需配置 |
+
+### Claude Code 必需设置：叶子目录的读取权限
+
+不配置时，router 每次读取叶子 `SKILL.md` 都会请求权限；在 `claude -p` 等非交互模式下会直接被拒，模型只能在没读到正文的情况下凭印象执行。安装时加 `--claude-allow-read`，安装器会先备份 `settings.json`，再追加两条只读规则：
+
+```bash
+python3 install.py --target claude --claude-allow-read
 ```
 
-路径按本机 home 调整。新增技能后，把它加进对应 router 的表格，并运行 `python3 support/routing/check_routers.py ~/.claude/skills` 检查孤儿和失效引用。
+手动添加时，把 `<CLAUDE_HOME>` 换成实际 home 的绝对路径（例如 `/home/alice/.claude`），前面的 `//` 表示绝对路径：
+
+```json
+{ "permissions": { "allow": ["Read(/<CLAUDE_HOME>/skills/**)", "Read(/<CLAUDE_HOME>/skill-support/**)"] } }
+```
+
+### 安装后检查
+
+1. **新开一个会话**。技能列表在会话启动时加载，已打开的会话看不到变化。
+2. 运行 `python3 support/routing/check_routers.py <客户端 home>/skills`。预期结果：`orphans: none`、`router refs to missing dirs: none`、自动列表描述约 2k 字符。
+3. 在新会话里发一句“帮我把这段英文润色一下：……”。预期模型先调用 `paper-router`，再读取 `nature-polishing/SKILL.md`，并说明“用的是 nature-polishing”。
+
+### 不想要两级结构时
+
+`python3 install.py --target claude --no-routing` 会去掉叶子的仅显式标记，所有技能恢复自动调用（技能数量多时会出现描述截断）。用 `--skills` 只装部分技能时，安装器会自动带上 10 个 router。
+
+### 维护：新增或删除技能
+
+- 新增叶子技能：在对应 router 的表格里加一行（`| \`目录名\` | 用于 | 不用于（改用） |`），给它的 frontmatter 加 `disable-model-invocation: true`，同步更新 `manifest.json` 和 `CATALOG.md`。
+- 新增的技能如果应该自动触发（跨领域、按语气触发），不加标记，也不放进 router。
+- 改完运行 `check_routers.py`，确认没有孤儿和失效引用。
 
 ## 更新
 

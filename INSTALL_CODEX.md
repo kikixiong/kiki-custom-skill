@@ -5,9 +5,9 @@
 1. 使用已有的 GitHub 访问方式克隆 https://github.com/kikixiong/kiki-custom-skill 到普通源码目录，不复制其他机器的凭据。
 2. 确认当前用户目录及 `CODEX_HOME`。默认技能目录为 `~/.codex/skills`；设置 `CODEX_HOME` 时使用其 `skills` 子目录，也可传入 `--codex-home`。
 3. 在仓库执行 `python3 install.py --target codex`。安装器自动填充当前机器路径；不需要机器 profile，也不会连接其他机器。
-4. 默认安装 manifest 中的全部技能；只选部分时使用 `--skills` 和 CATALOG 中的目录名。同名条目先备份，无关技能与 `.system` 保留。
+4. 默认采用分类路由：安装器在叶子技能的 `agents/openai.yaml` 写入 `policy.allow_implicit_invocation: false`，自动列表只保留 10 个 `*-router` 和 `pua`、`prompt-clarifier`；router 指示用 shell 读取叶子 `SKILL.md`。需要全部自动调用时加 `--no-routing`。默认安装 manifest 中的全部技能；只选部分时使用 `--skills` 和 CATALOG 中的目录名。同名条目先备份，无关技能与 `.system` 保留。
 5. 需要机器专属配置时，复用用户和项目约定；缺少必要字段才集中询问。将补充内容保存到当前 Codex home 下的 `skill-config/kiki-custom-skill/environment.md`，不回写本仓库、不记录凭据。没有远程任务时不要求远程主机配置。
-6. 报告实际安装位置、数量、备份位置和操作错误，提示新建会话加载技能。安装不授权模型实验、技能评测、登录变更或远程部署。
+6. 运行 `python3 support/routing/check_routers.py <codex home>/skills` 检查路由一致性（该脚本按 SKILL.md 标记统计，Codex 侧以 openai.yaml 为准）。报告实际安装位置、数量、备份位置和操作错误，提示新建会话加载技能。安装不授权模型实验、技能评测、登录变更或远程部署。
 
 ```bash
 python3 install.py --target codex
