@@ -42,7 +42,7 @@ description: 调研与选题的总入口：论文检索（arXiv/Semantic Scholar
 
 | skill | 用于 | 不用于（改用） |
 |---|---|---|
-| `arxiv-daily-digest` | 按配置的研究兴趣每日抓取、过滤、排序 arXiv 新论文，生成每日 digest、定时推送 | 一次性检索改用 arxiv；量化方向论文挖掘改用 quant-ai-paper-scout |
+| `arxiv-daily-digest` | 按用户配置的研究兴趣抓取、过滤、排序 arXiv 新论文，生成本地 Markdown digest；用户要求时才设定时任务或外发 | 一次性检索改用 arxiv；量化方向论文挖掘改用 quant-ai-paper-scout |
 | `quant-ai-paper-scout` | 检索 NeurIPS/ICML/KDD 等 AI/时序论文，提炼可用于股票期货预测、多因子、alpha 的思路 | 非量化领域的相关工作调研改用 research-lit |
 
 ## 文献调研
@@ -50,7 +50,7 @@ description: 调研与选题的总入口：论文检索（arXiv/Semantic Scholar
 | skill | 用于 | 不用于（改用） |
 |---|---|---|
 | `research-lit` ⚠C | 围绕课题找相关工作并梳理研究脉络，可联动 Zotero/Obsidian/本地 papers/ 与 arXiv、DeepXiv | 正式系统性综述（PRISMA）改用 af-literature-review；单篇论文改用 alphaxiv |
-| `af-literature-review` 重 | 系统性文献综述：规划检索、筛选纳入、数据提取、主题综合、引用核验，输出 markdown/PDF | 快速相关工作梳理改用 research-lit；多代理深度研究报告改用 deep-research |
+| `af-literature-review` ⚠C 重 | 系统性文献综述：规划检索、筛选纳入、数据提取、主题综合、引用核验，输出 markdown/PDF | 快速相关工作梳理改用 research-lit；多代理深度研究报告改用 deep-research |
 | `deep-research` 重 | 13 代理深度研究：问题定义、检索、证据综合、事实核查、meta-analysis、APA 报告，含苏格拉底引导模式 | 只需相关工作列表改用 research-lit；只做 idea 打分改用 idea-evaluator |
 | `top-survey-workflow` | 用户要写综述、review article、tutorial review 或 state-of-the-art 综合，并要求达到顶刊水准，需要设计 taxonomy 并论证与已有综述的差异，而非逐篇罗列的阅读笔记。 | （论文类，也在 paper-router） |
 
@@ -66,7 +66,7 @@ description: 调研与选题的总入口：论文检索（arXiv/Semantic Scholar
 | skill | 用于 | 不用于（改用） |
 |---|---|---|
 | `idea-evaluator` | 评估已有 idea 是否值得做：致命缺陷、创新性、可行性、五维打分、多个候选对比 | 还没有 idea 改用 brainstorming-research-ideas；审查已有研究证据质量改用 af-scientific-critical-thinking |
-| `af-scientific-critical-thinking` | 批判性审查研究设计、统计有效性、偏倚、混杂、证据质量（GRADE、Cochrane ROB）、逻辑谬误 | 评估自己的新 idea 改用 idea-evaluator |
+| `af-scientific-critical-thinking` ⚠C | 批判性审查研究设计、统计有效性、偏倚、混杂、证据质量（GRADE、Cochrane ROB）、逻辑谬误 | 评估自己的新 idea 改用 idea-evaluator |
 | `novelty-check` ⚠C | 用户问“有没有人做过 X”“这个方法新不新”“最接近的 prior work 是哪篇、差在哪”“审稿人会拿哪篇来说我不新”；动手实验或写作前需要核查方法和实验设定的新颖性风险；需要知道怎样定位贡献。 | （论文类，也在 paper-router） |
 
 ## 知识库

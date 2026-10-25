@@ -55,14 +55,14 @@ description: 实验与科研代码的总入口：实验规划、结果分析、�
 
 | skill | 用于 | 不用于（改用） |
 |---|---|---|
-| `monitor-experiment` ⚠C | 看正在跑的实验：远程 cnic-ps 日志 tail、进程/session 状态、已存 JSON/CSV 结果，单次快照 | 判断训练健康度（NaN/发散/停滞）用 training-check；AutoDL 实例用 autodl-experiment |
+| `monitor-experiment` ⚠C | 看正在跑的实验：按 run 记录定位主机，读日志尾部、进程/session 状态、已存 JSON/CSV 结果，默认单次快照 | 判断训练健康度（NaN/发散/停滞）用 training-check；AutoDL 实例用 autodl-experiment |
 | `training-check` ⚠C | 基于 loss/eval/lr/grad norm 或 W&B run 判断训练是否 NaN、发散、停滞，给 CONTINUE/STOP 结论 | 只看日志进度用 monitor-experiment；CUDA/显存报错用 server-gpu-diagnosis |
 
 ## 科研编码
 
 | skill | 用于 | 不用于（改用） |
 |---|---|---|
-| `research-code-autopilot` 重 | 整体推进科研代码：读 README/入口脚本、训练评估脚本、复现论文结果、日志与故障处理 | 单个明确实现任务用 research-task-executor；算法正确性审查用 research-algorithm-checker |
+| `research-code-autopilot` | 整体推进科研代码：读 README/入口脚本、训练评估脚本、复现论文结果、日志与故障处理 | 单个明确实现任务用 research-task-executor；算法正确性审查用 research-algorithm-checker |
 | `research-algorithm-checker` | 对照论文/伪代码审查实现：张量 shape、dtype、索引、梯度/概率数值、边界、性能，维护 ISSUES.md | 通用代码 review 用 code-review；要直接实现功能用 research-task-executor |
 | `research-task-executor` | 执行一个明确的科研代码/实验实现任务（加模块、改脚本、跑 smoke check）并更新任务记录 | 项目级统筹复现用 research-code-autopilot；先理清现状用 research-progress-tracker |
 
@@ -78,9 +78,9 @@ description: 实验与科研代码的总入口：实验规划、结果分析、�
 
 | skill | 用于 | 不用于（改用） |
 |---|---|---|
-| `autodl-experiment` 重 | 在 AutoDL/SeetaCloud SSH 实例上启动、监控、排障、邮件通知、拉回结果，tmux/screen、conda/HF 配置 | 实例连接/磁盘/学术加速管理用 autodl-manager；cnic-ps 实验看 monitor-experiment |
+| `autodl-experiment` 重 | 在 AutoDL/SeetaCloud SSH 实例上启动、监控、排障、邮件通知、拉回结果，tmux/screen、conda/HF 配置 | 实例连接/磁盘/学术加速管理用 autodl-manager；非 AutoDL 主机上的实验看 monitor-experiment |
 | `autodl-manager` | 管理 AutoDL 实例：SSH 连接、有无 GPU 检测、磁盘告警、conda 初始化、网络加速、多实例 | 在实例上跑/监控训练任务用 autodl-experiment |
-| `server-gpu-diagnosis` | 排查 CUDA 不可用、GPU 不可见、驱动/框架版本不兼容、显存 OOM、服务器环境问题（默认 cnic-ps） | 训练指标异常用 training-check；AutoDL 实例状态用 autodl-manager |
+| `server-gpu-diagnosis` | 排查 CUDA 不可用、GPU 不可见、驱动/框架版本不兼容、显存 OOM、服务器环境问题（目标主机按任务或 run 记录确定） | 训练指标异常用 training-check；AutoDL 实例状态用 autodl-manager |
 
 ## 实验追踪
 

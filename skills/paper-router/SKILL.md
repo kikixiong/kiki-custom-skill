@@ -71,7 +71,7 @@ description: 论文与学术文本请求的总入口：选题定位、大纲、�
 
 | skill | 用于 | 不用于（改用） |
 |---|---|---|
-| `af-citation-management` | DOI/arXiv 转 BibTeX、找高被引论文导出、清理去重 .bib、PubMed 检索 | 核查引用是否支持论断（`citation-audit`） |
+| `af-citation-management` ⚠C | DOI/arXiv 转 BibTeX、找高被引论文导出、清理去重 .bib、PubMed 检索 | 核查引用是否支持论断（`citation-audit`） |
 | `citation-audit` ⚠C | 投稿前查引用是否编造、作者年份是否对、是否支持所在句、预印本是否已正式发表 | 草稿未完成时；只整理 bib（`af-citation-management`） |
 
 ## 5. 审稿、自查与核验
@@ -117,7 +117,7 @@ description: 论文与学术文本请求的总入口：选题定位、大纲、�
 |---|---|---|
 | `rebuttal` ⚠C | **默认**。OpenReview/CMT 审稿意见写有字数限制的正式 rebuttal、追问的增量回复、QUICK_MODE 只看策略 | 投稿前自查（`pre-submission-reviewer`） |
 | `rebuttalstudio` | 点名 RebuttalStudio，或要五阶段式整理、OpenReview 评论串逐条回复、Final Remarks | 有严格字符预算的终稿（`rebuttal`） |
-| `af-venue-templates` | 拿会议/期刊/基金/海报的模板和格式规范、调写作风格到目标期刊 | 编译（`paper-compile`） |
+| `af-venue-templates` ⚠C | 拿会议/期刊/基金/海报的模板和格式规范、调写作风格到目标期刊 | 编译（`paper-compile`） |
 | `paper-compile` | **默认**。编译 PDF、修报错、`??` 引用、页数/字体嵌入/匿名检查 | 改内容 |
 | `overleaf-sync` | 单纯 pull/push/status 与 Overleaf 同步 | 逐段审批（`overleaf-paper-sync`） |
 | `overleaf-paper-sync` | 逐段推到 Overleaf 网页审阅、批准后再改下一段 | 普通同步（`overleaf-sync`） |

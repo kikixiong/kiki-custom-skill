@@ -4,11 +4,34 @@
 
 [GitHub 仓库](https://github.com/kikixiong/kiki-custom-skill) · [技能目录](CATALOG.md) · [Codex 安装说明](INSTALL_CODEX.md) · [Claude Code 安装说明](INSTALL_CLAUDE_CODE.md)
 
+## 新机器快速开始
+
+```bash
+git clone https://github.com/kikixiong/kiki-custom-skill.git ~/src/kiki-custom-skill
+cd ~/src/kiki-custom-skill
+python3 install.py --target claude --claude-allow-read   # Claude Code
+python3 install.py --target codex                        # Codex
+python3 support/routing/check_routers.py ~/.claude/skills  # 检查路由完整性
+```
+
+然后**新开一个客户端会话**。装好前需要确认的只有下面几项：
+
+| 项 | 必需？ | 说明 |
+|---|---|---|
+| Python 3.10+、Git | 必需 | 安装器只用标准库，不装依赖 |
+| 客户端本身已能登录、能对话 | 必需 | 模型、API 网关、key 属于客户端自己的配置，本仓库不提供也不修改 |
+| Claude Code 读取规则（`--claude-allow-read`） | 用 Claude Code 时必需 | 否则 router 读不到叶子正文，见“分类路由” |
+| Codex 容器沙箱设置 | 仅容器里的 Codex | 报 `bwrap: No permissions to create a new namespace` 时才需要，见“Codex 在容器里” |
+| `skill-config/kiki-custom-skill/environment.md` | 可选 | 只有用到远程 GPU/实验类技能时才需要填写主机别名、项目目录等 |
+| 各技能自身依赖（vLLM、LaTeX、wandb 等） | 按需 | 用到哪个技能再装；安装器不装 |
+
+仓库不含任何主机名、IP、用户名、项目路径、账号或凭据；所有本机路径由安装器在安装时用 `@@KIKI_*@@` 标记渲染。
+
 ## 一句话安装与配置
 
 把下面这句话发给当前使用的 Codex 或 Claude Code：
 
-> 请帮我安装并配置 https://github.com/kikixiong/kiki-custom-skill：先阅读仓库 README 和当前客户端的安装说明，识别本机用户目录及已有配置，用安装器完成安装并备份同名技能；从我的项目约定中读取需要的运行环境，缺少必要信息时集中询问我，主机、路径和执行偏好只保存到本机配置，不写回仓库，不复制凭据、不启动实验，最后告诉我安装位置和启用方法。
+> 请帮我安装并配置 https://github.com/kikixiong/kiki-custom-skill：先阅读仓库 README 和当前客户端的安装说明，识别本机用户目录及已有配置，用安装器完成安装并备份同名技能；如果是 Claude Code，征得我同意后加 `--claude-allow-read`；装完运行 `support/routing/check_routers.py` 并告诉我结果；从我的项目约定中读取需要的运行环境，缺少必要信息时集中询问我，主机、路径和执行偏好只保存到本机配置，不写回仓库，不复制凭据、不启动实验，最后告诉我安装位置和启用方法。
 
 需要个性化时，可在同一句话后补充“远程主机用 `<SSH 别名>`，项目目录为 `<项目路径>`，运行环境为 `<环境名称>`，执行限制为 `<你的要求>`”。这些只是待填写字段；不使用远程实验时无需提供。安装器本身不连接远程主机。
 
@@ -128,6 +151,7 @@ approval_policy = "on-request"        # 有风险的命令先询问
 ```bash
 git pull --ff-only
 python3 install.py --target codex
+python3 install.py --target claude --claude-allow-read   # 已有的规则不会重复添加
 ```
 
 按实际客户端选择 `codex`、`claude` 或 `both`。新建客户端会话加载更新。安装目录的修改不会自动回传到 GitHub；本机环境配置继续单独保留。

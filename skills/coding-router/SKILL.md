@@ -61,4 +61,4 @@ description: 软件开发与 GitHub 请求的总入口：仓库/PR/issue、CI �
 
 | skill | 用于 | 不用于（改用） |
 |---|---|---|
-| `research-code-autopilot` 重 | 科研代码改造：训练/评估脚本、复现、seed/配置、结果日志、远端 cnic-ps 实验与故障处理 | 首次摸清项目改用 project-intake-autopilot；纯代码风格改用 lean-modular-coding |
+| `research-code-autopilot` | 科研代码改造：训练/评估脚本、复现、seed/配置、结果日志、在已授权的执行环境中运行实验与故障处理 | 首次摸清项目改用 project-intake-autopilot；纯代码风格改用 lean-modular-coding |
