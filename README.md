@@ -80,7 +80,7 @@ python3 install.py --target codex --skills kiki-paper-writing kiki-paper-workflo
 |---|---|---|
 | 叶子仅显式调用 | 仓库里的 `SKILL.md` frontmatter 已带 `disable-model-invocation: true` | 安装器在每个叶子的 `agents/openai.yaml` 写入 `policy.allow_implicit_invocation: false` |
 | router 读取叶子 | Read 工具读取 `~/.claude/skills/<名字>/SKILL.md` | shell 读取 `~/.codex/skills/<名字>/SKILL.md` |
-| 读取权限 | **必须配置**，见下文 | 默认沙箱可读用户目录，通常无需配置 |
+| 读取权限 | **必须配置**，见下文 | 默认沙箱可读用户目录，通常无需配置；容器内见下文 |
 
 ### Claude Code 必需设置：叶子目录的读取权限
 
@@ -95,6 +95,17 @@ python3 install.py --target claude --claude-allow-read
 ```json
 { "permissions": { "allow": ["Read(/<CLAUDE_HOME>/skills/**)", "Read(/<CLAUDE_HOME>/skill-support/**)"] } }
 ```
+
+### Codex 在容器里：沙箱起不来
+
+Linux 上 Codex 用 bubblewrap 沙箱执行命令。容器通常不允许创建 user namespace，所有命令都会失败，报 `bwrap: No permissions to create a new namespace`，router 也就读不到叶子（模型可能编一个技能名）。此时在 `~/.codex/config.toml` 顶部加：
+
+```toml
+sandbox_mode = "danger-full-access"   # 依赖容器自身隔离
+approval_policy = "on-request"        # 有风险的命令先询问
+```
+
+这会关闭 Codex 内置隔离，修改前先征得用户同意并备份配置。非容器机器不需要。
 
 ### 安装后检查
 

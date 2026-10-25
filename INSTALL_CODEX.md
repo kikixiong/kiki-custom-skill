@@ -17,4 +17,6 @@ python3 install.py --target codex --dry-run
 
 论文写作入口为 `$kiki-paper-writing`；多阶段工作流为 `$kiki-paper-workflow`。
 
+在容器中若 `codex exec` 的命令报 `bwrap: No permissions to create a new namespace`，按 README“Codex 在容器里”一节处理，修改 `config.toml` 前先征得用户同意。
+
 不将 `reference/` 的系统和插件快照当作普通技能安装。更新时先 `git pull --ff-only` 再运行同一安装命令。不要删除整个技能目录或重写用户全局模型、网络、账号及 shell 配置。
