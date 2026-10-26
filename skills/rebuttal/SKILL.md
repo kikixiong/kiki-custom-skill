@@ -104,6 +104,9 @@ For each atomic concern:
 - `issue_type`: assumptions / theorem_rigor / novelty / empirical_support / baseline_comparison / complexity / practical_significance / clarity / reproducibility / other
 - `severity`: critical / major / minor
 - `reviewer_stance`: positive / swing / negative / unknown
+- `score`, `confidence`, and the venue's scale, when supplied; do not infer expertise from confidence
+- `score_change_condition`: exact reviewer wording such as "I would raise my score if X", or `none_stated`; track each condition's evidence and resolution separately
+- `shared_issue`: related issue IDs across reviewers, without losing individual coverage
 - `response_mode`: direct_clarification / grounded_evidence / nearest_work_delta / assumption_hierarchy / narrow_concession / future_work_boundary
 - `status`: open / answered / deferred / needs_user_input
 
@@ -111,23 +114,25 @@ For each atomic concern:
 
 Create `rebuttal/STRATEGY_PLAN.md`.
 
-1. Identify 2-4 **global themes** resolving shared concerns
-2. Choose **response mode** per issue
-3. Build **character budget** (10-15% opener, 75-80% per-reviewer, 5-10% closing)
+Read [reviewer-response tactics](references/reviewer-response-tactics.md) when prioritizing reviewers, compressing replies, or handling the common disputes listed there. These are qualified heuristics adapted from user-provided peer experience, not guarantees of score changes.
+
+1. Identify 2-4 **global themes** resolving shared concerns; repeated concerns may reveal a shared validity or clarity problem
+2. Choose **response mode** and priority per issue: scientific severity, explicit score-change conditions, available evidence, then cost/deadline. A high-confidence negative review can warrant early attention when its decisive concern is answerable; confidence alone is not a ranking rule
+3. Build a **character budget** around substantive answers. Keep opener/closing short and reserve a direct answer for every reviewer, including supportive ones; interpret scores using the venue scale, not a universal cutoff
 4. Identify **blocked claims** (ungrounded or unapproved)
 5. If unresolved blockers → pause and present to user
 
 **QUICK_MODE exit**: If `QUICK_MODE = true`, stop here. Present `ISSUE_BOARD.md` + `STRATEGY_PLAN.md` to the user and summarize: how many issues per reviewer, shared vs unique concerns, recommended priorities, and evidence gaps. The user can then decide to continue with full rebuttal (`/rebuttal — quick mode: false`) or write manually.
 
-### Phase 3.5: Evidence Sprint (when AUTO_EXPERIMENT = true)
+### Phase 3.5: Evidence Sprint (only for authorized supplementary experiments)
 
-**Skip entirely if `AUTO_EXPERIMENT` is `false` — instead, pause and present the evidence gaps to the user.**
+**Execute only when `AUTO_EXPERIMENT` is `true` AND the user has authorized the exact experiment scope.** Otherwise record the gaps and proposed runs; continue drafting supported answers without implying that missing results exist.
 
 If the strategy plan identifies issues that require new empirical evidence (tagged `response_mode: grounded_evidence` with `evidence_source: needs_experiment`):
 
 1. Generate a mini experiment plan from the reviewer concerns:
    - What to run (ablation, baseline comparison, scale-up, condition check)
-   - Success criterion (what result would satisfy the reviewer)
+   - Question tested and reporting criterion, including null/negative outcomes; an explicit score-change condition guides relevance, not a target outcome to manufacture
    - Estimated GPU-hours
 
 2. Invoke `/research-task-executor` with the mini plan:
@@ -145,7 +150,7 @@ If the strategy plan identifies issues that require new empirical evidence (tagg
 
 5. Save experiment results to `rebuttal/REBUTTAL_EXPERIMENTS.md` for provenance tracking.
 
-**Time guard**: If estimated GPU-hours exceed rebuttal deadline, skip and flag for manual handling.
+**Time guard**: If the full plan exceeds the deadline, propose a feasible, authorized subset. Report actual completed runs/seeds and remaining uncertainty; do not select only favorable runs or promise unfinished results.
 
 ### Phase 4: Draft Initial Rebuttal
 
@@ -153,7 +158,7 @@ Create `rebuttal/REBUTTAL_DRAFT_v1.md`.
 
 Structure:
 1. **Short opener** — thank reviewers + 2-4 global resolutions
-2. **Per-reviewer numbered responses** — answer → evidence → implication
+2. **Per-reviewer numbered responses** — preserve W1/Q1 or equivalent labels; answer → evidence → implication, without copying the full question
 3. **Short closing** — resolved / remaining / acceptance case
 
 Default reply pattern per issue:
@@ -161,14 +166,17 @@ Default reply pattern per issue:
 - Sentence 2-4: grounded evidence
 - Last sentence: implication for the paper
 
-Heuristics from 5 successful rebuttals:
+Practical drafting heuristics:
 - Evidence > assertion
 - Global narrative first, per-reviewer detail second
 - Concrete numbers for counter-intuitive points
 - Name closest prior work + exact delta for novelty disputes
 - Concede narrowly when reviewer is right
 - For theory: separate core vs technical assumptions
-- Answer friendly reviewers too
+- Answer supportive reviewers too: brief thanks, then resolve each remaining concern
+- Keep each reply understandable on its own. A cross-reference must include a local answer/evidence summary plus the exact reviewer and issue/table label; never write only "see our other response"
+- Use a compact result table when the venue format permits; retain metric, protocol, uncertainty and actual seed count needed to interpret it
+- Present relevant evidence and then its supported scope. Acknowledge confirmed errors promptly; avoid both blanket self-criticism and concealment of limitations
 
 Hard rules:
 - NEVER invent experiments, numbers, derivations, citations, or links
@@ -215,12 +223,12 @@ Rules for `REVISION_PLAN.md`:
 ### Phase 5: Safety Validation
 
 Run all lints:
-1. **Coverage** — every issue maps to draft anchor
+1. **Coverage** — every issue, supportive review, and explicit score-change condition maps to a substantive answer or a clearly stated unresolved gap; cross-references identify an accessible target and include a local answer
 2. **Provenance** — every factual sentence has source
 3. **Commitment** — promises are approved AND every paper-edit promise in the draft appears as a checklist item in `REVISION_PLAN.md` (and vice versa — no orphan items in the plan)
 4. **Tone** — flag aggressive/submissive/evasive phrases
-5. **Consistency** — no contradictions across reviewer replies
-6. **Limit** — exact character count, compress if over (redundancy → friendly → opener → wording, never drop critical answers)
+5. **Consistency** — no contradictions across reviewer replies; code-equivalence, comparison timelines, split protocols and seed counts are verified when claimed
+6. **Limit** — exact character count, compress if over (repeated questions → repeated thanks → opener/closing → wording; preserve substantive answers for all reviewers)
 
 ### Phase 6: Codex Reviewer Stress Test
 

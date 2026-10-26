@@ -19,6 +19,7 @@ skill does not provide account authorization, GPU allocation or missing tools.
 Use this skill when the user wants RebuttalStudio-style rebuttal organization or names the project directly. The upstream project defines a five-stage rebuttal editor pipeline.
 
 Load `references/pipeline.md` when a compact RebuttalStudio stage reminder is needed.
+For reviewer prioritization, concise cross-references, or disputes about comparisons, code, splits, seeds or misassigned reviews, read [the shared reviewer-response tactics](@@KIKI_SKILLS_DIR@@/rebuttal/references/reviewer-response-tactics.md). Apply them during `Breakdown` and `Reply`, including when no final `rebuttal` handoff is requested.
 
 ## Pipeline
 
@@ -38,6 +39,7 @@ Load `references/pipeline.md` when a compact RebuttalStudio stage reminder is ne
 ## Operating Rules
 
 - Preserve reviewer IDs and issue coverage.
+- Track explicit score-change conditions and answer supportive reviewers' remaining concerns; confidence alone does not determine priority.
 - Do not merge distinct reviewer concerns until each has a traceable response.
 - Separate real evidence, planned experiments, and unavailable evidence.
 - Keep tone professional, concise, and non-defensive.
