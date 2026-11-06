@@ -252,7 +252,7 @@
     {
       "directory": "craft-scientific-figure-prompts",
       "name": "craft-scientific-figure-prompts",
-      "description": "Analyze reference figures and their prompts, extract transferable visual and organizational grammar, maintain a project-wide style profile across multiple figures, and produce robust model-agnostic prompts for scientific overview figures, method diagrams, architecture schematics, graphical abstracts, and research posters. Use when Codex must learn or preserve figure style, adapt it to a paper, thesis, proposal, or technical project, rewrite or audit a long image-generation prompt, keep a multi-figure project visually consistent, preserve scientific evidence states, or iteratively improve a generated figure without copying the reference's scientific content."
+      "description": "Learn reference-figure style, preserve scientific meaning and project-wide visual consistency, and build audited prompts for overview figures, method diagrams, architecture schematics, graphical abstracts, and research posters. For a finished-figure request, continue from the prompt to Image2/image generation and visual inspection in explicit steps. Also use for prompt-only drafting, templates, audits, and targeted figure revisions without copying the reference's scientific content."
     },
     {
       "directory": "creating-elegantpaper-reports",

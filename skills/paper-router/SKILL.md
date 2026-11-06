@@ -100,7 +100,7 @@ description: 论文与学术文本请求的总入口：选题定位、大纲、�
 | `figure-spec` | 可编辑、精确的 SVG/PDF 架构图、pipeline 图、决策图（含中文标签） | 数据图；简单流程图（`mermaid-diagram`） |
 | `figure-designer` | 出图前规划 Figure 1/总览图布局，或审查已有图；只出文字方案 | 要图文件或代码 |
 | `paper-illustration` ⚠C | AI 生成/编辑概念插图、teaser，位图可接受 | 含实测数值的图（严禁）；可编辑框图 |
-| `craft-scientific-figure-prompts` ⚠C | 产出是生图 prompt：学参考图风格、审长 prompt、局部修正、多图风格统一 | 直接要图 |
+| `craft-scientific-figure-prompts` ⚠C | 科研图的 prompt 编写/审查、学参考图风格、多图风格统一；需要成图时按“内容与风格 → prompt 审计 → Image2/生图 → 成图检查”连续完成 | 普通插画或 teaser、不需要科研内容契约（`paper-illustration`）；实测数据图（`nature-figure`） |
 
 ## 7. 演示与海报
 
