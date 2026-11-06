@@ -4,7 +4,7 @@ description: Learn reference-figure style, preserve scientific meaning and proje
 disable-model-invocation: true
 ---
 
-## Kiki runtime configuration
+## Runtime configuration
 
 Read [the installed runtime profile](@@KIKI_SUPPORT_DIR@@/compatibility.md).
 Use the current client's available tools and this machine's paths. A copied
@@ -16,6 +16,10 @@ Turn references into rendering contracts that preserve scientific meaning,
 layout hierarchy, and visual character across projects. For a requested figure,
 complete the prompt-to-image workflow in the same task. An explicit prompt-only
 request stops after prompt validation.
+
+Resolve project paths and available tools from the current user's environment.
+Keep personal host/account mappings and deployment records outside the shared
+skill; examples use project-relative paths or descriptive placeholders.
 
 ## Resolve the request
 

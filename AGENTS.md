@@ -28,3 +28,6 @@ relevant INSTALL_CODEX.md or INSTALL_CLAUDE_CODE.md before installation.
   actual platform limitations rather than claiming tools work everywhere.
 - Review intended changes and scan for personal environment data before commit.
   Never commit local configuration, credentials or private library documents.
+- Keep installation inventories and deployment reports outside this repository.
+  Public change summaries describe shared capabilities without naming private
+  deployment targets; use generic examples and preserve required attribution.
