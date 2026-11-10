@@ -1,6 +1,6 @@
 # Kiki Custom Skill
 
-面向 Codex 和 Claude Code 的可移植技能集合，包含 **210 个可安装技能**（10 个分类 router + 200 个叶子技能）及其脚本、模板和共享资源。不同机器使用各自的用户目录、工具和项目配置；仓库不预设服务器、GPU、账号、实验路径或个人执行偏好。
+面向 Codex 和 Claude Code 的可移植技能集合，包含 **211 个可安装技能**（10 个分类 router + 201 个叶子技能）及其脚本、模板和共享资源。不同机器使用各自的用户目录、工具和项目配置；仓库不预设服务器、GPU、账号、实验路径或个人执行偏好。
 
 [GitHub 仓库](https://github.com/kikixiong/kiki-custom-skill) · [技能目录](CATALOG.md) · [Codex 安装说明](INSTALL_CODEX.md) · [Claude Code 安装说明](INSTALL_CLAUDE_CODE.md)
 
@@ -158,7 +158,7 @@ python3 install.py --target claude --claude-allow-read   # 已有的规则不会
 
 ## 内容与能力边界
 
-- `skills/`：默认可安装的 210 个技能，其中 10 个 `*-router` 为分类入口。
+- `skills/`：默认可安装的 211 个技能，其中 10 个 `*-router` 为分类入口。
 - `support/`：共享工具、参考资源和跨客户端运行说明。
 - `reference/`：系统和插件的参考快照，不由安装器注册或覆盖。
 - `provenance/`、`THIRD_PARTY_NOTICES.md`：来源、版本和版权说明。

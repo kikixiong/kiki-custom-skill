@@ -2,7 +2,7 @@
   "name": "Kiki Custom Skill",
   "repository": "kikixiong/kiki-custom-skill",
   "purpose": "Portable skill collection for Codex and Claude Code",
-  "skill_count": 210,
+  "skill_count": 211,
   "skills": [
     {
       "directory": "0-autoresearch-skill",
@@ -408,6 +408,11 @@
       "directory": "joinquant-research-workflow",
       "name": "joinquant-research-workflow",
       "description": "面向聚宽 API 和回测脚本的研究工作流。"
+    },
+    {
+      "directory": "kaggle-leaderboard-campaign",
+      "name": "kaggle-leaderboard-campaign",
+      "description": "长周期“有官方 verifier/打分器”的优化竞赛与冲榜战役编排（Kaggle 竞赛、优化比赛、verifier-scored / metric-scored challenge、leaderboard 冲榜、成本最小化、电路/编译/求解器类赛题），把逐位复现的代理指标、预注册+kill 条件、汇率定价、多 agent研究循环（multi-agent research loop：研究/设计 vs 编码 vs 对抗评审）、情报收割与按任务拼装、第三方代码审查+断网沙箱、集群作业与发布纪律、跳出局部最优的外循环串成一条流水线；适合已有或将有 GOAL.md / research-state.yaml 的多周竞赛项目，而非写论文的通用 autoresearch 或单纯的代码复现。"
     },
     {
       "directory": "kiki-paper-workflow",

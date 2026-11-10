@@ -17,6 +17,12 @@ all included files, and does not replace upstream licenses.
   in `reference/system-skills/skill-creator/`; its original LICENSE.txt is retained.
   Kiki added a compatibility note and its entrypoint link. See
   `provenance/anthropic-skill-creator.json` for the pinned source and changes.
+- `skills/kaggle-leaderboard-campaign/`: original workflow distilled from the owner's own
+  competition practice. It summarises design ideas (no code copied) from
+  https://github.com/bogoconic1/Qgentic-AI (MIT), see its `references/qgentic-comparison.md`,
+  and adapts the idea-research structure of the bundled `brainstorming-research-ideas`,
+  `creative-thinking-for-research` and `idea-evaluator` skills (the last from
+  https://github.com/HKUSTDial/Supervisor-Skills, CC-BY-4.0) in `references/idea-research.md`.
 - Plugin/system snapshots in `reference/` retain provider paths, versions, notices
   and runtime assumptions. They are reference copies, not installed integrations.
 - ElegantPaper and other pinned upstream assets retain their source notices and

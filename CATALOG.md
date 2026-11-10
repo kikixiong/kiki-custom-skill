@@ -1,6 +1,6 @@
 # Kiki Custom Skill — 技能目录
 
-默认安装下列 210 个技能；系统和插件快照位于 `reference/`，不自动安装。
+默认安装下列 211 个技能；系统和插件快照位于 `reference/`，不自动安装。
 
 | 技能目录 | 名称 | 用途 |
 |---|---|---|
@@ -85,6 +85,7 @@
 | [instructor](skills/instructor/SKILL.md) | instructor | Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-tested structured output library |
 | [intro-drafter](skills/intro-drafter/SKILL.md) | intro-drafter | 把研究动机组织成六段式 Introduction 提纲。 |
 | [joinquant-research-workflow](skills/joinquant-research-workflow/SKILL.md) | joinquant-research-workflow | 面向聚宽 API 和回测脚本的研究工作流。 |
+| [kaggle-leaderboard-campaign](skills/kaggle-leaderboard-campaign/SKILL.md) | kaggle-leaderboard-campaign | 长周期“有官方 verifier/打分器”的优化竞赛与冲榜战役编排（Kaggle 竞赛、优化比赛、verifier-scored / metric-scored challenge、leaderboard 冲榜、成本最小化、电路/编译/求解器类赛题），把逐位复现的代理指标、预注册+kill 条件、汇率定价、多 agent研究循环（multi-agent research loop：研究/设计 vs 编码 vs 对抗评审）、情报收割与按任务拼装、第三方代码审查+断网沙箱、集群作业与发布纪律、跳出局部最优的外循环串成一条流水线；适合已有或将有 GOAL.md / research-state.yaml 的多周竞赛项目，而非写论文的通用 autoresearch 或单纯的代码复现。 |
 | [kiki-paper-workflow](skills/kiki-paper-workflow/SKILL.md) | kiki-paper-workflow | Kiki Custom 论文全流程：由研究报告生成大纲、图表、正文和 PDF。用于明确选择这套完整流水线的任务；日常论文修改优先使用已有 kiki-paper-writing。 |
 | [kiki-paper-writing](skills/kiki-paper-writing/SKILL.md) | kiki-paper-writing | Evidence-grounded planning, drafting, revision, comparison, and final audit for AI/ML and technical research papers. Use when writing from an idea or outline; revising an Abstract, Introduction, Method, Figure Caption, Related Work, Experiments, Conclusion, or Table; choosing among versions; calibrating claims; formalizing notation; processing iterative user feedback; or aligning story, evidence, figures, tables, citations, and LaTeX across a paper. |
 | [knowledge-distillation](skills/knowledge-distillation/SKILL.md) | knowledge-distillation | Compress large language models using knowledge distillation from teacher to student models. Use when deploying smaller models with retained performance, transferring GPT-4 capabilities to open-source models, or reducing inference costs. Covers temperature scaling, soft targets, reverse KLD, logit distillation, and MiniLLM training strategies. |

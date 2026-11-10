@@ -81,4 +81,5 @@ description: 调研与选题的总入口：论文检索（arXiv/Semantic Scholar
 | skill | 用于 | 不用于（改用） |
 |---|---|---|
 | `0-autoresearch-skill` 重 | 全自主端到端 AI 研究项目：双循环（实验迭代+综合转向），从文献到论文并路由到领域 skill | 只需规划 AI 协作边界改用 vibe-research-workflow；只做调研改用 research-lit |
+| `kaggle-leaderboard-campaign` 重 | 有官方 verifier/打分器的多周竞赛冲榜（Kaggle、优化/编译赛题）：逐位复现基线、情报收割与按任务拼装、idea 定价与预注册、多 agent 研究循环、沙箱审查、跳出局部最优的外循环 | 写论文的端到端科研改用 0-autoresearch-skill；单次代码复现改用 research-code-autopilot |
 | `vibe-research-workflow` ⚠C | 规划 AI 辅助科研的编程、绘图、写作各阶段分工与学术诚信规则（元 skill） | 要全自主跑实验到论文改用 0-autoresearch-skill |
