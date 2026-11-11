@@ -51,6 +51,8 @@ Before and after work, record the status of these high-risk paths: `@@KIKI_TEXBI
 
 4. Compile only when the already-installed stable `latexmk`, `xelatex`, and `biber` launchers are executable. ElegantPaper uses XeLaTeX; bibliography processing uses Biber. The absolute launcher avoids relying on a GUI process or shell-profile `PATH`.
 
+   Keep the generated `latexmkrc` in the project root when uploading to Overleaf. It routes both the default PDF build and the native XeLaTeX build through XeLaTeX, so a manual compiler setting is unnecessary.
+
    ```sh
    LATEXMK="$(command -v latexmk)"
    if [ -n "$LATEXMK" ] && command -v xelatex >/dev/null && command -v biber >/dev/null; then

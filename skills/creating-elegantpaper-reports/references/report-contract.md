@@ -31,6 +31,8 @@ Add a BibLaTeX entry and `\cite{key}` only when a supplied or verified source su
 
 Run `scripts/validate_report.py OUTPUT` before compilation. It rejects `OUTPUT` itself or any descendant that is a symlink; its non-following inventory runs before marker, class, or hash reads. It then deterministically checks required file/directory types, an uncommented `\documentclass{elegantpaper}` line (including options), the exact eight-path/SHA-256 upstream v0.12 snapshot, equality of the root/upstream class copies, and every unresolved `@@...@@` marker in `.tex` files. Use `--require-pdf` only when `main.pdf` must exist.
 
+The generated root `latexmkrc` routes both latexmk's default `-pdf` rule and its native `-xelatex` rule to XeLaTeX. Keep `%O` in the command template: latexmk supplies `-no-pdf` only for the native XeLaTeX/XDV route. The Chinese `main.tex` selects TeX Live's portable Fandol font set before the class loads `ctex`; the pinned upstream class remains unchanged. This configuration lets an intact Overleaf upload compile without a manual compiler change. A successful Git upload or structural check does not establish successful compilation or a visually checked PDF.
+
 Compile with the already-installed local XeLaTeX and Biber toolchain. The
 stable launcher is absolute so VS Code and Codex do not depend on a shell
 profile or GUI-process `PATH`:
